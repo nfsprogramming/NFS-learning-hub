@@ -23,20 +23,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2); /* Slightly more visible */
     border-radius: 20px;
     border: 2px solid #05060a;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 242, 255, 0.4);
+    background: rgba(0, 242, 255, 0.5); /* Primary glow on hover */
 }
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.1) #05060a;
+    scrollbar-color: rgba(255, 255, 255, 0.2) #05060a;
 }
 /* Global transitions & Base */
 * {
