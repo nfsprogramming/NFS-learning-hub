@@ -1,0 +1,337 @@
+[
+    {
+        "section": "Ai Framework Project",
+        "lessons": [
+            {
+                "title": "Ai Framework Project",
+                "path": "10-ai-framework-project/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "10-ai-framework-project/solution/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Bank Project",
+        "lessons": [
+            {
+                "title": "Template Route",
+                "path": "7-bank-project/1-template-route/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Forms",
+                "path": "7-bank-project/2-forms/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Data",
+                "path": "7-bank-project/3-data/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "State Management",
+                "path": "7-bank-project/4-state-management/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Bank Project",
+                "path": "7-bank-project/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Api",
+                "path": "7-bank-project/api/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "7-bank-project/solution/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Browser Extension",
+        "lessons": [
+            {
+                "title": "About Browsers",
+                "path": "5-browser-extension/1-about-browsers/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Forms Browsers Local Storage",
+                "path": "5-browser-extension/2-forms-browsers-local-storage/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Background Tasks And Performance",
+                "path": "5-browser-extension/3-background-tasks-and-performance/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Browser Extension",
+                "path": "5-browser-extension/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "5-browser-extension/solution/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Chat Project",
+        "lessons": [
+            {
+                "title": "Chat Project",
+                "path": "9-chat-project/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "9-chat-project/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Backend",
+                "path": "9-chat-project/solution/backend/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Python",
+                "path": "9-chat-project/solution/backend/python/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Frontend",
+                "path": "9-chat-project/solution/frontend/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Code Editor",
+        "lessons": [
+            {
+                "title": "Using A Code Editor",
+                "path": "8-code-editor/1-using-a-code-editor/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Getting Started Lessons",
+        "lessons": [
+            {
+                "title": "Intro To Programming Languages",
+                "path": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Github Basics",
+                "path": "1-getting-started-lessons/2-github-basics/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Accessibility",
+                "path": "1-getting-started-lessons/3-accessibility/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Getting Started Lessons",
+                "path": "1-getting-started-lessons/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Git Basics",
+        "lessons": [
+            {
+                "title": "Git Basics",
+                "path": "Git-Basics/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Js Basics",
+        "lessons": [
+            {
+                "title": "Data Types",
+                "path": "2-js-basics/1-data-types/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Functions Methods",
+                "path": "2-js-basics/2-functions-methods/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Making Decisions",
+                "path": "2-js-basics/3-making-decisions/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Arrays Loops",
+                "path": "2-js-basics/4-arrays-loops/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Js Basics",
+                "path": "2-js-basics/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Lesson Template",
+        "lessons": [
+            {
+                "title": "Lesson Template",
+                "path": "lesson-template/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Memory Game",
+        "lessons": [
+            {
+                "title": "Memory Game",
+                "path": "memory-game/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Space Game",
+        "lessons": [
+            {
+                "title": "Introduction",
+                "path": "6-space-game/1-introduction/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Drawing To Canvas",
+                "path": "6-space-game/2-drawing-to-canvas/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Moving Elements Around",
+                "path": "6-space-game/3-moving-elements-around/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Collision Detection",
+                "path": "6-space-game/4-collision-detection/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "6-space-game/4-collision-detection/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Your Work",
+                "path": "6-space-game/4-collision-detection/your-work/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Keeping Score",
+                "path": "6-space-game/5-keeping-score/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "6-space-game/5-keeping-score/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Your Work",
+                "path": "6-space-game/5-keeping-score/your-work/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "End Condition",
+                "path": "6-space-game/6-end-condition/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "6-space-game/6-end-condition/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Your Work",
+                "path": "6-space-game/6-end-condition/your-work/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Space Game",
+                "path": "6-space-game/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "6-space-game/solution/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Terrarium",
+        "lessons": [
+            {
+                "title": "Intro To Html",
+                "path": "3-terrarium/1-intro-to-html/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Intro To Css",
+                "path": "3-terrarium/2-intro-to-css/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Intro To Dom And Closures",
+                "path": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Terrarium",
+                "path": "3-terrarium/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "3-terrarium/solution/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Typing Game",
+        "lessons": [
+            {
+                "title": "Typing Game",
+                "path": "4-typing-game/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Solution",
+                "path": "4-typing-game/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Typing Game",
+                "path": "4-typing-game/typing-game/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

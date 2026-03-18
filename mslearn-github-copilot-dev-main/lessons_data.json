@@ -1,0 +1,222 @@
+[
+    {
+        "section": "Concepts",
+        "lessons": [
+            {
+                "title": "How To Scope Vibe Coding Lab Exercise",
+                "path": "Instructions/Concepts/How to scope vibe coding lab exercise.md",
+                "notebooks": []
+            },
+            {
+                "title": "Sample Prds",
+                "path": "Instructions/Concepts/Sample PRDs.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Downloadablecodeprojects",
+        "lessons": [
+            {
+                "title": "Library",
+                "path": "DownloadableCodeProjects/az-2007-m3-develop-code-python/AccelerateDevGHCopilot/library/readme.md",
+                "notebooks": []
+            },
+            {
+                "title": "Acceleratedevghcopilot",
+                "path": "DownloadableCodeProjects/az-2007-m3-develop-code/AccelerateDevGHCopilot/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Library",
+                "path": "DownloadableCodeProjects/az-2007-m4-develop-unit-tests-pytest/AccelerateDevGHCopilot/library/readme.md",
+                "notebooks": []
+            },
+            {
+                "title": "Acceleratedevghcopilot",
+                "path": "DownloadableCodeProjects/az-2007-m4-develop-unit-tests/AccelerateDevGHCopilot/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Library",
+                "path": "DownloadableCodeProjects/az-2007-m5-refactor-improve-code-python/AccelerateDevGHCopilot/library/readme.md",
+                "notebooks": []
+            },
+            {
+                "title": "Acceleratedevghcopilot",
+                "path": "DownloadableCodeProjects/az-2007-m5-refactor-improve-code/AccelerateDevGHCopilot/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Ecommerceorderandreturn",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/consolidate-duplicate-code/ECommerceOrderAndReturn/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Contosoonlinestore",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/implement-performance-profiling/ContosoOnlineStore/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dataanalyzerreporter",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/implement-performance-profiling/DataAnalyzerReporter/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Ecommerceorderprocessing",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/refactor-large-functions/ECommerceOrderProcessing/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Sdd Get Started Rss Feed",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/sdd-get-started-rss-feed/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Sdd Implement Contoso Dashboard Feature",
+                "path": "DownloadableCodeProjects/standalone-lab-projects/sdd-implement-contoso-dashboard-feature/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Instructions",
+        "lessons": [
+            {
+                "title": "Instructions",
+                "path": "Instructions/readme.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Labs",
+        "lessons": [
+            {
+                "title": "Lab Ak 00 Configure Github Copilot Sdk Lab",
+                "path": "Instructions/Labs/LAB_AK_00_configure_github_copilot_sdk_lab.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 00 Configure Github Dev Kit Lab",
+                "path": "Instructions/Labs/LAB_AK_00_configure_github_dev_kit_lab.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 00 Configure Lab Environment",
+                "path": "Instructions/Labs/LAB_AK_00_configure_lab_environment.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 00 Configure Lab Environment Py",
+                "path": "Instructions/Labs/LAB_AK_00_configure_lab_environment_py.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 00 Enable Github Copilot In Visual Studio Code",
+                "path": "Instructions/Labs/LAB_AK_00_enable_github_copilot_in_visual_studio_code.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 01 Examine Settings Interface",
+                "path": "Instructions/Labs/LAB_AK_01_examine_settings_interface.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 02 Analyze Document Code",
+                "path": "Instructions/Labs/LAB_AK_02_analyze_document_code.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 02 Analyze Document Code Py",
+                "path": "Instructions/Labs/LAB_AK_02_analyze_document_code_py.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 03 Develop Code Features",
+                "path": "Instructions/Labs/LAB_AK_03_develop_code_features.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 03 Develop Code Features Py",
+                "path": "Instructions/Labs/LAB_AK_03_develop_code_features_py.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 04 Develop Unit Tests Pytest",
+                "path": "Instructions/Labs/LAB_AK_04_develop_unit_tests_pytest.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 04 Develop Unit Tests Xunit",
+                "path": "Instructions/Labs/LAB_AK_04_develop_unit_tests_xunit.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 05 Refactor Improve Existing Code",
+                "path": "Instructions/Labs/LAB_AK_05_refactor_improve_existing_code.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 05 Refactor Improve Existing Code Py",
+                "path": "Instructions/Labs/LAB_AK_05_refactor_improve_existing_code_py.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 06 Vibe Coding Prototype Ecommerce App",
+                "path": "Instructions/Labs/LAB_AK_06_vibe_coding_prototype_ecommerce_app.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 07 Consolidate Duplicate Code",
+                "path": "Instructions/Labs/LAB_AK_07_consolidate_duplicate_code.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 08 Refactor Large Functions",
+                "path": "Instructions/Labs/LAB_AK_08_refactor_large_functions.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 09 Simplify Complex Conditionals",
+                "path": "Instructions/Labs/LAB_AK_09_simplify_complex_conditionals.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 10 Implement Performance Profiling",
+                "path": "Instructions/Labs/LAB_AK_10_implement_performance_profiling.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 11 Resolve Github Issues",
+                "path": "Instructions/Labs/LAB_AK_11_resolve_github_issues.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 12 Resolve Github Secret Scanning Alerts",
+                "path": "Instructions/Labs/LAB_AK_12_resolve_github_secret_scanning_alerts.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 13 Get Started Spec Driven Development",
+                "path": "Instructions/Labs/LAB_AK_13_get-started-spec-driven-development.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 14 Implement Spec Driven Development",
+                "path": "Instructions/Labs/LAB_AK_14_implement-spec-driven-development.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 15 Configure Customize Github Copilot Vscode",
+                "path": "Instructions/Labs/LAB_AK_15_configure_customize_github_copilot_vscode.md",
+                "notebooks": []
+            },
+            {
+                "title": "Lab Ak 16 Develop Ai Enabled Apps Github Copilot Sdk",
+                "path": "Instructions/Labs/LAB_AK_16_develop_ai_enabled_apps_github_copilot_sdk.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)\\.(md|ipynb|png|jpg|jpeg|gif|svg|json|css|js)",
+      "has": [
+        {
+          "type": "header",
+          "key": "Sec-Fetch-Dest",
+          "value": "document"
+        }
+      ],
+      "destination": "/index.html"
+    },
+    {
+      "source": "/lessons/(.*)",
+      "destination": "/lessons/$1"
+    },
+    {
+      "source": "/images/(.*)",
+      "destination": "/images/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

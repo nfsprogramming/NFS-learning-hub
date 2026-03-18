@@ -1,0 +1,7 @@
+numpy<2.0.0
+pandas
+scikit-learn
+scipy
+shap
+lightgbm
+xgboost

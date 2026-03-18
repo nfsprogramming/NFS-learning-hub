@@ -1,0 +1,1789 @@
+{
+  "Common": {
+    "close": "關閉",
+    "tooltipButton": "工具提示按鈕",
+    "identityFeature": "身分識別功能",
+    "infoTitle": "其他資訊",
+    "spinButton": "微調",
+    "editButton": "編輯",
+    "decreaseValue": "減少值",
+    "increaseValue": "增加值",
+    "decreaseValueByOne": "將值減 1",
+    "increaseValueByOne": "將值加 1",
+    "loading": "正在載入..."
+  },
+  "ChartContextMenu": {
+    "hideData": "隱藏運算列表",
+    "viewData": "檢視運算列表",
+    "viewInFullScreen": "以全螢幕檢視",
+    "printChart": "列印圖表",
+    "downloadCSV": "下載 CSV",
+    "downloadPNG": "下載 PNG 影像",
+    "downloadJPEG": "下載 JPEG 影像",
+    "downloadPDF": "下載 PDF 文件",
+    "downloadSVG": "下載 SVG 向量影像",
+    "downloadXLS": "下載 XLS"
+  },
+  "CausalAnalysis": {
+    "AggregateView": {
+      "binary": "二元處理方式:",
+      "binaryDescription": "在此樣本中，平均只要開啟此特徵，就會造成類別/標籤 '{0}' 的可能性增加 X 個單位。",
+      "regressionDescription": "在此樣本中，平均只要將此特徵開啟，就會造成目標的預測增加/減少 X 個單位。",
+      "causalPoint": "因果關係點",
+      "confidenceLower": "信賴區間 (下限)",
+      "confidenceUpper": "信賴區間 (上限)",
+      "confoundingFeature": "干擾因子特徵同時與處理方式和感興趣的結果相互關聯。干擾因子在直接因果關係上建立從處理方式到結果的額外相互關聯路徑。除非已計算好干擾因子特徵並將其包含在模型中，否則這些額外的相互關聯可能會造成因果關係的偏差預估。這偏差可能是正面或負面，取決於省略的干擾因子、處理方式以及結果之間的相互關聯方向。",
+      "continuous": "持續處理方式:",
+      "continuousDescription": "在此樣本中，平均只要將此特徵增加 1 個單位，就會造成類別/標籤 '{0}' 的可能性增加 X 個單位。",
+      "continuousRegressionDescription": "在此樣本中，平均只要將此特徵增加 1 個單位，就會造成目標的預測增加/減少 X 個單位。",
+      "description": "原因分析會回答在不同的原則選擇下，現實世界結果會如何改變的「假設狀況」問題，例如為產品採取不同的價格策略或病患採取替代治療。這些工具與識別重要相互關聯模式的模型預測不同，它們可協助您識別直接影響感興趣結果的最重要原因特徵。這些模型會識別一項特徵的因果關係 (一般稱為「處理方式」)，將其他干擾因子特徵保持一致。為取得最佳的結果，請務必確保完整的資料集包含所有可能與結果相互關聯做為干擾因子的可用特徵。",
+      "directAggregate": "具有 95% 信賴區間之每種治療的直接彙總因果關係",
+      "here": "這裡",
+      "infoTitle": "彙總因果關係的其他資訊",
+      "lasso": "套索 (或若 y 為二元時則為羅吉斯迴歸) 適合從 X[-i] 預測 y，套索 (或若 X[i] 為絕對時則為羅吉斯迴歸) 也適合從 Χ[-i] 預測 X[i]。您可將因果關係視為兩個預測工作之剩餘/意外變化的相互關聯。深入了解 Double Machine Learning。",
+      "unconfounding": "什麼是干擾因子特徵?"
+    },
+    "IndividualView": {
+      "currentOutcome": "目前結果",
+      "currentTreatment": "目前的治療值",
+      "dataRequired": "此索引標籤需要選取資料點。",
+      "selectedDatapoint": "選取的資料點",
+      "description": "個別因果關係可顯現個人化的操作，例如針對客戶的目標性促銷或個人化的治療計劃。具有特定特徵集合的個人會如何回應原因特徵或治療的變更? 原因假設狀況工具可在假設為特定個人變更治療層級的情況下，計算出其在現實世界結果中的邊際變更。此分析可讓您了解現實世界成果在不同的原則選擇下會如何變更，例如為產品採取不同的價格策略或病患採取替代治療。指定感興趣的治療方式，並觀察現實世界結果的變更方式。",
+      "directIndividual": "具有 95% 信賴區間之每種治療的直接個人因果關係",
+      "index": "資料點索引",
+      "infoTitle": "有關個人原因假設狀況的其他資訊",
+      "missingParameters": "此索引標籤需要提供評估資料集。",
+      "newOutcome": "新結果",
+      "selectTreatment": "選取治療",
+      "setNewTreatment": "設定新的治療值",
+      "treatmentValue": "處理方式值最小值: {0} ({1})，最大值: {2} ({3})"
+    },
+    "MainMenu": {
+      "aggregate": "彙總因果關係",
+      "cohortInfo": "原因分析目前不支援全域世代。所有資料都會顯示所有原因分析。",
+      "header": "原因分析",
+      "individual": "個人原因假設狀況",
+      "learnMore": "深入了解",
+      "title": "具有 90% 信賴區間之每種特徵的直接因果關係",
+      "treatment": "治療原則",
+      "why": "為什麼包含干擾因子特徵很重要?"
+    },
+    "TreatmentPolicy": {
+      "BarDescriptionBinary": "這個圖表可顯示各式處理方式原則的平均增益，相對於未對您母體中任何人提供 {0} 處理方式的基準。",
+      "BarDescriptionContinuous": "這個圖表可顯示各式處理方式原則的平均增益，相對於未對母體中任何人目前處理方式值進行任何修改的基準。",
+      "BarTextBinary": "第一個長條指出若已套用上述建議的全域處理原則，平均的相對增益。報告的增益報告了使用之處理方式的數字變化。第二個長條則表示將每個人的處理方式改為二元處理方式後的相對增益 (或損失)。",
+      "BarTextContinuous": "第一個長條指出若已套用上述建議的全域處理方式原則，平均的相對增益。報告的增益反映了將樣本中一般處理方式大小的處理方式特徵增加/減少 10%。第二個長條則表示持續將處理方式增加/減少 10% 的相對增益 (或損失)。",
+      "Description": "這些工具可協助建立未來介入的原則。您可以識別您樣本的哪些部分會體驗到因果關係驅動 (例如治療) 的最大回應，或構造規則以定義哪些未來人口將具有最大的治療效果。",
+      "Left": "{0} 小於或等於 {1}",
+      "Recommended": "建議的處理 = {0}",
+      "Right": "{0} 大於 {1}",
+      "SelectPolicy": "設定處理特徵",
+      "Size": "樣本大小的可解譯建議全域處理原則 (n) = {0}",
+      "Table": "此資料表可透過取得資料列來讀取，然後取得該特定資料列的資料行。",
+      "TableDescription": "此資料表顯示可套用到目前資料樣本或其他母體的建議處理方式原則。此資料表提供了簡單規則，根據個人是否具備對所選取之處理方式有最大影響回應的特徵，來將觀察區隔成資料世代。此資料表也會指定指派給個別區段之目前資料樣本中的資料點數目。",
+      "alwaysTreat": "一律處理 '{0}'",
+      "averageGainBinary": "將處理方式 {0} 設定為其基準值 {1} 的平均增益。",
+      "averageGainContinuous": "不進行 {0} 處理之替代原則的平均收益。",
+      "header": "這些工具可協助建立未來操作的原則。您可以識別樣本的哪些部分會體驗到原因特徵或處理方式變更的最大回應，並構造規則以定義哪些未來母體應鎖定進行特定操作。",
+      "infoTitle": "關於處理原則的其他資訊",
+      "nSample": "n = {0}",
+      "noData": "沒有資料"
+    }
+  },
+  "Core": {
+    "ExpandableText": {
+      "SeeLess": "查看較少",
+      "SeeMore": "查看更多"
+    },
+    "NoData": {
+      "Title": "沒有資料"
+    },
+    "ComparisonTypes": {
+      "lt": "{0} 小於 {1}",
+      "lte": "{0} 小於或等於 {1}",
+      "gt": "{0} 大於 {1}",
+      "gte": "{0} 大於或等於 {1}",
+      "eq": "{0} 等於 {1}",
+      "ne": "{0} 不等於 {1}",
+      "in": "{0} 在集合 ({1}) 中",
+      "nin": "{0} 不在集合 ({1}) 中",
+      "rg": "{0} 介於範圍 ({1})",
+      "nrg": "{0} 介於範圍 ({1})",
+      "Unknown": "未知"
+    },
+    "ShiftCohort": {
+      "apply": "套用",
+      "applyAriaLabel": "套用世代",
+      "cancel": "取消",
+      "title": "切換世代",
+      "subText": "從世代清單中選取世代。將世代套用到儀表板。",
+      "selectCohort": "選取世代",
+      "cohortList": "世代清單"
+    },
+    "PreBuiltCohort": {
+      "featureNameNotFound": "資料集中找不到特徵名稱",
+      "notACategoricalFeature": "特徵不是類別目錄"
+    },
+    "EmptyCohortDialog": {
+      "title": "資料集世代未包含任何資料點",
+      "subText": "您的資料集世代似乎未包含任何資料點，請調整您的篩選以在資料集世代中至少包含一個資料點，然後再儲存。"
+    }
+  },
+  "Counterfactuals": {
+    "AriaLabel": "反事實",
+    "CurrentTreatment": "目前的處理方式",
+    "EffectLowerBound": "CI 較低",
+    "EffectOfTreatment": "建議的效果",
+    "EffectUpperBound": "CI 較高",
+    "ErrorDialog": {
+      "Close": "關閉",
+      "ErrorPrefix": "發生的錯誤: {0}",
+      "PythonError": "Python 錯誤"
+    },
+    "RecommendedTreatment": "建議的處理",
+    "WhatIf": {
+      "setValue": "設定值",
+      "sortFeatures": "依反事實特徵重要度排序特徵資料行",
+      "percentCounterfactualLocalImportance": "不同特徵之反事實的百分比",
+      "toggleToolTipBody": "反事實範例會產生局部特徵重要度，指出哪些主要功能最干擾，以達到回歸案例所需的類別分類案例或所需的範圍。",
+      "toggleToolTipHeader": "排名的反事實功能",
+      "predictedClass": "預測類別",
+      "predictedValue": "預測值"
+    },
+    "Size": "大小",
+    "loading": "正在載入...",
+    "counterfactualEx": "反事實 Ex {0}",
+    "counterfactualName": "模擬反事實名稱",
+    "createWhatIfCounterfactual": "建立模擬反事實",
+    "createCounterfactual": "反事實",
+    "counterfactualAriaLabel": "反事實建立",
+    "revertToBubbleChart": "檢視泡泡圖",
+    "createOwn": "建立您自己的反事實:",
+    "currentClass": "目前類別",
+    "currentRange": "目前範圍",
+    "decreaseByOne": "將值減 1",
+    "desiredClass": "反事實的所需類別",
+    "header": "假設狀況反事實",
+    "increaseByOne": "將值加 1",
+    "individualTreatment": "建議的個別處理原則",
+    "listChoose": "使用微調控制來選擇您要檢視的熱門 k 樣本。",
+    "listDescription": "此清單會顯示目前資料樣本中對選取的處理方式具有最大原因回應的資料點，根據包含在估愈原因模型中的所有特徵。左側的 5 個資料行會報告觀察是否建議使用處理方式，目前的處理方式、處理方式的估計效果 (影響為不進行二元處理方式的基準進行處理，或將處理方式特徵增加/減少在樣本中一般處理方式大小的 10: [動態：會報告使用之處理方式的數字變化] )，以及此效果的下限與上限信賴區間 (CI)。其餘的資料行則會顯示目前的處理方式狀態和每個觀察的其他特徵。",
+    "localImportanceDescription": "在資料列 {0} 中要轉換以達成所需模式預測的的最高排名特徵。根據預測的假設狀況評估: {1}",
+    "localImportanceSelectData": "選取資料點以檢視本機重要度圖表",
+    "largeLocalImportanceSelectData": "選取泡泡圖，後面接著資料點，以檢視本機重要度圖表",
+    "localImportanceFetchError": "擷取本機重要度資料時發生錯誤。錯誤詳細資料: {0} 請檢查使用的資料。",
+    "BubbleChartFetchError": "擷取資料時發生錯誤。錯誤詳細資料: {0} 請檢查使用的資料。",
+    "noData": "沒有資料",
+    "noFeatures": "無可用的功能",
+    "panelDescription": "瀏覽反事實，然後建立您自己的反事實。搜尋特徵，以查看各種反事實樣本的建議值。按一下每個反事實名稱下的 [設定值] 文字，以設定建議的反事實特徵值。為您的反事實命名並加以儲存。",
+    "panelDescriptionWithoutSetValue": "瀏覽反事實，然後建立您自己的反事實。搜尋特徵，以查看各種反事實樣本的建議值。",
+    "whatIfPanelHeader": "模擬反事實",
+    "panelHeader": "反事實",
+    "recommendedPolicy": "建議的原則增益",
+    "referenceDatapoint": "參考資料點: 資料列 {0}",
+    "saveAsNew": "另存為新資料點",
+    "saveDescription": "這些反事實是以模型的預測為基礎，因此可能會擷取由模型取得的同樣相互關聯。不建議使用者根據這個工具作出現實世界的決定。請使用我們的工具組來進行真實世界決策制定案例的原因分析。",
+    "seePrediction": "查看預測差異",
+    "selectedDatapoint": "選取的資料點",
+    "showOnly": "僅顯示",
+    "showTop": "對於處理方式特徵具有最大估計原因回應的資料點: {0}",
+    "whatifDescription": "假設狀況可讓您針對任何輸入來轉換特徵，並觀察模型的預測如何變更。您可以手動對特徵進行轉換，或指定所需的預測 (例如分類器類別標籤)，以查看最接近原始輸入的資料點清單，以得到所需的預測。這也稱為預測反事實，您可以使用它們來探索模型所學到的關聯性；了解模型預測的重要必要功能；或針對模型進行邊緣案例的偵錯。若要開始，請從資料表或散佈圖選擇輸入點。"
+  },
+  "DataAnalysis": {
+    "TableView": {
+      "description": "以具有地面事實和預測標籤的資料表標記法檢視資料集。資料表會以正確和不正確的預測分隔成子資料工作表。",
+      "infoTitle": "資料表檢視的其他資訊"
+    }
+  },
+  "ErrorAnalysis": {
+    "Cohort": {
+      "cohort": "世代",
+      "defaultLabel": "所有資料"
+    },
+    "CohortBaseAndFilters": {
+      "globalCohortAndFilters": "全域世代和篩選",
+      "globalCohort": "全域世代",
+      "errorExplorer": "錯誤總管",
+      "filters": "篩選"
+    },
+    "CohortInfo": {
+      "baseCohortInstances": "全域世代中的執行個體",
+      "basicInformation": "基本資訊",
+      "cohortInformation": "世代資訊",
+      "correct": "正確",
+      "filters": "篩選條件篩選",
+      "incorrect": "不正確",
+      "predictionPath": "預測路徑 (篩選)",
+      "saveCohort": "另存為新的世代",
+      "selectedCohortInstances": "所選世代中的執行個體",
+      "total": "總計"
+    },
+    "CohortList": {
+      "coverage": "涵蓋範圍"
+    },
+    "EditCohort": {
+      "cohortName": "世代名稱",
+      "subText": "了解所選的世代。編輯其世代名稱。刪除此世代。"
+    },
+    "FeatureList": {
+      "featureList": "特徵清單",
+      "apply": "套用",
+      "features": "特徵",
+      "importances": "重要性",
+      "treeMapDescription": "要重新訓練樹狀圖，請選取並儲存以下特徵。使用共有資訊和真實標籤上的錯誤來計算特徵的重要性。請將此作爲訓練樹狀圖的方針。",
+      "staticTreeMapDescription": "檢視用來訓練樹狀圖的特徵。特徵重要性是使用 true 標籤上有錯誤的相互資訊計算。",
+      "searchResultMessage": "在 {searchValue} 的 {resultLength} 中顯示的結果"
+    },
+    "TreeViewParameters": {
+      "maximumDepth": "最大深度",
+      "maximumDepthInfoText": "錯誤上訓練的代理樹狀結構的最大深度",
+      "maximumDepthTitle": "關於最大深度的其他資訊",
+      "numLeaves": "樹葉數目",
+      "numLeavesInfoText": "在錯誤時訓練的替代樹狀結構葉子數目",
+      "numLeavesTitle": "關於樹葉數目的其他資訊",
+      "minDataInLeaf": "一個分葉中樣本數目的最小值",
+      "minDataInLeafInfoText": "建立一分葉所需的最小資料數目",
+      "minDataInLeafTitle": "一分葉樣本數目下限的其他資訊"
+    },
+    "TreeLegend": {
+      "clearSelection": "清除選取項目"
+    },
+    "FilterTooltip": {
+      "correctNum": "正確 (#): ",
+      "countNum": "計數 (#): ",
+      "errorSum": "錯誤總和: ",
+      "incorrectNum": "不正確 (#): "
+    },
+    "InspectionView": {
+      "emptyError": "請按一下核取方塊來選取錯誤和正確類別中的資料點。",
+      "selectedDatapoints": "已選取的資料點"
+    },
+    "InstanceView": {
+      "inspect": "檢查",
+      "selection": "已選取 {0}"
+    },
+    "MainMenu": {
+      "cohortInfo": "世代資訊",
+      "cohortList": "世代清單",
+      "cohortSettings": "世代設定",
+      "errorAnalysisLabel": "錯誤分析",
+      "errorExplorer": "錯誤總管",
+      "errorExplorerLabel": "錯誤總管:",
+      "explanation": "解釋",
+      "featureList": "特徵清單",
+      "fullscreen": "全螢幕",
+      "heatMap": "熱度圖",
+      "newCohort": "新世代",
+      "shiftCohort": "切換世代",
+      "treeMap": "樹狀圖",
+      "whatIf": "假設狀況"
+    },
+    "MapShift": {
+      "cancel": "取消",
+      "close": "關閉",
+      "move": "移動",
+      "saveAs": "另存為新的世代",
+      "shift": "移位",
+      "heatTitle": "離開樹狀檢視?",
+      "heatSubText": "是否確定要離開樹狀檢視? 您可以將篩選儲存為新世代，以便您可在 [世代] 設定中存取它們。否則您的篩選將會遺失。",
+      "treeTitle": "是否要離開熱度圖檢視?",
+      "treeSubText": "是否確定要離開熱度圖檢視? 您可以將篩選儲存為新世代，以便您可在 [世代] 設定中存取它們。否則您的篩選將會遺失。"
+    },
+    "MatrixArea": {
+      "clearAll": "全部清除",
+      "emptyText": "使用上方的下拉式清單選取兩個特徵。 您可以沿兩個維度對資料進行群集和篩選。",
+      "selectAll": "全選"
+    },
+    "MatrixFilter": {
+      "disabledWarning": "因為已為完整資料集產生熱度圖，所以已停用錯誤熱度圖，除非全域世代切換為代表「所有資料」。切換回完整資料集以檢視錯誤熱度圖。"
+    },
+    "MatrixSummary": {
+      "heatMapInfoTitle": "熱度圖的其他資訊",
+      "heatMapDescription": "熱度圖讓您可以專注於特定的交集特徵篩選並計算無彙總錯誤率。從比較兩個資料集特徵開始。",
+      "heatMapStaticDescription": "透過熱度圖，您可以將焦點放在特定交集功能篩選器和計算匯總的錯誤率。檢視儀表板前，最多必須選取兩個功能，才能透過 SDK 建立熱度圖。"
+    },
+    "MatrixOptions": {
+      "quantileBinningLabel": "分位數量化",
+      "binningThresholdLabel": "量化閾值",
+      "toggleOnLabel": "開啟",
+      "toggleOffLabel": "關閉",
+      "quantileBinningInfoText": "在各式間隔範圍均等地散發值",
+      "quantileBinningTitle": "分位數量化的其他資訊",
+      "binningThresholdInfoText": "量化前需要的值數目",
+      "binningThresholdTitle": "量化閾值的其他資訊"
+    },
+    "Metrics": {
+      "AccuracyScore": {
+        "Name": "正確性分數",
+        "Info": "正確性分數代表資料中正確執行個體相對於總執行個體的比率。",
+        "Short": "正確性",
+        "Title": "關於正確性分數的其他資訊"
+      },
+      "ErrorRate": {
+        "Name": "錯誤率",
+        "Info": "錯誤率代表系統失敗節點中實例的百分比。",
+        "Short": "錯誤率",
+        "Title": "錯誤率的其他資訊"
+      },
+      "F1Score": {
+        "Name": "F1 分數",
+        "Info": "F1 分數是精確度和重新叫用計量的調和平均數。",
+        "Short": "F1 分數",
+        "Title": "F1 分數的其他資訊"
+      },
+      "MeanAbsoluteError": {
+        "Name": "平均絕對誤差",
+        "Info": "平均絕對誤差是誤差總和的平均值。",
+        "Short": "平均絕對誤差",
+        "Title": "平均絕對誤差的其他資訊"
+      },
+      "MeanSquaredError": {
+        "Name": "平均平方誤差",
+        "Info": "平均平方誤差是平方誤差的平均值。",
+        "Short": "平均平方誤差",
+        "Title": "平均平方誤差的其他資訊"
+      },
+      "Precision": {
+        "Name": "精確度分數",
+        "Info": "精確度是所有預測正數的真正數比率。",
+        "Short": "精確度",
+        "Title": "關於精確度的其他資訊"
+      },
+      "Recall": {
+        "Name": "重新叫用分數",
+        "Info": "重新叫用是所有實際正數的真正數比率。",
+        "Short": "召回率",
+        "Title": "重新叫用的其他資訊"
+      },
+      "MacroPrecision": {
+        "Name": "巨集平均精確度分數",
+        "Info": "巨集平均精確度是每個類別單獨計算並平均計算之所有預測正數的真正數比率。",
+        "Short": "巨集精確度",
+        "Title": "巨集平均精確度的其他資訊"
+      },
+      "MicroPrecision": {
+        "Name": "微平均精確度分數",
+        "Info": "微平均精確度是所有類別所匯總之所有預測正數的真正數比率。",
+        "Short": "微精確度",
+        "Title": "微平均精確度的其他資訊"
+      },
+      "MacroRecall": {
+        "Name": "巨集平均重新叫用分數",
+        "Info": "巨集平均重新叫用是每個類別單獨計算並平均計算之所有實際正數的真正數比率。",
+        "Short": "巨集重新叫用",
+        "Title": "巨集平均重新叫用的其他資訊"
+      },
+      "MicroRecall": {
+        "Name": "微平均重新叫用分數",
+        "Info": "微型平均重新叫用是所有類別所匯總之所有實際正數的真數比率。",
+        "Short": "微重新叫用",
+        "Title": "微平均重新叫用的其他資訊"
+      },
+      "MacroF1Score": {
+        "Name": "巨集平均 F1 分數",
+        "Info": "巨集平均的 F1 分數是巨集平均精確度和重新叫用計量的調和平均數。",
+        "Short": "巨集 F1 分數",
+        "Title": "巨集平均 F1 分數的其他資訊"
+      },
+      "MicroF1Score": {
+        "Name": "微平均 F1 分數",
+        "Info": "微平均的 F1 分數是微平均精確度和重新叫用計量的調和平均數。",
+        "Short": "微 F1 分數",
+        "Title": "微平均 F1 分數的其他資訊"
+      },
+      "MeanAveragePrecision": {
+        "Name": "平均精確度均值分數",
+        "Info": "物件偵測模型的平均精確度均值是所有類別的平均 AP (平均精確度)。這會評估物件偵測模型的強固性，並封裝精確度與召回之間的權衡。",
+        "Short": "平均精確度均值",
+        "Title": "平均平均精確度均值分數的其他資訊"
+      },
+      "AveragePrecision": {
+        "Name": "平均精確度分數",
+        "Info": "會針對選取的類別計算物件偵測模型的平均精確度。",
+        "Short": "平均精確度",
+        "Title": "平均精確度分數的其他資訊"
+      },
+      "AverageRecall": {
+        "Name": "平均召回分數",
+        "Info": "會針對選取的類別計算物件偵測模型的平均召回。",
+        "Short": "平均召回",
+        "Title": "平均召回分數的其他資訊"
+      },
+      "metricName": "計量名稱",
+      "metricValue": "計量值"
+    },
+    "MetricSelector": {
+      "selectorLabel": "選取計量",
+      "feature1SelectorLabel": "資料列: 特徵 1",
+      "feature2SelectorLabel": "資料行: 特徵 2"
+    },
+    "Navigation": {
+      "cohortSaved": "已儲存新世代! 請參閱 [世代] 設定下的 [世代清單]。",
+      "dataExplorer": "資料總管",
+      "errorExplorer": "錯誤總管",
+      "globalExplanation": "全域解釋",
+      "localExplanation": "局部解釋",
+      "localExplanationInspection": "局部解釋 (檢查)"
+    },
+    "SaveCohort": {
+      "cancel": "取消",
+      "close": "關閉",
+      "cohortName": "世代名稱",
+      "move": "移動",
+      "save": "儲存",
+      "saveTitle": "另存為新的世代",
+      "subText": "將目前的世代儲存到世代設定。您可以透過世代設定重新造訪已經儲存的世代。",
+      "defaultLabelCopy": "所有資料複製"
+    },
+    "TreeView": {
+      "ariaLabel": "互動式圖表",
+      "disabledArialLabel": "已停用互動式圖表",
+      "treeMapInfoTitle": "樹狀圖的其他資訊",
+      "treeDescription": "樹狀圖視覺效果使用每個特徵和錯誤之間的共有資訊，以最佳方式將錯誤執行個體與成功執行個體在資料中依階層分開。這簡化了探索及醒目提示常見失敗模式的流程。若要尋找重要的失敗模式，請尋找具有較強紅色色彩的節點 (亦即高錯誤率) 及較高的填滿線(例如，高錯誤涵蓋範圍)。若要編輯樹狀圖中使用的特徵清單，請按一下 [特徵清單]。使用 [選取計量] 下拉式功能表以深入了解您的錯誤和成功節點效能。請注意，此計量選取項目並不會影響您錯誤樹狀圖產生的方式。",
+      "treeStaticDescription": "樹狀圖視覺效果使用每個特徵和錯誤之間的共有資訊，以最佳方式將錯誤執行個體與成功執行個體在資料中依階層分開。這簡化了探索及醒目提示常見失敗模式的流程。若要尋找重要的失敗模式，請尋找具有較強紅色色彩的節點 (亦即高錯誤率) 及較高的填滿線(例如，高錯誤涵蓋範圍)。若要檢視用來建立此錯誤樹狀圖的特徵清單，請按一下 [特徵清單]。使用 [選取計量] 下拉式功能表以深入了解您的錯誤和成功節點效能。請注意，此計量選取項目並不會影響您錯誤樹狀圖產生的方式。",
+      "disabledWarning": "因為已為完整資料集產生樹狀圖，所以已停用錯誤樹狀圖，除非全域世代切換為代表「所有資料」。切換回完整資料集以檢視錯誤樹狀圖。"
+    },
+    "WhatIfPanel": {
+      "whatIfHeader": "假設狀況"
+    },
+    "allSelected": "已選取全部",
+    "cells": "資料格",
+    "cellsInfo": "在矩陣篩選中選取的儲存格數目。如果未選取任何儲存格，則顯示 - (破折號) 並顯示全域世代資訊，就像已選取所有儲存格一樣。",
+    "cellsTitle": "儲存格中的其他資訊",
+    "cohortInfo": "世代資訊",
+    "correctPrediction": "正確的預測",
+    "correctTotal": "更正/總計",
+    "dataExploration": "資料集探索",
+    "dataExplorerView": "資料總管",
+    "defaultClassNames": "類別 {0}",
+    "defaultFeatureNames": "特徵 {0}",
+    "errorCoverage": "錯誤涵蓋範圍",
+    "errorCoverageInfo": "錯誤涵蓋範圍顯示了在資料集中存在的所有錯誤中，集中在選取範圍的錯誤百分比。",
+    "errorCoverageTitle": "錯誤涵蓋範圍的其他資訊",
+    "globalExplanationView": "全域解釋",
+    "globalImportance": "全域重要性",
+    "incorrectPrediction": "不正確的預測",
+    "incorrectTotal": "不正確/總計",
+    "instanceView": "執行個體檢視",
+    "localExplanationView": "局部解釋",
+    "noFeature": "無特徵",
+    "scaleWarning": "針對 UI 說明的縮放原因會隨機縮小取樣",
+    "whatIfDatapoints": "假設狀況資料點"
+  },
+  "Fairness": {
+    "ValidationErrors": {
+      "missingPerformanceMetric": "找不到任何效能計量。",
+      "missingFairnessMetric": "找不到公平性計量。"
+    },
+    "BinDialog": {
+      "cancel": "取消",
+      "cancelAriaLabel": "取消量化",
+      "categoryHeader": "組界值:",
+      "header": "設定組界",
+      "makeCategorical": "視為類別",
+      "numberOfBins": "組界數目:",
+      "save": "儲存",
+      "saveAriaLabel": "儲存量化"
+    },
+    "DropdownHeaders": {
+      "errorMetric": "啟用誤差線",
+      "fairnessMetric": "公平性計量",
+      "performanceMetric": "成效指標",
+      "sensitiveFeature": "敏感性特徵"
+    },
+    "ErrorBounds": {
+      "howToRead": "如何讀取這些誤差線",
+      "introModalText1": "誤差線會因為評估資料集的大小而在計量值中顯示不確定性。顯示計算出 95% 的信賴區隔 ，其使用",
+      "wilsonScores": "Wilson 分數",
+      "introModalText2": "(適用於二元分類) 或",
+      "normalApproximation": "一般近似值",
+      "introModalText3": "(適用於其他工作)。"
+    },
+    "Fairness": {
+      "body": "公平性指標可量化所選特徵之間模型行為的變化。有幾種基於各種效能指標的公平性指標。他們可擷取各群組之間的極值之間的差額或比例，或捕獲任何群組中的最差值。",
+      "bodyLegacy": "公平性指標可量化所選特徵之間模型行為的變化。有兩個公平性指標: 即將推出更多....",
+      "header": "依據差距進行測量的公平性",
+      "pickerHeader": "要如何測量公平性?"
+    },
+    "Feature": {
+      "body": "公平性會根據模型行為中的差距部分進行評估。我們會依據各個所選特徵的值來分割資料，並評估在這些分割中，模型的成效指標與預測有何差異。",
+      "categoriesOverflow": "   和其他 {0} 個類別",
+      "editBinning": "編輯群組",
+      "header": "要依循哪些特徵評估模型公平性?",
+      "hideCategories": "摺疊",
+      "learnMore": "深入了解",
+      "showCategories": "全部顯示",
+      "subgroups": "子群組",
+      "summaryCategoricalCount": "此特徵有 {0} 個唯一值",
+      "summaryNumericCount": "此數值特徵的範圍為 {0} 到 {1}，並分成 {2} 個組界。"
+    },
+    "Footer": {
+      "back": "上一步",
+      "next": "下一步"
+    },
+    "Header": {
+      "documentation": "文件",
+      "title": "公平性"
+    },
+    "Intro": {
+      "explanatoryStep": "若要設定評定，您必須指定敏感性特徵、效能計量和公平性計量。",
+      "fairness": "公平性計量",
+      "fairnessDashboard": "公平性儀表板",
+      "fairnessInfo": "公平性計量可用於評估模型的整體品質，以及每個群組中的模型品質。公平性計量可以表示效能指標的極端值之間的差額或比率，也可以表示任何群組中的最差值。",
+      "features": "敏感性特徵",
+      "featuresInfo": "敏感性特徵會用於將資料分割成群組。這些群組中模型的公平性是透過公平性計量來衡量。公平性計量量化了模型行為在這些群組之間的變化程度。",
+      "getStarted": "立即開始",
+      "introBody": "公平性儀表板可讓您評定模型效能與公平性之間的權衡取捨",
+      "performance": "成效指標",
+      "performanceInfo": "成效指標可用於評估模型的整體品質，以及每個群組中的模型品質。各群組成效指標極端值之間的差異，會在成效中回報為差距。",
+      "welcome": "歡迎使用"
+    },
+    "Metrics": {
+      "Groups": {
+        "auc": "ROC 曲線下的區域",
+        "average": "平均預測",
+        "classificationAccuracyAndErrorRate": "正確性 / 錯誤率",
+        "custom": "自訂計量",
+        "equalizedOdds": "均等化奇數",
+        "f1_score": "F1 分數",
+        "falseNegativeRate": "誤判為否率 / 未命中率",
+        "falsePositiveRate": "誤判為真率 / 誤檢",
+        "loss": "遺失",
+        "overUnderPrediction": "預測超過及預測不足",
+        "precision": "精確度",
+        "r2_score": "R 平方分數",
+        "regressionError": "錯誤",
+        "selectionRate": "人口均等 / 選取率",
+        "trueNegativeRate": "確判為否 / 明確性",
+        "truePositiveRate": "確判為真率 / 召回率 / 敏感度"
+      },
+      "ROCAUCScoreMin": "最低 ROC AUC 分數",
+      "ROCAUCScoreMinDescription": "所有群組的接收者操作特徵曲線 (ROC AUC) 下的最小區域。",
+      "accuracyDescription": "正確分類的資料點。",
+      "accuracyScore": "正確性",
+      "accuracyScoreDifference": "正確性分數差額",
+      "accuracyScoreDifferenceDescription": "兩個群組中正確性分數的最大差額。",
+      "accuracyScoreMin": "最低正確性分數",
+      "accuracyScoreMinDescription": "所有群組中的最低正確性分數。",
+      "accuracyScoreRatio": "正確性分數比例",
+      "accuracyScoreRatioDescription": "兩個群組中正確性分數的最小比例。",
+      "auc": "ROC 曲線下的區域",
+      "aucDescription": "從負值範例分隔出正值範例的預測品質，以分數檢視。",
+      "average": "平均預測",
+      "balancedAccuracy": "平衡的正確性",
+      "balancedAccuracyDescription": "正值與負值範例會重新加權，使總權重相等。適用於高度不平衡的基礎資料。",
+      "balancedAccuracyScoreMin": "最低平衡的正確性分數",
+      "balancedAccuracyScoreMinDescription": "所有群組在每個類別 (0和1) 上的平均召回率中的最小值。",
+      "balancedRMSEDescription": "正值與負值範例會重新加權，使總權重相等。適用於高度不平衡的基礎資料。",
+      "balancedRootMeanSquaredError": "平衡的均方根誤差",
+      "demographicParityDifference": "人口均等差額",
+      "demographicParityDifferenceDescription": "兩個群組中選取率的最大差額，既是預測標籤為 1 的分數。",
+      "demographicParityRatio": "人口均等比例",
+      "demographicParityRatioDescription": "兩個群組中選取率的最低比例，既是預測標籤為 1 的分數。",
+      "equalizedOddsDifference": "均等化奇數差額",
+      "equalizedOddsDifferenceDescription": "任意兩個群組的確判為真率之間的最大差異或任意兩個群組的誤判為真率之間的最大差異，以較大者為準。",
+      "equalizedOddsRatio": "均等化奇數比例",
+      "equalizedOddsRatioDescription": "任意兩個群組的確判為真率之間的最小比例或任意兩個群組的誤判為真率之間的最小比例，以較小者為準。",
+      "errorRateDifference": "錯誤率差額",
+      "errorRateDifferenceDescription": "任意兩個群組的錯誤率之間的最大差異。",
+      "errorRateRatio": "錯誤率比例",
+      "errorRateRatioDescription": "任意兩個群組的錯誤率之間的最低比例。",
+      "f1Score": "F1 分數",
+      "f1ScoreDescription": "F1 分數是精確度和召回率的調和平均數。",
+      "f1ScoreMin": "最低 F1 分數",
+      "f1ScoreMinDescription": "所有群組中的最低 F1 分數。",
+      "falloutRate": "散落率",
+      "falseNegativeRate": "誤判為否率",
+      "falseNegativeRateDescription": "真實標籤為 1 的資料點當中，被錯誤分類的資料點分數。",
+      "falseNegativeRateDifference": "誤判為否率差額",
+      "falseNegativeRateDifferenceDescription": "任意兩組的誤判為否率之間的最大差額。有時也稱為未命中率差額。",
+      "falseNegativeRateRatio": "誤判為否率比例",
+      "falseNegativeRateRatioDescription": "任意兩個群組的誤判為否率之間的最小比例。有時也稱為未命中率比例。",
+      "falsePositiveRate": "誤判為真率",
+      "falsePositiveRateDescription": "真實標籤為 0 的資料點當中，被錯誤分類的資料點分數。",
+      "falsePositiveRateDifference": "誤判為真率差額",
+      "falsePositiveRateDifferenceDescription": "任意兩組的誤判為真率之間的最大差額。有時也稱為誤檢差額。",
+      "falsePositiveRateRatio": "誤判為真率比例",
+      "falsePositiveRateRatioDescription": "任意兩個群組的誤判為真率之間的最小比例。有時也稱為誤檢比例。",
+      "logLoss": "記錄遺失",
+      "logLossMax": "最大的記錄遺失",
+      "logLossMaxDescription": "所有群組的最大邏輯遺失。",
+      "maxError": "最大誤差",
+      "meanAbsoluteError": "平均絕對誤差",
+      "meanAbsoluteErrorDescription": "誤差絕對值的平均。比 MSE 更不易受極端值影響。",
+      "meanAbsoluteErrorMax": "最大的平均絕對誤差",
+      "meanAbsoluteErrorMaxDescription": "所有群組的最大平均絕對誤差。",
+      "meanSquaredError": " 平均平方誤差",
+      "meanSquaredErrorMax": "最大平均平方誤差",
+      "meanSquaredErrorMaxDescription": "所有群組的最大平均平方誤差。",
+      "meanSquaredLogError": "平均平方對數誤差",
+      "medianAbsoluteError": "絕對誤差中位數",
+      "missRate": "失誤率",
+      "mseDescription": "平方誤差的平均。",
+      "overprediction": "預測過度",
+      "precisionDescription": "在分類為 1 的資料點當中，正確分類的資料點。",
+      "precisionScore": "精確度",
+      "precisionScoreMin": "最低的精確度分數",
+      "precisionScoreMinDescription": "所有群組中的最低精確度分數。",
+      "r2Description": "模型所解釋的標籤變異數。",
+      "r2ScoreMin": "最低 R2 分數",
+      "r2ScoreMinDescription": "所有群組中的最低 R2 分數。",
+      "r2_score": "R 平方分數",
+      "recallDescription": "在 True 標籤為 1 的資料點當中，正確分類的資料點。替代名稱: 確判為真率、敏感度。",
+      "recallScore": "召回率",
+      "recallScoreMin": "最低召回率分數",
+      "recallScoreMinDescription": "所有群組中的最低召回率分數。",
+      "rms_error": "均方根錯誤",
+      "rmseDescription": "平方誤差平均的平方根。",
+      "selectionRate": "選擇率",
+      "specificityScore": "具體程度分數",
+      "trueNegativeRateDifference": "確判為否率差額",
+      "trueNegativeRateDifferenceDescription": "任意兩組的確判為否率之間的最大差額。有時也稱為明確性分數差額。",
+      "trueNegativeRateRatio": "確判為否率比例",
+      "trueNegativeRateRatioDescription": "任意兩個群組的確判為否率之間的最小比例。有時也稱為明確性分數比例。",
+      "truePositiveRateDifference": "確判為真率差額",
+      "truePositiveRateDifferenceDescription": "任意兩個群組的確判為真率之間的最大差額。有時也稱為同等機會差額或召回率分數差額。",
+      "truePositiveRateRatio": "確判為真率比例",
+      "truePositiveRateRatioDescription": "任意兩個群組的確判為真率之間的最小比例。有時也稱為同等機會比例或召回率分數比例。",
+      "underprediction": "預測不足",
+      "zeroOneLoss": "0-1 損失"
+    },
+    "ModelComparison": {
+      "disparity": " 差距 ",
+      "disparityInOutcomes": "預測中的差距",
+      "disparityInPerformance": "{0} 中的差距",
+      "downloadReport": "下載報表",
+      "helpModalText1": "X 軸代表效能，{0} 為最佳。",
+      "helpModalText2": "Y 軸代表公平性計量值，{0} 為最佳。",
+      "higher": "高於",
+      "howToMeasureDisparity": "應如何測量差距?",
+      "howToRead": "如何閱讀此圖表",
+      "howToReadText": "此圖表會將每個 {0} 模型表示為可選取的點。X 軸代表 {1}， {2} 為最佳。Y 軸代表差距，越低越好。",
+      "insights": "關鍵深入解析",
+      "insightsLegacy": "見解",
+      "insightsText2": "{0} 的範圍由 {1} 到 {2}。{3} 的範圍由 {4} 到 {5}。",
+      "insightsText3": "最佳效能的模型得分為 {0}/{1} 和 {2}/{3}。",
+      "insightsText3v1FairnessMetric": "差距",
+      "insightsText4": "最佳公平性計量值的模型得分為 {0}/{1} 和 {2}/{3}。",
+      "introModalText": "每個模型都是一個可選點。按一下或點選模型以進行完整的公平性評定。",
+      "lower": "低於",
+      "period": "。",
+      "rangesFrom": " 範圍從 ",
+      "title": "模型比較",
+      "to": " 至 "
+    },
+    "Performance": {
+      "binary": "二元",
+      "binaryClassifier": "二元分類器",
+      "body": "您的資料包含 {0} 個標籤和 {2} {1} 預測。根據這些資訊，建議您使用下列計量。請從清單中選取一個計量。",
+      "continuous": "連續",
+      "header": "要如何測量成效?",
+      "modelMakes": "模型會建立",
+      "modelsMake": "模型會建立",
+      "probabilisticRegressor": "概率迴歸輸入變數",
+      "regressor": "迴歸輸入變數"
+    },
+    "Report": {
+      "assessmentResults": "評定結果",
+      "backToComparisons": "返回所有模型",
+      "backToComparisonsLegacy": "多重模型檢視",
+      "chartChoiceDropdownHeader": "圖表",
+      "chartChoiceAriaLabel": "圖表選取項目",
+      "classificationOutcomesHowToRead": "橫條圖會顯示各群組中的選擇率，表示分類為 1 的資料點。",
+      "classificationPerformanceHowToRead1": "橫條圖會顯示各群組中的誤差分佈。",
+      "classificationPerformanceHowToRead2": "錯誤會分割成預測過度錯誤 (當 True 標籤為 0 時，預測 1) 及預測不足錯誤 (當 True 標籤為 1 時，預測 0)。",
+      "classificationPerformanceHowToRead3": "以整體群組大小除以錯誤數目來取得回報比率。",
+      "classificationPerformanceHowToReadV2": "橫條圖顯示了每個群組中的誤判為否和誤判為真率。",
+      "collapseSensitiveAttributes": "摺疊敏感性屬性",
+      "distributionOfErrors": "誤差分佈",
+      "distributionOfPredictions": "預測分佈",
+      "editConfiguration": "編輯組態",
+      "expandSensitiveAttributes": "展開敏感性屬性",
+      "falseNegativeRate": "誤判為否率",
+      "falsePositiveRate": "誤判為真率",
+      "globalPerformanceText": "整體為 {0}",
+      "groupLabel": "子群組",
+      "maxTag": "最大值",
+      "minTag": "最小值",
+      "modelName": "模型 {0}",
+      "outcomesTitle": "預測中的差距",
+      "overallLabel": "整體",
+      "overestimationError": "預測過度",
+      "overpredictionExplanation": "(已預測 = 1，True = 0)",
+      "performanceChartHeaderBinaryClassification": "誤判為真和誤判為否率",
+      "performanceChartHeaderProbability": "預測超過及預測不足",
+      "performanceChartHeaderRegression": "誤差分佈",
+      "performanceDisparityText": "為 {0} 中的差距",
+      "probabilityPerformanceHowToRead1": "橫條圖會顯示各群組的平均絕對誤差，分割成預測過度及預測不足。",
+      "probabilityPerformanceHowToRead2": "在每個範例中，我們都會測量預測與標籤之間的差異。若是正數，我們稱為預測過度; 若是負數，我們稱為預測不足。",
+      "probabilityPerformanceHowToRead3": "我們回報了預測過度誤差總和及預測不足誤差總和除以整體群組大小。",
+      "regressionOutcomesHowToRead": "盒狀圖會顯示各群組中的預測分佈。個別資料點會重疊在上方。",
+      "regressionPerformanceHowToRead": "誤差是預測與標籤之間的差異。盒狀圖會顯示各群組中的誤差分佈。個別資料點會重疊在上方。",
+      "title": "成效差距",
+      "tooltipError": "錯誤: {0}",
+      "tooltipPrediction": "預測: {0}",
+      "underestimationError": "預測不足",
+      "underpredictionExplanation": "(已預測 = 0，True = 1)"
+    },
+    "attributes": "屬性",
+    "attributesCount": "{0} 個敏感性特徵",
+    "calculating": "正在計算...",
+    "close": "關閉",
+    "dataSpecifications": "資料統計資料",
+    "defaultClassNames": "類別 {0}",
+    "defaultCustomMetricName": "自訂計量 {0}",
+    "defaultFeatureNames": "敏感性特徵 {0}",
+    "defaultSingleFeatureName": "敏感性特徵",
+    "done": "完成",
+    "errorOnInputs": "輸入發生錯誤。敏感性特徵目前必須是類別目錄值。請將值對應至組界類別，然後重試。",
+    "fairnessMetric": "03 公平性計量",
+    "instanceCount": "{0} 個實例",
+    "loremIpsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "modelComparisonTab": "模型比較",
+    "opportunityTab": "商機公平性",
+    "performanceMetric": "02 效能計量",
+    "performanceMetricLegacy": "效能計量",
+    "performanceTab": "成效公平性",
+    "sensitiveFeatures": "01 敏感性特徵",
+    "singleAttributeCount": "1 個敏感性特徵",
+    "tableTab": "詳細資料檢視"
+  },
+  "Interpret": {
+    "AggregateImportance": {
+      "featureLabel": "特徵: {0}",
+      "high": "高",
+      "importanceLabel": "重要度: {0}",
+      "low": "低",
+      "noColor": "無",
+      "predictedClass": "預測類別",
+      "predictedClassTooltip": "預測類別: {0}",
+      "predictedOutputTooltip": "預測輸出: {0}",
+      "predictedValue": "預測值",
+      "scaledFeatureValue": "縮放的特徵值",
+      "tooManyRows": "提供的資料集超過這個圖表可支援的大小",
+      "topKFeatures": "前 K 個特徵:",
+      "topKInfo": "計算出前 k 項的方法",
+      "trueClass": "實際類別",
+      "trueClassTooltip": "實際類別: {0}",
+      "trueOutputTooltip": "實際輸出: {0}",
+      "trueValue": "實際值",
+      "valueLabel": "特徵值: {0}"
+    },
+    "AxisConfigDialog": {
+      "TreatAsCategorical": "視為類別",
+      "apply": "套用",
+      "binLabel": "對資料套用量化",
+      "countHelperText": "包含點數的長條圖",
+      "ditherLabel": "應該遞色",
+      "groupByCohort": "依世代分組",
+      "logarithmicScaling": "啟用對數縮放",
+      "numOfBins": "量化數目",
+      "selectClass": "選取類別",
+      "selectFeature": "選取特徵",
+      "selectFilter": "選取您的軸值"
+    },
+    "BarChart": {
+      "absoluteGlobal": "絕對全域",
+      "absoluteLocal": "絕對局部",
+      "calculatingExplanation": "正在計算解釋",
+      "classLabel": "類別: {0}",
+      "noData": "沒有資料",
+      "sortBy": "排序方式"
+    },
+    "Charts": {
+      "cohort": "世代",
+      "count": "計數",
+      "countTooltipPrefix": "計數: {0}",
+      "featureImportance": "特徵重要度",
+      "featurePrefix": "特徵",
+      "howToRead": "如何讀取此圖表",
+      "importancePrefix": "重要度",
+      "numberOfDatapoints": "資料點數目",
+      "rowIndex": "資料列索引",
+      "absoluteIndex": "絕對索引",
+      "xValue": "X 值",
+      "yValue": "Y 值"
+    },
+    "Cohort": {
+      "cohort": "世代",
+      "defaultLabel": "所有資料",
+      "temporaryCohort": "暫時世代"
+    },
+    "CohortBanner": {
+      "addCohort": "新世代",
+      "binaryClassifier": "二進位分類器",
+      "copy": " 複製",
+      "dataStatistics": "資料統計資料",
+      "datapoints": "{0} 個資料點",
+      "datasetCohorts": "資料集世代",
+      "details": "詳細資料",
+      "duplicateCohort": "重複",
+      "edit": "編輯",
+      "editCohort": "編輯世代",
+      "features": "{0} 個特徵",
+      "filters": "{0} 個篩選",
+      "multiclassClassifier": "多類別分類器",
+      "name": "名稱",
+      "regressor": "迴歸輸入變數"
+    },
+    "CohortEditor": {
+      "columns": {
+        "index": "索引",
+        "dataset": "資料集",
+        "predictedY": "預測的 Y",
+        "trueY": "實際的 Y",
+        "classificationOutcome": "分類結果",
+        "regressionError": "錯誤"
+      },
+      "TreatAsCategorical": "視為類別",
+      "TreatAsCategoricalAriaLabelChecked": "Treat as categorical checked, number of unique values: {0}",
+      "TreatAsCategoricalAriaLabelUnchecked": "Treat as categorical unchecked, min value: {0}, max value: {1}",
+      "addFilter": "新增篩選",
+      "addFilterAriaLabel": "新增世代篩選",
+      "addedFilters": "篩選",
+      "cancel": "取消",
+      "cancelAriaLabel": "取消世代",
+      "cancelExistingCohort": "確定要取消編輯新的世代並返回嗎?",
+      "cancelNewCohort": "確定要取消建立新的世代並返回嗎?",
+      "cancelNo": "否",
+      "cancelTitle": "取消世代",
+      "cancelYes": "是",
+      "cohortNameError": "缺少世代名稱",
+      "cohortNameDupError": "已存在相同名稱的世代。",
+      "cohortNameLabel": "資料集世代名稱",
+      "cohortNamePlaceholder": "為您的世代命名",
+      "clearAllFilters": "清除所有篩選",
+      "defaultFilterState": "選取篩選以將參數加入您的資料集世代。已預先填入您目前檢視世代的篩選。",
+      "delete": "刪除",
+      "deleteAriaLabel": "刪除世代",
+      "invalidValueError": "值應介於 {0} 到 {1} 之間。",
+      "minimumGreaterThanMaximum": "最小輸入值必須小於最大輸入值。",
+      "noAddedFilters": "沒有任何篩選",
+      "placeholderName": "世代 {0}",
+      "save": "儲存",
+      "saveAriaLabel": "儲存世代",
+      "saveAndSwitch": "儲存並切換",
+      "selectFilter": "選取篩選",
+      "noFiltersApplied": "未套用任何篩選條件",
+      "filterAdded": "已新增篩選"
+    },
+    "Columns": {
+      "classificationOutcome": "分類結果",
+      "dataset": "資料集",
+      "error": "錯誤",
+      "falseNegative": "誤判為否",
+      "falsePositive": "誤判為真",
+      "none": "計數",
+      "predictedProbabilities": "預測機率",
+      "predictedLabels": "預測的標記",
+      "trueLabels": "True 的標記",
+      "regressionError": "迴歸錯誤",
+      "trueNegative": "確判為否",
+      "truePositive": "確判為真",
+      "correctlyClassified": "正確分類",
+      "misclassified": "分類錯誤"
+    },
+    "CrossClass": {
+      "absoluteValInfo": "絕對值的平均值: 顯示所有可能類別的特徵重要度總和，除以類別數目",
+      "close": "關閉",
+      "crossClassWeights": "跨類別權數",
+      "enumeratedClassInfo": "列舉的類別名稱: 只顯示所有資料點中指定類別的特徵重要度值。",
+      "info": "跨類別計算的資訊",
+      "label": "跨類別加權:",
+      "overviewInfo": "多類別模型會為每個類別產生獨立的特徵重要度向量。每個類別的特徵重要度向量會呈現出哪些特徵較有可能或較不可能構成某個類別。您可以選取如何將每個類別特徵重要度向量的權數摘要成單一值:",
+      "predictedClassInfo": "預測類別: 為指定點的預測類別顯示特徵重要度值"
+    },
+    "DatasetExplorer": {
+      "aggregatePlots": "彙總繪圖",
+      "chartType": "圖表類型",
+      "colorValue": "色彩值",
+      "infoTitle": "資料分析圖表檢視的其他資訊",
+      "helperText": "建立資料集世代以依篩選分析資料集統計資料，例如預測成果、資料集特徵和錯誤群組。了解資料集中的代表性過度/代表性不足。",
+      "individualDatapoints": "個別資料點",
+      "missingParameters": "此索引標籤需要提供評估資料集。",
+      "noColor": "無",
+      "datasetCohortDropdown": "資料集世代"
+    },
+    "DependencePlot": {
+      "featureImportanceOf": "特徵重要度:",
+      "placeholder": "選取特徵以顯示其相依性繪圖"
+    },
+    "ExplanationScatter": {
+      "class": "類別: ",
+      "colorValue": "色彩:",
+      "count": "計數",
+      "dataGroupLabel": "資料",
+      "dataLabel": "資料 : {0}",
+      "importanceLabel": "重要度 : {0}",
+      "index": "索引",
+      "output": "輸出",
+      "predictedY": "預測的 Y",
+      "odIncorrect": "不正確",
+      "odCorrect": "正確",
+      "probabilityLabel": "機率 : {0}",
+      "trueY": "實際的 Y",
+      "xValue": "X 值:",
+      "yValue": "Y 值:"
+    },
+    "ExplanationSummary": {
+      "clickHere": "深入了解",
+      "limeDescription": "此解釋器使用 LIME，這提供了模型的線性近似值。若要取得解釋，會執行下列動作: 擾動該執行個體、取得模型預測，並使用這些預測作為標籤，以了解局部忠實的稀疏線性模型。此線性模型的權數會作為「特徵重要度」。按一下下方連結以深入了解。",
+      "limeTitle": "LIME (局部可理解的模型無關解釋法)",
+      "mimicDescription": "此解釋器根據訓練全域代理模型的概念來模仿黑箱模型。全域代理模型為一種內部可解釋的模型，經過訓練能夠盡可能正確地近似任何黑箱模型的預測。特徵重要度值是基礎代理模型 (LightGBM、線性迴歸、或隨機梯度下降法或決策樹) 的模型式特徵重要度值。",
+      "mimicTitle": "模仿 (全域代理解釋)",
+      "pfiDescription": "此解釋器針對整個資料集的資料，隨機地一次解釋一個特徵，並計算偏好變數的效能計量 (預設效能計量: F1 用於二進位分類，具有微平均值的 F1 分數用於多元分類，而平均絕對誤差用於迴歸)。變數越大，特徵就越重要。此解釋器只能解釋基礎模型的整體行為，而不會解釋個別的預測。透過擾動該特定特徵，特徵的特徵重要度代表模型效能中的差異。",
+      "pfiTitle": "排列特徵重要度 (PFI)",
+      "shapDescription": "此解釋器使用 SHAP，這是一種從遊戲理論來解釋模型的方法，透過邊緣化將模型中的那些特徵「隱藏」以測量特徵集的重要度。按下方連結以深入了解。",
+      "shapTitle": "夏普利值",
+      "whatDoFeatureMean": "這些功能重要性值的含義為何?"
+    },
+    "FeatureImportanceWrapper": {
+      "barText": "橫條圖",
+      "beehiveText": "群集",
+      "boxText": "方塊",
+      "chartType": "圖表類型:",
+      "globalImportanceExplanation": "全域特徵重要度的計算方法，是先算出所有點之特徵重要度的絕對值，再計算該絕對值的平均值 (L1 正規化)。 ",
+      "multiclassImportanceAddendum": "計算特徵對所有類別的重要度時，所有點皆會予以計入，而不會使用差異加權。因此，若特徵對於許多預測不屬於「A 類別」的點具有重大負面重要度，將會大幅增加該特徵的「A 類別」重要度。",
+      "violinText": "小提琴"
+    },
+    "FilterOperations": {
+      "equals": " 等於 {0}",
+      "excludes": " 排除 {0} ",
+      "greaterThan": " 大於 {0}",
+      "greaterThanEquals": " 大於或等於 {0}",
+      "inTheRangeOf": "[ {0} ]",
+      "includes": " 包含 {0} ",
+      "lessThan": " 小於 {0}",
+      "lessThanEquals": " 小於或等於 {0}",
+      "overflowFilterArgs": "{0} 和其他 {1} 個"
+    },
+    "Filters": {
+      "categoricalIncludeValues": "包含的值:",
+      "equalComparison": "等於",
+      "greaterThanComparison": "大於",
+      "greaterThanEqualToComparison": "大於或等於",
+      "inTheRangeOf": "介於範圍",
+      "lessThanComparison": "小於",
+      "lessThanEqualToComparison": "小於或等於",
+      "max": "最大值: {0}",
+      "maximum": "最大值",
+      "min": "最小值: {0}",
+      "minimum": "最小值",
+      "numericValue": "值",
+      "numericalComparison": "作業",
+      "uniqueValues": "# 個唯一值: {0}"
+    },
+    "GlobalOnlyChart": {
+      "helperText": "探索影響您整體模型預測的前 k 項重要特徵。使用滑桿顯示遞減的特徵重要度。"
+    },
+    "GlobalTab": {
+      "absoluteValues": "以絕對值檢視",
+      "aggregateFeatureImportance": "彙總特徵重要度",
+      "collapsedHelperText": "探索影響您的整體模型預測的前 k 個重要特徵。",
+      "datapoint": "資料點",
+      "datasetCohortSelector": "選取資料集世代",
+      "datasetCohorts": "資料集世代",
+      "datasetRequired": "依存性繪圖需要評估資料集與區域特徵重要度陣列。",
+      "dependencePlotFeatureSelectPlaceholder": "選取特徵",
+      "dependencePlotHelperText": "此依存性繪圖顯示特徵值以及與特徵對應之特徵重要度值的關聯性。",
+      "dependencePlotTitle": "依存性繪圖",
+      "helperText": "探索影響整體模型預測的前 k 大重要特徵 (亦即全域解釋)。使用滑桿顯示遞減的特徵重要性度。所有世代的特徵重要度會並排顯示，並可透過選取圖例中的世代加以關閉切換。按一下圖表中的任一特徵，以在下面查看選取的特徵值如何影響預測的密度繪圖。",
+      "infoTitle": "彙總特徵重要度的其他資訊",
+      "legendHelpText": "按一下圖例項目，即可在繪圖中將世代切換為開啟或關閉。",
+      "missingParameters": "此索引標籤需要提供局部特徵重要度參數。",
+      "sortByCohort": "依世代排序",
+      "sortBy": "依資料點排序",
+      "topAtoB": "主要 {0} 特徵 (依重要度)",
+      "viewDependencePlotFor": "檢視依存性繪圖:",
+      "weightOptions": "類別重要度權數",
+      "weightOptionsDropdown": "類別重要度權數下拉式清單"
+    },
+    "IcePlot": {
+      "close": "關閉",
+      "errorPrefix": "發生的錯誤: {0}",
+      "featurePickerLabel": "特徵:",
+      "integerError": "必須為整數",
+      "loadingMessage": "正在載入資料...",
+      "maximumInputLabel": "最大值:",
+      "minimumInputLabel": "最小值:",
+      "noModelError": "請提供經操作化的模型，以在 ICE 繪圖中探索預測。",
+      "numericError": "必須為數字",
+      "predictedProbability": "預測的機率",
+      "prediction": "預測",
+      "predictionLabel": "預測: {0}",
+      "probabilityLabel": "機率: {0}",
+      "pythonError": "Python 錯誤",
+      "stepInputLabel": "步驟:",
+      "submitPrompt": "提交範圍以檢視 ICE 繪圖",
+      "topLevelErrorMessage": "參數有誤"
+    },
+    "ModelPerformance": {
+      "cohortPickerLabel": "選取要探索的資料集世代",
+      "helperText": "探索您的預測值分佈與模型效能計量的值，以評估您的模型效能。您可以查看資料集不同世代或子群組之間的效能比較分析，以進一步調查您的模型。選取 y 值及 x 值上的篩選，以穿越不同維度。",
+      "missingParameters": "此索引標籤需要提供模型的預測值陣列。",
+      "missingTrueY": "除了預測結果以外，模型效能統計資料還需要提供真實結果",
+      "modelStatistics": "模型統計資料"
+    },
+    "PerturbationExploration": {
+      "loadingMessage": "正在載入...",
+      "perturbationLabel": "擾動:"
+    },
+    "PredictionLabel": {
+      "predictedClassLabel": "預測類別 : {0}",
+      "predictedValueLabel": "預測值 : {0}"
+    },
+    "Statistics": {
+      "accuracy": "正確性: {0}",
+      "bleuScore": "Bleu 分數: {0}",
+      "bertScore": "Bert 分數: {0}",
+      "exactMatchRatio": "完全符合比率: {0}",
+      "rougeScore": "Rouge 分數: {0}",
+      "fnr": "誤判為否率: {0}",
+      "fpr": "誤判為真率: {0}",
+      "hammingScore": "Hamming 分數: {0}",
+      "meanPrediction": "平均預測 {0}",
+      "meteorScore": "Meteor 分數: {0}",
+      "mse": "平均平方誤差: {0}",
+      "precision": "精確度: {0}",
+      "rSquared": "R²: {0}",
+      "recall": "召回率: {0}",
+      "selectionRate": "選擇率: {0}",
+      "mae": "平均絕對誤差: {0}",
+      "f1Score": "F1 分數: {0}",
+      "samples": "樣本大小: {0}",
+      "meanAveragePrecision": "平均精確度均值: {0}",
+      "averagePrecision": "平均精確度: {0}",
+      "averageRecall": "平均資料總管: {0}"
+    },
+    "ValidationErrors": {
+      "addFilters": "新增篩選",
+      "datasizeError": "選取的世代太大。請新增篩選以縮小該世代。",
+      "datasizeWarning": "評估資料集太大，無法有效地顯示在某些圖表中。請新增篩選以縮小該世代。 ",
+      "errorHeader": "某些輸入參數不一致，將不予採用: ",
+      "evalData": "評估資料集",
+      "globalFeatureImportance": "全域特徵重要度",
+      "inconsistentDimensions": "維度不一致。{0} 的維度是 {1}，但預期為 {2}",
+      "localFeatureImportance": "局部特徵重要度",
+      "notArray": "{0} 不是陣列。必須是維度 {1} 的陣列",
+      "notNonEmpty": "{0} 輸入不是非空白陣列",
+      "predictedProbability": "預測的機率",
+      "predictedY": "預測的 Y",
+      "varyingLength": "維度不一致。{0} 有不同長度的元素"
+    },
+    "Violin": {
+      "groupBy": "群組依據",
+      "groupNone": "未分組",
+      "groupPredicted": "預測的 Y",
+      "groupTrue": "實際的 Y"
+    },
+    "WhatIf": {
+      "closeAriaLabel": "關閉",
+      "defaultCustomRootName": "資料列 {0} 的複本",
+      "filterFeaturePlaceholder": "搜尋特徵"
+    },
+    "WhatIfTab": {
+      "IceGetStartedText": "選取一個點或建立一個假設點以檢視 ICE 繪圖",
+      "classLabel": "類別: {0}",
+      "classPickerLabel": "類別",
+      "cohortPickerLabel": "選取要探索的資料集世代",
+      "dataPointInfo": "資料點資訊",
+      "deltaLabel": "差異",
+      "disclaimer": "免責聲明: 這些是以許多近似值為依據的解釋，而不是預測的「原因」。若在因果推論上沒有嚴謹的數據穩定性，我們並不建議使用者根據這個工具制定實際決策。",
+      "featureImportanceGetStartedText": "在上表中選取資料點，以檢視其局部特徵重要度",
+      "featureImportanceLackingParameters": "提供局部特徵重要度，以了解各個特徵如何影響個別預測。",
+      "featureImportancePlot": "特徵重要度繪圖",
+      "featureValues": "特徵值",
+      "helperText": "透過按一下散佈圖中的資料點來選取單個資料點，以在下面檢視其局部特徵重要度值，並在右側面板中檢視特徵值。",
+      "iceLackingParameters": "ICE 繪圖需要可操作的模型，才可為假設資料點做預測。",
+      "icePlot": "個別條件預測 (ICE) 繪圖",
+      "icePlotHelperText": "ICE 繪圖示範所選資料點的預測值，如何按照最小值與最大值之間的特徵值範圍發生變化。",
+      "indexLabel": "資料索引",
+      "loading": "正在載入...",
+      "localFeatureImportanceForPoint": "選取資料點的局部特徵重要度",
+      "maxLabel": "最大值",
+      "minLabel": "最小值",
+      "missingParameters": "此索引標籤需要提供評估資料集。",
+      "newPredictedClass": "新的預測類別: ",
+      "newPredictedValue": "新的預測值: ",
+      "newProbability": "新的機率: ",
+      "nonNumericValue": "值應為數字",
+      "noneCreatedYet": "尚未建立任何項目",
+      "noneSelectedYet": "尚未選取任何項目",
+      "notAvailable": "Studio 目前不支援 What-If。在 Jupyter 筆記本中執行此小工具，以啟用 What-If。",
+      "panelPlaceholder": "需要模型才能對新的資料點進行預測。",
+      "predictedClass": "預測的類別: ",
+      "predictedValue": "預測值: ",
+      "probability": "機率: ",
+      "probabilityLabel": "機率",
+      "realPoint": "實際資料點",
+      "rowLabel": "資料列 {0}",
+      "saveAsNewPoint": "另存為新點",
+      "saveChanges": "儲存變更",
+      "scatterLegendText": "按一下圖例項目，即可在繪圖中將資料點切換為開啟或關閉。",
+      "selectionLimit": "最多選取 3 個點",
+      "showLabel": "顯示:",
+      "stepsLabel": "步驟",
+      "tooltipTitleFew": "預測類別",
+      "tooltipTitleMany": "前 {0} 個預測類別",
+      "trueClass": "True 類別: ",
+      "trueValue": "True 值: ",
+      "trueValue.comment": "迴歸實際標籤的前置詞",
+      "whatIfDatapoint": "假設狀況資料點",
+      "whatIfDatapoints": "假設資料點",
+      "whatIfHelpText": "在繪圖上選取一個點，或手動輸入已知的資料點索引以用於擾動，並另存為新的假設點。",
+      "whatIfNameLabel": "假設資料點名稱",
+      "whatIfTooltipTitle": "假設狀況預測類別"
+    },
+    "absoluteAverage": "絕對值的平均",
+    "aggregateFeatureImportance": "彙總特徵重要度",
+    "calloutTitle": "按一下即可取得資訊",
+    "clearSelection": "清除選取",
+    "dataExploration": "資料集探索",
+    "datasetExplorer": "資料集總管",
+    "defaultClassNames": "類別 {0}",
+    "defaultFeatureNames": "特徵 {0}",
+    "explanationExploration": "解釋探索",
+    "feature": "特徵:",
+    "featureImportance": "特徵重要度",
+    "featureImportanceOf": "{0} 的特徵重要度",
+    "globalImportance": "全球重要性",
+    "ice": "ICE",
+    "individualAndWhatIf": "個別特徵重要度與假設狀況",
+    "individualImportance": "個別特徵重要度",
+    "intercept": "截距",
+    "localFeatureImportance": "本機特徵重要度",
+    "modelPerformance": "模型效能",
+    "perturbationExploration": "擾動探索",
+    "predictedClass": "預測類別",
+    "selectPoint": "選取點以查看其區域解釋",
+    "summaryImportance": "彙總重要度"
+  },
+  "InterpretText": {
+    "View": {
+      "interpretibilityDashboard": "可解譯性儀表板",
+      "importantWords": "顯示最重要的字詞",
+      "topFeatureList": "熱門特徵清單分析",
+      "allButton": "所有特徵",
+      "negButton": "負特徵",
+      "posButton": "正面特徵",
+      "legendText": "正純量特徵重要度代表文字對所選標籤分類的重要度，而負純量特徵重要度代表鼓勵模型遠離所選標籤的文字。",
+      "legendTextForQA": "左側文字方塊和橫條圖顯示模型的預測。右側文字方塊顯示與選取權杖相關聯的特徵重要性。正面特徵重要性代表文字重要的範圍，用來將選取的權杖標示為答案的起始/結束位置。",
+      "label": "標籤",
+      "colon": ": ",
+      "startingPosition": "開始位置",
+      "endingPosition": "結束位置",
+      "predictedAnswer": "預測的答案:",
+      "trueAnswer": "正確答案:",
+      "inputs": "輸入",
+      "outputs": "輸出",
+      "sliderAriaLabel": "重要字詞的滑桿"
+    },
+    "Legend": {
+      "featureLegend": "文字特徵圖例",
+      "posFeatureImportance": "負面特徵重要度",
+      "negFeatureImportance": "負面特徵重要性",
+      "cls": "CLS: 句子開頭",
+      "sep": "SEP:句子結尾",
+      "selectedWord": "選取的字:"
+    },
+    "BarChart": {
+      "featureImportance": "特徵重要度"
+    }
+  },
+  "InterpretVision": {
+    "Cohort": {
+      "close": "關閉",
+      "errorCohortName": "請選擇唯一的世代名稱。",
+      "errorNumSelected": "請至少選取一 (1) 個項目。",
+      "itemsSelectedSingular": "已選取項目",
+      "itemsSelectedPlural": "已選取項目",
+      "save": "儲存世代",
+      "saveAndClose": "儲存並關閉",
+      "saveAndSwitch": "儲存並切換",
+      "textField": "新世代名稱",
+      "title": "儲存新世代"
+    },
+    "Dashboard": {
+      "allData": "所有資料",
+      "columnOne": "影像",
+      "columnTwo": "索引",
+      "columnThree": "實際的 Y",
+      "columnFour": "預測的 Y",
+      "columnThreeOD": "正確",
+      "columnFourOD": "不正確",
+      "columnFive": "其他中繼資料",
+      "chooseObject": "選擇偵測到的物件",
+      "examples": "範例",
+      "filter": "篩選",
+      "indexLabel": "影像 ",
+      "labelTypeDropdown": "選取標記類型",
+      "labelTypeAriaLabel": "標籤類型",
+      "labelVisibilityDropdown": "選取要顯示的標記",
+      "labelVisibilityAriaLabel": "標籤可見度",
+      "legendFailure": "失敗",
+      "legendSuccess": "成功",
+      "loading": "正在計算索引映像的說明",
+      "multiselect": "多重選取",
+      "notdefined": "物件案例未定義",
+      "objectSelect": "物件選取項目",
+      "pageSize": "頁面大小: ",
+      "panelTitle": "選取的執行個體",
+      "panelExplanation": "說明",
+      "panelInformation": "資訊",
+      "predictedLabel": "預測標記",
+      "predictedY": "預測: ",
+      "correctDetections": "正確的偵測: ",
+      "incorrectDetections": "不正確的偵測: ",
+      "prefix": "物件: ",
+      "rows": "資料列: ",
+      "rowsAriaLabel": "每頁的資料列數目",
+      "search": "搜尋",
+      "selectAll": "全選",
+      "settings": "設定",
+      "showAll": "全部顯示",
+      "tabOptionFirst": "影像總管檢視",
+      "tabOptionSecond": "資料表檢視",
+      "tabOptionThird": "類別檢視",
+      "thumbnailSize": "縮圖大小",
+      "titleBarError": "錯誤實例",
+      "titleBarSuccess": "成功實例",
+      "trueY": "地面事實: "
+    }
+  },
+  "ModelAssessment": {
+    "AddingTab": {
+      "AddButtonText": "新增",
+      "CalloutContent": "新增部分元件 (錯誤樹狀檢視、錯誤熱度圖) 可讓您篩選從下方元件中所看到的全域世代資料。",
+      "AddComponentAriaLabel": "新增儀表板元件",
+      "AddButtonAriaLabel": "加入儀表板",
+      "CalloutTitle": "新增元件",
+      "TabAddedMessage": {
+        "DataAnalysis": "已新增資料分析元件",
+        "FeatureImportances": "已新增特徵重要度元件",
+        "ErrorAnalysis": "已新增錯誤分析元件",
+        "Fairness": "已新增公平性元件",
+        "ModelOverview": "已新增模型概觀元件",
+        "CausalAnalysis": "已新增原因分析元件",
+        "Counterfactuals": "已新增反事實元件",
+        "Vision": "已新增視覺資料總管元件",
+        "Forecasting": "已新增趨勢預測假設狀況元件"
+      }
+    },
+    "CausalAnalysis": {
+      "Table": {
+        "ciLower": "信賴區間 (下限)",
+        "ciUpper": "信賴區間 (上限)",
+        "name": "特徵",
+        "pValue": "P-value",
+        "point": "效果估計",
+        "stderr": "標準錯誤",
+        "zstat": "Z 分數"
+      }
+    },
+    "Cohort": {
+      "apply": "套用",
+      "delete": "刪除",
+      "deleteAriaLabel": "刪除世代",
+      "cancel": "取消",
+      "cancelAriaLabel": "取消世代",
+      "cohortInfo": "世代資訊",
+      "cohortList": "世代清單",
+      "deleteCohort": "刪除 {0}?",
+      "deleteConfirm": "確定要刪除此世代嗎?",
+      "selectCohort": "選取世代",
+      "selectCohortAriaLabel": "世代選取項目",
+      "shiftCohort": "切換世代",
+      "shiftCohortAriaLabel": "切換世代",
+      "shiftCohortDescription": "從世代清單中選取世代。將世代套用到儀表板。"
+    },
+    "CohortInformation": {
+      "ShiftCohort": "切換世代",
+      "SwitchTimeSeries": "切換時間系列",
+      "NewCohort": "新世代",
+      "DataPoints": "資料點數目",
+      "DefaultCohort": " (預設值)",
+      "Filters": "篩選數目",
+      "GlobalCohort": "全域世代: "
+    },
+    "CohortSettings": {
+      "CohortSettingsDescription": "全域世代是透過手動新增篩選或在錯誤分析元件中儲存選取的群組而建立的資料子集。檢視、建立、編輯、複製及刪除世代。",
+      "CohortSettingsTitle": "世代設定"
+    },
+    "ComponentNames": {
+      "ChartView": "圖表檢視",
+      "CausalAnalysis": "原因分析",
+      "Counterfactuals": "反事實",
+      "DataAnalysis": "資料分析",
+      "DataBalance": "資料平衡",
+      "DataExplorer": "資料總管",
+      "ErrorAnalysis": "錯誤分析",
+      "Fairness": "公平性",
+      "FeatureImportances": "特徵重要度",
+      "Forecasting": "預測",
+      "ModelOverview": "模型概觀",
+      "TableView": "資料表檢視",
+      "VisionTab": "視覺資料總管"
+    },
+    "DashboardSettings": {
+      "Content": "此清單顯示儀表板的版面配置。您可以使用錯誤分析元件篩選資料，在下方的元件中檢視資料。",
+      "DashboardComponents": "儀表板元件",
+      "DataPoints": "資料點數目",
+      "DeleteDialog": {
+        "Cancel": "取消",
+        "Content": "您確定要刪除 {0} 嗎?",
+        "Delete": "刪除",
+        "Title": "要刪除 {0} 嗎?"
+      },
+      "Title": "儀表板設定"
+    },
+    "DataBalance": {
+      "AggregateBalanceMeasures": {
+        "Callout": {
+          "Description": "彙總匯總平衡量值可讓我們對資料集取得較高的不等式概念。這些是根據我們感興趣的資料行集計算，而不相依於標籤資料行。這些量值會查看所有感興趣資料行之特徵值組合的記錄分佈。",
+          "Title": "什麼是彙總平衡量值?"
+        },
+        "Measures": {
+          "AtkinsonIndex": {
+            "Description": "「Atkinson 指數」是一種收入不平等的量值，它呈現給定社會為了在其居民之間擁有更多相等收入所必須占之總收入的百分比。對於資料集，這代表需要置放才能擁有與所需資料行完全平衡之資料集的記錄百分比。指數介於 0 和 1 之間，其中較小的指數值表示不平等層級較低。",
+            "Name": "阿金森指標"
+          },
+          "TheilLIndex": {
+            "Description": "「戴爾指數」是收入不平等的量值，其計算方式是使用 α = 0 的 [一般化熵指數]，因此它對分佈較低端的差異比較敏感。這個指數更能擷取資料集中不會太頻繁出現的記錄組合。它也稱為平均記錄偏差量值。",
+            "Name": "戴爾指數 (L)"
+          },
+          "TheilTIndex": {
+            "Description": "「戴爾指數」是收入不平等的量值，其計算方式是使用 α = 1 的 [一般化熵指數]，因此它對分佈較高端的差異比較敏感。這個指數可以更清楚擷取資料集中經常出現的記錄組合。",
+            "Name": "戴爾指數 (T)"
+          }
+        },
+        "MeasuresNotComputed": "未計算彙總平衡量值。若要計算，請確定: (1)工作類型為 「分類」，(2)類別功能清單有效且非空白，(3)計算深入解析時不會擲回錯誤。",
+        "Name": "彙總平衡量值",
+        "Table": {
+          "Description": "描述",
+          "FeatureName": "特徵名稱",
+          "FeatureValue": "特徵值"
+        }
+      },
+      "DistributionBalanceMeasures": {
+        "Callout": {
+          "Description": "分佈平衡量值可讓我們比較資料與參考一致化分佈。這些量值是依據相關資料行計算，且不相依於標籤資料行。",
+          "Title": "什麼是分佈平衡量值?"
+        },
+        "Chart": {
+          "Axes": {
+            "DistributionMeasure": "分佈量值",
+            "MeasureValue": "量值"
+          },
+          "Title1": "正在比較",
+          "Title2": "具有一致化分佈"
+        },
+        "Measures": {
+          "ChiSquarePValue": {
+            "Description": "卡方檢定的 p 值為 Null 假設提供證明，假設觀察到的和預期頻率的差異是隨機的。",
+            "Name": "卡方 P 值"
+          },
+          "ChiSquareStatistic": {
+            "Description": "卡方檢定會驗證 Null 假設，當類別資料與每個類別中的預期頻率比較時，類別資料具有指定的頻率。",
+            "Name": "卡方 (χ2) 統計"
+          },
+          "CrossEntropy": {
+            "Description": "兩個機率分佈之間的交叉熵也稱為記錄遺失，是一種資訊理論上的量值，計算資料集機率分佈的負總和乘以參考機率分佈的記錄。",
+            "Name": "交叉熵"
+          },
+          "InfiniteNormDistance": {
+            "Description": "無限範數距離，又稱為切比雪夫距離或棋盤距離，是表示兩個向量之間的距離是沿著任何座標維度的最大差異的量值。量值不是負數，值為 0 表示兩個分佈相等。",
+            "Name": "無限範數距離"
+          },
+          "JSDistance": {
+            "Description": "Jensen-Shannon (JS) 散度會測量兩個機率分佈之間的相似性。這是 Kullback-Leibler (KL) 不一致的對稱且平滑化版本，以及 JS 不一致的平方根。範圍為 [0, 1]，其中量值為 0 表示分佈完全平衡。",
+            "Name": "Jensen-Shannon 距離"
+          },
+          "KLDivergence": {
+            "Description": "「Kullback-Leibler (KL) 散度」是一個機率分佈與第二個機率分佈的不同程度。這代表當一個分佈用來估計另一個分佈時遺失的資訊量。量值不是負數，值為 0 表示兩個分佈相等。",
+            "Name": "Kullback-Leibler 散度"
+          },
+          "TotalVariationDistance": {
+            "Description": "總變化距離等於兩個分佈之間的半曼哈頓 (L1) 距離。它是使用兩個分佈間絕對值差異的總和計算而計算的。量值不是負數，值為 0 表示兩個分佈相等。",
+            "Name": "全變差距離"
+          },
+          "WassersteinDistance": {
+            "Description": "Wasserstein 距離也稱為動土者距離，因為它可以視為將一個分佈轉換成另一個分佈所需的最小「工作」量。工作是以必須移動的分佈權數，乘以必須移動的距離來計算。量值不是負數，值為 0 表示兩個分佈相等。",
+            "Name": "Wasserstein 距離"
+          }
+        },
+        "MeasuresNotComputed": "未計算分佈平衡量值。若要計算，請確定: (1)工作類型為 「分類」，(2)類別功能清單有效且非空白，(3)計算深入解析時不會擲回錯誤。",
+        "Name": "分佈平衡量值"
+      },
+      "FeatureBalanceMeasures": {
+        "Callout": {
+          "Description": "功能平衡量值可讓我們了解每個特徵值的組合是否以平衡機率接收正結果 (真預測)。",
+          "Title": "什麼是特徵平衡量值?"
+        },
+        "Chart": {
+          "Axes": {
+            "ClassA": "類別 A",
+            "ClassB": "類別 B"
+          },
+          "Tooltip": {
+            "And": "和",
+            "ValueDescription1": "有一個",
+            "ValueDescription2": "/"
+          }
+        },
+        "Description1": "正在顯示",
+        "Description2": "所有類別的間距",
+        "Description3": "用於標籤",
+        "FeaturePicker": "特徵",
+        "LabelPicker": "正標記",
+        "MeasurePicker": "量值",
+        "Measures": {
+          "JaccardIndex": {
+            "Description": "間距代表類別 A 雅卡爾指數和類別 B 雅卡爾指數之間的差異。雅卡爾指數本身是交集聯集量值，因此範圍為 [0, 1]，其中 0 表示分佈完全不相符，1 表示它們完全相同。",
+            "Name": "雅卡爾指數"
+          },
+          "KendallRankCorrelation": {
+            "Description": "(KRC) 間距代表 A 類別的 KRC 與類別 B 的 KRC 之間的差異。肯德爾等級相關係數本身是用來測量兩個測量數量之間的序數關聯的相互關聯統計資料，當觀察在兩個變數之間的順位相異時，量值就會高。",
+            "Name": "肯德爾等級相關係數"
+          },
+          "LogLikelihoodRatio": {
+            "Description": "(LLR) 間距代表類別 A 的 LLR 與類別 B 的 LLR 之間的差異。記錄可能性比率本身是相互關聯統計資料，用來測量具有正標記的特徵機率與正標記機率之間的比率。",
+            "Name": "對數似然比"
+          },
+          "PointwiseMutualInformation": {
+            "Description": "(PMI) 間距代表類別 A 的 PMI 與類別 B 的 PMI 之間的差異。點交互資訊本身是一種熵量值，指定類別 A 和類別 B，可量化由於其結合分佈與其個別分佈 (假設獨立性)，而導致轉移機率的差異。",
+            "Name": "點交互資訊"
+          },
+          "SorensenDiceCoefficient": {
+            "Description": "(SDC) 間距代表類別 A 的 SDC 與類別 B 的 SDC 之間的差異。索倫森-骰子係數本身是 intserction-over-union 量值，用來表示兩個樣本的相似性。它與 F1 分數有關，而且它等於兩個集合通用元素數的兩倍，除以每個集合中元素數目的總和。",
+            "Name": "索倫森-骰子係數"
+          },
+          "StatisticalParity": {
+            "Description": "(SP) 間距代表類別 A 的 SP 與類別 B 的 SP 之間的差異。統計均等本身會測量真實率，也就是一個類別接收到真實率結果的程度。間距會測量兩個類別正率之間的差異。當接近 0 時，表示兩個類別都同時收到正數結果。正值表示第一個類別看到的正標記比第二類多。負值表示相反。",
+            "Name": "統計均等"
+          },
+          "TTest": {
+            "Description": "gap 代表類別 A 的 T 測試與類別 B 的 T 測試之間的差異。T 測試本身是相互關聯統計資料，用來比較兩個群組(成對)的方法。在 T 分配表上查閱間距值，以判斷兩個群組是否明顯不同。",
+            "Name": "t-test"
+          },
+          "TTestPValue": {
+            "Description": "gap 代表類別 A 與類別 B 之間 T 測試間距的統計簽章。T 測試間距值和自由度是用來計算 p 值。",
+            "Name": "t-test p-value"
+          }
+        },
+        "MeasuresNotComputed": "未計算功能平衡量值。若要計算，請確定: (1)工作類型為 「分類」，(2)類別功能清單有效且非空白，(3)計算深入解析時不會擲回錯誤。",
+        "Name": "功能平衡量值"
+      },
+      "LearnMore": "深入了解",
+      "MeasuresNotComputed": "此索引標籤需要為此資料集計算資料平衡量值。指定「分類」工作類型與非空白類別功能清單時，會計算量值。"
+    },
+    "FeatureImportances": {
+      "CorrectPredictions": "正確的預測",
+      "GlobalExplanation": "彙總特徵重要度",
+      "IncorrectPredictions": "不正確的預測",
+      "InfoTitle": "功能重要性值的其他資訊",
+      "IndividualFeatureTabular": "按一下資料表中的資料點 (最多 5 個資料點) 選取資料點，以在檢視其局部特徵重要度值 (區域解釋)，以個別條件預測 (ICE) 繪圖。",
+      "IndividualFeatureText": "按一下資料表中的資料點以選取資料點，以從 SHAP 的文字解釋者檢視本機特徵重要度值 (本機說明)。",
+      "LocalExplanation": "個別特徵重要度",
+      "SelectionCounter": "已選取 {0}/{1} 個資料點",
+      "SelectionLimit": "目前最多可選取 5 個資料點。",
+      "RowCheckboxAriaLabel": "資料列核取方塊",
+      "SelectionColumnAriaLabel": "切換選取項目"
+    },
+    "IndividualFeatureImportanceView": {
+      "SmallInstanceSelection": "執行個體選取項目"
+    },
+    "MainMenu": {
+      "DashboardSettings": "儀表板設定",
+      "cohortInfo": "世代資訊",
+      "cohortList": "世代清單",
+      "cohortSettings": "世代設定",
+      "createCohort": "建立世代",
+      "shiftCohort": "切換世代"
+    },
+    "Navigation": {
+      "modelStatistics": "模型統計資料"
+    },
+    "ModelOverview": {
+      "metrics": {
+        "accuracy": {
+          "name": "正確度分數",
+          "description": "正確分類的資料點。"
+        },
+        "exactMatchRatio": {
+          "name": "完全相符比率",
+          "description": "每個標記正確分類的執行個體比率。"
+        },
+        "meteorScore": {
+          "name": "Meteor 分數",
+          "description": "METEOR 分數是根據精確度和召回的調和平均數計算，召回加權超過問題解答工作的精確度。"
+        },
+        "bleuScore": {
+          "name": "Bleu 分數",
+          "description": "Bleu 分數會測量電腦產生的文字中文字 (和/或 n-grams) 的比率，這些文字出現在問題解答工作中的參照文字中。"
+        },
+        "bertScore": {
+          "name": "Bert 分數",
+          "description": "BERTScore 著重於計算參考權杖與電腦在問題解答工作中產生的文字之間的語意相似性。"
+        },
+        "rougeScore": {
+          "name": "Rouge 分數",
+          "description": "Rouge 分數會測量電腦在問題解答工作中產生的文字中顯示之參照文字中的文字 (和/或 n-grams) 比率。"
+        },
+        "hammingScore": {
+          "name": "Hamming 分數",
+          "description": "在多標籤工作中分類為 1 的標記中，正確分類的平均標記比率。"
+        },
+        "f1Score": {
+          "name": "F1 分數",
+          "description": "F1 分數是精確度和召回率的調和平均數。"
+        },
+        "f1ScoreMacro": {
+          "name": "巨集 F1 分數",
+          "description": "巨集 F1 分數是每個類別的精確度和召回的調和平均值，每個類別都會平均加權。"
+        },
+        "f1ScoreMicro": {
+          "name": "微 F1 分數",
+          "description": "微 F1 分數是每個類別的精確度和召回的調和平均數，每個類別都會根據它所包含的執行個體數量加權。"
+        },
+        "meanAbsoluteError": {
+          "name": "平均絕對誤差",
+          "description": "誤差絕對值的平均。比 MSE 更不易受極端值影響。"
+        },
+        "meanSquaredError": {
+          "name": "平均平方誤差",
+          "description": "平方誤差的平均。"
+        },
+        "precision": {
+          "name": "精確度分數",
+          "description": "在分類為 1 的資料點當中，正確分類的資料點。"
+        },
+        "precisionMacro": {
+          "name": "巨集精確度分數",
+          "description": "針對每個類別，正確分類為 1 的資料點分數，每個類別會平均進行加權。"
+        },
+        "precisionMicro": {
+          "name": "微精確度分數",
+          "description": "針對每個類別，正確分類為 1 的資料點分數，每個類別會依據其包含的執行個體數進行加權。"
+        },
+        "recall": {
+          "name": "重新叫用分數",
+          "description": "在 True 標籤為 1 的資料點當中，正確分類的資料點。替代名稱: 確判為真率、敏感度。"
+        },
+        "recallMacro": {
+          "name": "巨集召回分數",
+          "description": "每個類別之 True 標記為 1 的資料點中正確分類的資料點分數，每個類別會平均進行加權。"
+        },
+        "recallMicro": {
+          "name": "微召回分數",
+          "description": "每個類別之 True 標記為 1 的資料點中正確分類的資料點分數，每個類別會依據其包含的執行個體數進行加權。"
+        },
+        "falsePositiveRate": {
+          "name": "誤判為真率",
+          "description": "真實標籤為 0 的資料點當中，被錯誤分類的資料點分數。"
+        },
+        "falseNegativeRate": {
+          "name": "誤判為否率",
+          "description": "真實標籤為 1 的資料點當中，被錯誤分類的資料點分數。"
+        },
+        "selectionRate": {
+          "name": "選取率",
+          "description": "標籤為 1 的預測百分比。"
+        },
+        "meanPrediction": {
+          "name": "平均預測",
+          "description": "所有預測的平均值。"
+        },
+        "meanAveragePrecision": {
+          "name": "平均精確度均值分數",
+          "description": "物件偵測模型的平均精確度均值是所有類別的平均 AP (平均精確度)。這會評估物件偵測模型的強固性，並封裝精確度與召回之間的權衡。"
+        },
+        "averagePrecision": {
+          "name": "平均精確度分數",
+          "description": "會針對選取的類別計算物件偵測模型的平均精確度。"
+        },
+        "averageRecall": {
+          "name": "平均召回分數",
+          "description": "會針對選取的類別計算物件偵測模型的平均召回。"
+        },
+        "fairnessMetricDifference": "差異",
+        "fairnessMetricRatio": "比例"
+      },
+      "metricsDropdown": "計量",
+      "metricsTypeDropdown": "彙總方法",
+      "metricTypes": {
+        "macro": "巨集",
+        "micro": "微"
+      },
+      "classSelectionDropdown": "選取類別",
+      "iouThresholdDropdown": {
+        "name": "IOU 閾值",
+        "description": "Union 上的交集可量化影像中偵測到物件的預測與地面事實界限方塊之間的重疊程度。例如，將 IoU 閾值設定為 70% 表示大於 70% 的預測與地面事實重為 True，因此會影響預測正確性定義和其他效能計量的計算。",
+        "iconId": "iouThresholdIconId",
+        "title": "了解 IoU 閾值"
+      },
+      "notAvailable": "N/A",
+      "countColumnHeader": "樣本大小",
+      "dataCohortsHeatmapHeader": "世代",
+      "dataCohortsChartSelectionHeader": "資料集世代",
+      "featureBasedCohortsChartSelectionHeader": "特徵世代",
+      "disaggregatedAnalysisHeatmapHeader": "特徵世代",
+      "fairnessMetricsHeatmapHeader": "公平性計量",
+      "featuresDropdown": "特徵",
+      "metricChartDropdownSelectionHeader": "計量",
+      "probabilityForClassSelectionHeader": "班級的機率",
+      "targetSelectionHeader": "目標",
+      "metricSelectionDropdownPlaceholder": "選取計量以比較您的世代。",
+      "classSelectionDropdownPlaceholder": "選取類別型分析的類別名稱。",
+      "featureSelectionDropdownPlaceholder": "選取特徵型分析要使用的特徵。",
+      "probabilityDistributionPivotItem": "機率分佈",
+      "regressionDistributionPivotItem": "目標發佈",
+      "metricsVisualizationsPivotItem": "計量視覺效果",
+      "confusionMatrixPivotItem": "混淆矩陣",
+      "disaggregatedAnalysisFeatureSelectionPlaceholder": "選取特徵以產生特徵型分析。",
+      "tableCountTooltip": "世代 {0} 包含 {1} 個執行個體。",
+      "tableMetricTooltip": "在世代 {1} 上模型的 {0} 是{2}",
+      "tableDifferenceTooltip": "{0} 差異為 {1}。其計算方式為將世代 {3} 的最小值 {2} 減去世代 {5} 的最大值 {4}。",
+      "tableRatioTooltip": "{0} 比率為 {1}。其計算方式為將世代 {3} 的最小值 {2} 除以世代 {5} 的最大值 {4}。",
+      "boxPlotPlaceholder": "選取至少一個世代來檢視方塊繪圖。",
+      "chartCohortSelectionPlaceholder": "選取至少一個世代整體來檢視圖表。",
+      "metricSelectionButton": "選擇計量",
+      "cohortSelectionButton": "選擇世代",
+      "probabilityLabelSelectionButton": "選擇標籤",
+      "regressionTargetSelectionButton": "選擇目標",
+      "selectAllCohortsOption": "全選",
+      "other": "其他",
+      "BoxPlot": {
+        "outlierProbability": "機率",
+        "outlierLabel": "極端值",
+        "boxPlotSeriesLabel": "方塊繪圖",
+        "lowerWhisker": "下鬚值",
+        "upperWhisker": "上鬚值",
+        "median": "中位數",
+        "lowerQuartile": "下四分位數",
+        "upperQuartile": "上四分位數"
+      },
+      "chartConfigApply": "套用",
+      "chartConfigCancel": "取消",
+      "chartConfigDatasetCohortSelectionPlaceholder": "選取資料集世代",
+      "chartConfigFeatureBasedCohortSelectionPlaceholder": "選取特徵型世代",
+      "confusionMatrix": {
+        "confusionMatrixCohortSelectionLabel": "選取資料集世代",
+        "confusionMatrixClassSelectionLabel": "選取類別",
+        "confusionMatrixClassMinSelectionError": "選取至少 {0} 個類別，以視覺化顯示混淆矩陣。",
+        "confusionMatrixClassMaxSelectionError": "選取最多 {0} 個類別，以視覺化顯示混淆矩陣。",
+        "confusionMatrixClassSelectionDefaultPlaceholder": "選擇類別",
+        "confusionMatrixHeatmapTooltip": "{0} 資料點應為 {1}，預測為 {2}",
+        "confusionMatrixYAxisLabel": "實際的類別",
+        "confusionMatrixXAxisLabel": "預測的類別",
+        "class": "類別"
+      },
+      "nA": "N/A",
+      "disaggregatedAnalysisBaseCohortDisclaimer": "下列特徵型分析中的世代是以全域世代群組 {0} 為基礎。",
+      "disaggregatedAnalysisBaseCohortWarning": "{1} 與 {0} 不同，其有包含篩選。因此，它只會擷取整個資料集的子集，且深入解析可能無法一般化為完整的資料集。",
+      "probabilitySplineChartToggleLabel": "使用曲線圖",
+      "countAxisLabel": "計數",
+      "helpMeChooseFeaturesButton": "協助我選擇特徵",
+      "helpMeChooseMetricsButton": "協助我選擇計量",
+      "featureConfiguration": {
+        "flyoutHeader": "選擇您的特徵",
+        "flyoutSubHeader": "要依循哪些特徵評估模型公平性?",
+        "flyoutDescription": "公平性會根據模型行為中的差距部分進行評估。我們會依據各個所選特徵的值來分割資料，並評估模型的效能計量在這些分割中有何差異。",
+        "selectAllRowsAriaLabel": "全選資料列",
+        "flyoutAriaLabel": "彙總平衡量值",
+        "featureColumnHeader": "特徵",
+        "featureSelectionAriaLabel": "功能選取資料表",
+        "metricSelectionAriaLabel": "計量選取項目資料表",
+        "groupsColumnHeader": "群組",
+        "categoricalGroupsCountRemark": "此特徵有 {0} 個唯一值。",
+        "continuousGroupsCountRemark": "此特徵是連續的，並分割成 {0} 個間隔。",
+        "continuousFeatureBinningLabel": "變更間隔數目",
+        "tooManyFeaturesSelectedWarning": "請只選取最多兩個特徵。"
+      },
+      "metricConfiguration": {
+        "flyoutHeader": "選擇您的計量",
+        "flyoutSubHeader": "要如何測量模型的效能?",
+        "flyoutDescription": "此為根據您的模型類型所建議的效能計量。藉由評估模型的效能於跨特徵子群組間有何差異，來執行公平性分析或取消彙集分析。",
+        "noMetricsSelectedWarning": "請至少選取一個計量。",
+        "metricNameColumnHeader": "計量名稱",
+        "metricDescriptionColumnHeader": "計量描述"
+      },
+      "cohortSelection": {
+        "flyoutHeader": "選擇世代",
+        "flyoutDescription": "您可以選擇要檢視資料集世代或功能世代。如果功能世代無法使用，您需要先在功能世代檢視中選取一或多個功能。接著，功能世代會隨即產生，而您可以在這裡選取它們。"
+      },
+      "regressionTargetOptions": {
+        "predictedY": "預測的 Y",
+        "trueY": "實際的 Y",
+        "error": "錯誤"
+      },
+      "topLevelDescription": "透過探索預測值和模型效能計量值的分佈來評估模型的效能。使用 [資料集世代] 索引標籤查看其跨不同預先建置或新建立之資料集世代的效能比較分析，以調查您的模型。使用 [特徵世代] 查看其跨敏感性/非敏感性特徵子世代的效能比較分析 (例如不同性別、收入等級的效能)，以調查您的模型。。",
+      "infoTitle": "模型概觀的其他資訊",
+      "visualDisplayToggleLabel": "顯示熱度圖",
+      "featureBasedViewDescription": "選取最多兩個特徵，以查看跨特徵型世代 (如果選取一個特徵) 或交點式世代 (如果選取兩個特徵) 的模型效能分解。"
+    },
+    "TableViewTab": {
+      "Heading": "以資料表格式檢視所有特徵和資料列的資料集。"
+    }
+  },
+  "Forecasting": {
+    "target": "目標",
+    "whatIfForecastingHeader": "假設狀況評估",
+    "forecastHeader": "趨勢預測分析",
+    "whatIfForecastingDescription": "假設狀況可讓您針對整個時間系列擾動特徵，並觀察模型的預測變更。",
+    "whatIfForecastingChooseTimeSeries": "若要開始，請從下列選項選擇時間系列。",
+    "forecastDescription": "預測分析會比較模型的預測與時間系列的實際值。若要啟用假設狀況評估，請提供具有特徵的資料集。",
+    "timeSeries": "時間序列",
+    "selectTimeSeries": "選取時間序列。",
+    "singleTimeSeries": "資料集僅包含預設選取的單一時間系列 '{0}'。",
+    "trueY": "實際的 Y",
+    "baselinePrediction": "基準預測",
+    "forecastComparisonHeader": "比較假設狀況趨勢預測",
+    "forecastComparisonChartTitle": "趨勢預測",
+    "forecastComparisonChartTimeAxisLabel": "時間",
+    "Transformations": {
+      "multiply": "乘",
+      "divide": "除",
+      "add": "新增",
+      "subtract": "減",
+      "change": "變更為"
+    },
+    "TransformationCreation": {
+      "title": "建立假設狀況案例",
+      "nameLabel": "假設狀況案例名稱",
+      "featureInstructions": "選擇要擾動的特徵。",
+      "operationInstructions": "選擇要套用此功能的作業。",
+      "operationDropdownHeader": "作業",
+      "featureDropdownHeader": "特徵",
+      "valueSpinButtonHeader": "值",
+      "scenarioNamingInstructionsPlaceholder": "輸入唯一名稱",
+      "scenarioNamingInstructions": "輸入您的假設狀況案例名稱。",
+      "scenarioNamingCollisionMessage": "此名稱已存在。請輸入唯一的名稱。",
+      "scenarioNamingLengthMessage": "名稱必須介於 1 到 50 個字元之間。實際長度為 {0}。",
+      "scenarioNamingInvalidCharactersMessage": "名稱只能包含英數字元、空白字元、虛線或底線，而且開頭必須包含英數字元。",
+      "valueErrorMessage": "針對作業 {0}，請選取 {1} 以外的值。",
+      "invalidCombinationErrorMessage": "這和現有的假設狀況案例相同。請變更特徵、作業或值。",
+      "addTransformationButton": "新增轉換",
+      "divisionAndMultiplicationBy": "由"
+    },
+    "TransformationTable": {
+      "nameColumnHeader": "名稱",
+      "methodColumnHeader": "方法",
+      "divisionAndMultiplicationBy": "由 ",
+      "header": "假設狀況趨勢預測 ({0})"
+    },
+    "TimeSeries": {
+      "apply": "套用",
+      "cancel": "取消",
+      "cohortList": "時間系列清單",
+      "selectCohort": "選取時間序列",
+      "selectCohortAriaLabel": "時間序列選取項目",
+      "shiftCohort": "切換時間系列",
+      "shiftCohortAriaLabel": "切換時間序列",
+      "shiftCohortDescription": "從時間系列清單中選取時間系列。將時間系列套用至儀表板。"
+    },
+    "TimeSeriesSettings": {
+      "CohortSettingsDescription": "時間系列是根據時間系列識別資料行預先定義。",
+      "CohortSettingsTitle": "時間系列設定"
+    }
+  }
+}

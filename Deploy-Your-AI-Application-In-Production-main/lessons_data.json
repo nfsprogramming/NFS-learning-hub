@@ -1,0 +1,17 @@
+[
+    {
+        "section": "Scripts",
+        "lessons": [
+            {
+                "title": "Onelakeindex",
+                "path": "scripts/automationScripts/OneLakeIndex/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Cleanup",
+                "path": "scripts/automationScripts/cleanup/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

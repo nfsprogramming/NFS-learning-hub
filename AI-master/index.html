@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Microsoft AI Architectures | Learning Portal</title>
+    <link rel="stylesheet" href="styles.css?v=2.7">
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Official Microsoft curriculum learning dashboard. Navigate lessons, track progress, and launch notebooks.">
+    <!-- Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <!-- Mermaid Diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ 
+                startOnLoad: false, 
+                theme: 'base',
+                themeVariables: {
+                    background: 'transparent',
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    primaryColor: 'rgba(0, 242, 255, 0.1)',
+                    primaryBorderColor: '#00f2ff',
+                    primaryTextColor: '#fff',
+                    lineColor: '#cbd5e1',
+                    secondaryColor: 'rgba(112, 0, 255, 0.2)',
+                    tertiaryColor: 'rgba(255, 255, 255, 0.05)'
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <aside>
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-brands fa-microsoft"></i></div>
+                <div class="logo-text">AI for Beginners</div>
+            </div>
+            
+            <a href="/index.html" class="btn-hub">
+                <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+            </a>
+
+            <nav id="sidebar-nav">
+                <!-- Sidebar Navigation items will be injected here -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <p class="footer-label">Microsoft Content</p>
+                <p>Frontend by NFS Hub</p>
+                <p style="opacity: 0.4; margin-top: 8px;">v1.0 Premium Portal</p>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <div class="header-left">
+                    <h1 id="course-header-title">Microsoft AI Architectures</h1>
+                    <p id="course-header-desc">Official curriculum for Microsoft AI Architectures.</p>
+                </div>
+                <div class="progress-overview">
+                    <div class="progress-header">
+                        <span>Course Progress</span>
+                        <span id="progress-text">0/0 Completed</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-content">
+                <div class="lesson-grid" id="lesson-grid">
+                    <!-- Lesson cards will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Theory Viewer Modal -->
+    <div id="theory-viewer" class="theory-modal">
+        <div class="theory-content-wrapper">
+            <div class="theory-header">
+                <button class="btn btn-outline" style="padding: 0.6rem 1.2rem; border-color: rgba(255,255,255,0.1);" onclick="closeTheory()">
+                    <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back
+                </button>
+                <div id="theory-title" style="flex: 1; text-align: center; margin-right: 100px;">Lesson Theory</div>
+            </div>
+            <div id="theory-body" class="markdown-body">
+                <!-- Markdown content will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2.6"></script>
+    <script>
+        // Hover tracking for dynamically created cards
+        document.addEventListener('mousemove', (e) => {
+            const card = e.target.closest('.lesson-card');
+            if (card) {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            }
+        });
+    </script>
+</body>
+
+</html>
+

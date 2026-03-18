@@ -1,0 +1,226 @@
+[
+    {
+        "section": "Data Science In Cloud",
+        "lessons": [
+            {
+                "title": "Introduction",
+                "path": "5-Data-Science-In-Cloud/17-Introduction/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Low Code",
+                "path": "5-Data-Science-In-Cloud/18-Low-Code/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Azure",
+                "path": "5-Data-Science-In-Cloud/19-Azure/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Data Science In Cloud",
+                "path": "5-Data-Science-In-Cloud/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Data Science In Wild",
+        "lessons": [
+            {
+                "title": "Real World Examples",
+                "path": "6-Data-Science-In-Wild/20-Real-World-Examples/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Data Science In Wild",
+                "path": "6-Data-Science-In-Wild/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Data Science Lifecycle",
+        "lessons": [
+            {
+                "title": "Introduction",
+                "path": "4-Data-Science-Lifecycle/14-Introduction/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Analyzing",
+                "path": "4-Data-Science-Lifecycle/15-analyzing/README.md",
+                "notebooks": [
+                    "assignment.ipynb",
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Communication",
+                "path": "4-Data-Science-Lifecycle/16-communication/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Data Science Lifecycle",
+                "path": "4-Data-Science-Lifecycle/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Data Visualization",
+        "lessons": [
+            {
+                "title": "Visualization Quantities",
+                "path": "3-Data-Visualization/09-visualization-quantities/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Visualization Distributions",
+                "path": "3-Data-Visualization/10-visualization-distributions/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Visualization Proportions",
+                "path": "3-Data-Visualization/11-visualization-proportions/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Visualization Relationships",
+                "path": "3-Data-Visualization/12-visualization-relationships/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Meaningful Visualizations",
+                "path": "3-Data-Visualization/13-meaningful-visualizations/README.md",
+                "notebooks": [
+                    "correlation-analysis.ipynb"
+                ]
+            },
+            {
+                "title": "Solution",
+                "path": "3-Data-Visualization/13-meaningful-visualizations/solution/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Starter",
+                "path": "3-Data-Visualization/13-meaningful-visualizations/starter/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Visualization Quantities",
+                "path": "3-Data-Visualization/R/09-visualization-quantities/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Visualization Distributions",
+                "path": "3-Data-Visualization/R/10-visualization-distributions/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Visualization Proportions",
+                "path": "3-Data-Visualization/R/11-visualization-proportions/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Visualization Relationships",
+                "path": "3-Data-Visualization/R/12-visualization-relationships/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Meaningful Vizualizations",
+                "path": "3-Data-Visualization/R/13-meaningful-vizualizations/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Data Visualization",
+                "path": "3-Data-Visualization/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Introduction",
+        "lessons": [
+            {
+                "title": "Defining Data Science",
+                "path": "1-Introduction/01-defining-data-science/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Ethics",
+                "path": "1-Introduction/02-ethics/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Defining Data",
+                "path": "1-Introduction/03-defining-data/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Stats And Probability",
+                "path": "1-Introduction/04-stats-and-probability/README.md",
+                "notebooks": [
+                    "assignment.ipynb",
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Introduction",
+                "path": "1-Introduction/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Working With Data",
+        "lessons": [
+            {
+                "title": "Relational Databases",
+                "path": "2-Working-With-Data/05-relational-databases/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Non Relational",
+                "path": "2-Working-With-Data/06-non-relational/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Python",
+                "path": "2-Working-With-Data/07-python/README.md",
+                "notebooks": [
+                    "notebook-covidspread.ipynb",
+                    "notebook-papers.ipynb",
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Data Preparation",
+                "path": "2-Working-With-Data/08-data-preparation/README.md",
+                "notebooks": [
+                    "assignment.ipynb",
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Working With Data",
+                "path": "2-Working-With-Data/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

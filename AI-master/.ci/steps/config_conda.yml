@@ -1,0 +1,108 @@
+  
+parameters:
+  conda_location: .
+  azureSubscription: #
+  conda: #
+  backward_compatability: false
+  backward_version: 1.0.2
+  flighting_release: false
+  flighting_preview: false
+  flighting_master: false
+  fresh_install: true
+  update_conda: false
+  update_conda_package: true
+  ubuntu18: true
+  off: false
+
+steps:
+- bash: echo "##vso[task.prependpath]/anaconda/bin"
+  displayName: Add conda to PATH
+
+- task: AzureCLI@1
+  displayName: 'Update Conda'
+  condition: eq('${{ parameters.update_conda }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      conda update --force-reinstall -y -n base -c defaults conda
+      
+- task: AzureCLI@1
+  displayName: 'Create New Conda'
+  condition: eq('${{ parameters.off }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      conda config --set notify_outdated_conda false
+
+      conda env create --force --file ${{parameters.conda_location}}/environment.yml python=3.6
+      source activate ${{parameters.conda}}
+      python -m ipykernel install --prefix=/data/anaconda/envs/${{parameters.conda}} --name ${{parameters.conda}}
+
+- task: AzureCLI@1
+  displayName: 'Upgrade Existing or Create New Conda'
+  condition: eq('${{ parameters.off }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      conda config --set notify_outdated_conda false
+      conda env create --force --file ${{parameters.conda_location}}/environment.yml python=3.7.4
+      source activate ${{parameters.conda}}
+      python -m ipykernel install --prefix=/data/anaconda/envs/${{parameters.conda}} --name ${{parameters.conda}}
+
+- task: AzureCLI@1
+  displayName: 'U18 Upgrade Existing or Create New Conda'
+  condition: eq('${{ parameters.ubuntu18 }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      conda config --set notify_outdated_conda false
+      conda env create --force --file ${{parameters.conda_location}}/environment.yml python=3.7.4
+      source activate ${{parameters.conda}}
+
+
+- task: AzureCLI@1
+  displayName: 'Upgrade AML SDK to latest release'
+  condition: eq('${{ parameters.flighting_release }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      source activate ${{parameters.conda}}
+
+      pip install -U azureml-core azureml-contrib-services azureml-pipeline
+      
+- task: AzureCLI@1
+  displayName: 'Upgrade AML SDK to Candidate release'
+  condition: eq('${{ parameters.flighting_preview }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      source activate ${{parameters.conda}}
+      
+      pip install -U azureml-core azureml-contrib-services azureml-pipeline \
+        --extra-index-url https://azuremlsdktestpypi.azureedge.net/sdk-release/Candidate/604C89A437BA41BD942B4F46D9A3591D
+
+- task: AzureCLI@1
+  displayName: 'Upgrade AML SDK to master release'
+  condition: eq('${{ parameters.flighting_master }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    failOnStandardError: True
+    scriptLocation: inlineScript
+    inlineScript: |
+      source activate ${{parameters.conda}}   
+
+      pip install -U "azureml-core<0.1.5" "azureml-contrib-services<0.1.5" "azureml-pipeline<0.1.5" \
+        --extra-index-url https://azuremlsdktestpypi.azureedge.net/sdk-release/master/588E708E0DF342C4A80BD954289657CF
+

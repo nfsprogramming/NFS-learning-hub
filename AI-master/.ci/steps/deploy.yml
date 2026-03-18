@@ -1,0 +1,43 @@
+parameters:
+  deployment_name: ''
+  template: ''
+  azureSubscription: ''
+  azure_subscription: ''
+  azureresourcegroup: ''
+  workspacename: ''
+  azureregion: ''
+  aksimagename: ''
+  environment: 'tridant-ai'
+  doCleanup: True
+  alias: '-'
+  project: '-'
+  expires : "2019-08-01"
+  agent: 'AI-GPU'
+  ENVIRONMENT_PREFIX: "ml-rts-"
+  deploymentguidtag: "ABC123"
+  aks_name: "mlaks"
+
+jobs:
+  - job: ${{parameters.deployment_name}}
+    timeoutInMinutes: 300
+    cancelTimeoutInMinutes: 2
+    pool:
+      name: ${{parameters.agent}}
+    steps:
+    - checkout: self  # self represents the repo where the initial Pipelines YAML file was found
+      submodules: recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+
+    - template: deploy_steps.yml
+      parameters:
+        template: ${{parameters.template}}
+        azureSubscription: ${{parameters.azureSubscription}}
+        azure_subscription: ${{parameters.azure_subscription}}
+        azureresourcegroup: ${{parameters.azureresourcegroup}}
+        workspacename: ${{parameters.workspacename}}
+        azureregion: ${{parameters.azureregion}}
+        alias : ${{parameters.alias}}
+        project : ${{parameters.project}}
+        expires : ${{parameters.expires}}        
+        aksimagename: ${{parameters.aksimagename}}
+        doCleanup: ${{parameters.doCleanup}}
+        aks_name: ${{parameters.aks_name}}

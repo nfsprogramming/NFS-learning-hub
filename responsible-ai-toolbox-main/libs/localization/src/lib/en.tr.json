@@ -1,0 +1,1789 @@
+{
+  "Common": {
+    "close": "Kapat",
+    "tooltipButton": "Araç ipucu düğmesi",
+    "identityFeature": "Kimlik özelliği",
+    "infoTitle": "Ek bilgiler",
+    "spinButton": "Döndür",
+    "editButton": "Düzenle",
+    "decreaseValue": "Değeri azalt",
+    "increaseValue": "Değeri artır",
+    "decreaseValueByOne": "Değeri 1 azaltın",
+    "increaseValueByOne": "Değeri 1 artır",
+    "loading": "Yükleniyor..."
+  },
+  "ChartContextMenu": {
+    "hideData": "Veri tablosunu gizle",
+    "viewData": "Veri tablosunu görüntüle",
+    "viewInFullScreen": "Tam ekranda görüntüle",
+    "printChart": "Grafiği yazdır",
+    "downloadCSV": "CSV'yi indir",
+    "downloadPNG": "PNG resmini indir",
+    "downloadJPEG": "JPEG resmini indir",
+    "downloadPDF": "PDF belgesini indir",
+    "downloadSVG": "SVG vektör görüntüsünü indir",
+    "downloadXLS": "XLS'i indir"
+  },
+  "CausalAnalysis": {
+    "AggregateView": {
+      "binary": "İkili tedavi: ",
+      "binaryDescription": "Bu örnekte ortalama olarak, bu özelliği açmak, '{0}' sınıfı/etiketi olasılığının X birim artmasına neden olur.",
+      "regressionDescription": "Bu örnekte ortalama olarak, bu özelliği açmak, hedef tahminlerinin X birim artmasına/azalmasına neden olur.",
+      "causalPoint": "Nedensel etki noktası",
+      "confidenceLower": "Güvenilirlik aralığı (alt)",
+      "confidenceUpper": "Güvenilirlik aralığı (üst)",
+      "confoundingFeature": "Çelişkili bir özellik, hem tedavi hem de ilgili sonuç ile ilişkilidir. Çelişkili etmen, doğrudan nedensel etkinin üzerine tedaviden sonuca kadar fazladan bir bağıntı yolu oluşturur. Çelişkili özellikler ölçülmedikçe ve modele dahil edilmedikçe, bu fazladan bağıntılar nedensel etkinin tahminlerini saptırabilir. Sapma; atlanan çelişkili etmenler, tedaviler ve sonuçlar arasındaki bağıntı yönlerine bağlı olarak pozitif veya negatif olabilir.",
+      "continuous": "Sürekli tedaviler: ",
+      "continuousDescription": "Bu örnekte ortalama olarak, bu özelliği 1 birim artırmak, '{0}' sınıfı/etiketi olasılığının X birim artmasına neden olur.",
+      "continuousRegressionDescription": "Bu örnekte ortalama olarak, bu özelliği 1 birim artırmak, hedef tahminlerinin X birim artmasına/azalmasına neden olur.",
+      "description": "Nedensel analiz, bir ürün için farklı bir fiyatlandırma stratejisi veya bir hasta için alternatif bir tedavi gibi farklı ilke seçimlerinde gerçek dünya sonuçlarının nasıl değişeceğiyle ilgili 'durum çözümlemesi' sorularını yanıtlar. Önemli bağıntı desenlerini tanımlayan model tahminlerinin aksine, bu araçlar ilgilendiğiniz sonucu doğrudan etkileyen en önemli nedensel özellikleri belirlemenize yardımcı olur. Bu modeller, diğer çelişkili özellikleri sabit tutarak bir özelliğin (genellikle “tedavi” olarak ifade edilir) nedensel etkisini tanımlar. En iyi sonuçları elde etmek için, tam veri kümesinin sonuçla ilişkili olabilecek kullanılabilir tüm özellikleri çelişkili olarak içerdiğinden emin olun.",
+      "directAggregate": "% 95 güven aralığı ile her tedavinin doğrudan toplam nedensel etkisi",
+      "here": "buradaki",
+      "infoTitle": "Toplu nedensel etkiler hakkında ek bilgi",
+      "lasso": "Bir kement (veya y ikili ise lojistik regresyon) X[-i] öğesinden y’yi ve bir kement ise (veya X[i] kategorikse lojistik regresyon) Χ[-i] öğesinden X[i] öğesini tahmin etmek için sığdırılmıştır. Nedensel etki, iki tahmin görevinin artık/sürpriz varyasyonunun ortalama bağıntısı olarak görüntülenebilir. Çift Makine Öğrenmesi hakkında daha fazla bilgi edinin",
+      "unconfounding": "Çelişkili özellikler nelerdir?"
+    },
+    "IndividualView": {
+      "currentOutcome": "Geçerli sonuç",
+      "currentTreatment": "Geçerli tedavi değeri",
+      "dataRequired": "Bu sekme, bir veri noktasının seçilmesini gerektirir.",
+      "selectedDatapoint": "Seçili veri noktası",
+      "description": "Her nedensel etki, müşterilere hedeflenen bir yükseltme veya bireysel bir tedavi planı gibi kişiselleştirilmiş müdahale hakkında bilgi verebilir. Belirli özellikler kümesine sahip bir kişi nedensel bir özellikteki veya tedavideki değişikliğe nasıl yanıt verir?  Nedensel durum çözümlemesi aracı, belirli bir kişinin tedavi düzeyini değiştirmeniz durumunda bu kişinin gerçek dünyada edineceği sonuçlardaki marjinal değişiklikleri hesaplar. Bu analiz, bir ürün için farklı bir fiyatlandırma stratejisi veya bir hasta için alternatif tedavi gibi farklı ilke seçimlerinde gerçek dünya sonuçlarının nasıl değiştiğini anlamanızı sağlar. İlgili tedaviyi belirtin ve gerçek dünya sonucunun nasıl değişeceğini gözlemleyin.",
+      "directIndividual": "% 95 güven aralığı ile her tedavinin doğrudan bireysel nedensel etkisi",
+      "index": "Datapoint dizini",
+      "infoTitle": "Bireysel nedensel etki değerlendirmesi hakkında ek bilgi",
+      "missingParameters": "Bu sekme için değerlendirme veri kümesi sağlanması gerekir.",
+      "newOutcome": "Yeni sonuç",
+      "selectTreatment": "Tedavi seçin",
+      "setNewTreatment": "Yeni tedavi değeri belirleyin",
+      "treatmentValue": "Tedavi değeri en düşük: {0} ({1}), en yüksek: {2} ({3})"
+    },
+    "MainMenu": {
+      "aggregate": "Kümeli nedensel etkiler",
+      "cohortInfo": "Genel kohortlar, nedensel analiz için şu anda desteklenmiyor. Tüm nedensel analizler, tüm veriler için gösterilir.",
+      "header": "nedensel analiz",
+      "individual": "Bireysel nedensel durum çözümlemesi",
+      "learnMore": "Daha fazla bilgi",
+      "title": "Her özelliğin % 90 güven aralığı ile doğrudan nedensel etkisi",
+      "treatment": "Tedavi ilkesi",
+      "why": "Çelişkili özellikleri dahil etmek neden önemlidir?"
+    },
+    "TreatmentPolicy": {
+      "BarDescriptionBinary": "Bu grafikte, popülasyonunuzdaki kimseye {0} tedavisinin sağlanmaması temeline göre çeşitli tedavi ilkelerinin ortalama kazançları gösterilir.",
+      "BarDescriptionContinuous": "Bu grafikte, popülasyonunuzdaki herkese verilen geçerli tedavi değerlerinde herhangi bir değişiklik yapılmaması temeline göre çeşitli tedavi ilkelerinin ortalama kazancını gösterilir.",
+      "BarTextBinary": "Yukarıda açıklanan önerilen genel tedavi ilkesi uygulanmışsa ilk çubuk, ortalama göreli kazançları gösterir. Bildirilen kazançlar, kullandığımız tedavideki sayısal değişikliği bildirir. İkinci çubuk, ikili tedavilerin açılmasıyla herkesin tedavi edilmesinden elde edilen göreli kazançları (veya zararları) gösterir.",
+      "BarTextContinuous": "Yukarıda açıklanan önerilen küresel tedavi ilkesi uygulanmışsa ilk çubuk, ortalama göreli kazançları gösterir. Bildirilen kazançlar, tedavi özelliğinin örnekteki tipik tedavi boyutunun %10’u kadar artırılmasını/azaltılmasını yansıtır. İkinci çubuk, sürekli tedavilerin %10 kadar artırılmasından/azaltılmasından elde edilen göreli kazançları (veya zararları) gösterir.",
+      "Description": "Bu araçlar, gelecekteki müdahaleler için ilkeler derlemeye yardımcı olur. Örneğinizin hangi bölümlerinin nedensel bir sürücüye (yani işlem) en büyük yanıtları deneyimlediğini belirleyebilir veya gelecekteki hangi veri kümelerinin en büyük işlem etkilerine sahip olacağını tanımlamak için kurallar oluşturabilirsiniz.",
+      "Left": "{0}, şundan az veya şuna eşittir: {1}",
+      "Recommended": "Önerilen işlem = {0}",
+      "Right": "{0}, şundan büyüktür: {1}",
+      "SelectPolicy": "İşleme özelliğini ayarla",
+      "Size": "Örnek boyutu için yorumlanabilir önerilen genel işlem ilkesi (n) = {0}",
+      "Table": "Tablo, bir satır alarak ve ardından bu belirli satırın bir sütunu alınarak okunabilir.",
+      "TableDescription": "Bu tabloda, geçerli veri örneğine veya diğer popülasyonlara uygulanabilecek önerilen bir tedavi ilkesini gösterilir. Tablo, kişinin seçili tedaviye yanıt verip vermemesi üzerinde en büyük etkisi olan özelliklere bağlı olarak gözlemleri veri kohortları olarak ayırmak için basit bir kural sağlar. Tabloda ayrıca, her segmente atanan geçerli veri örneğindeki veri noktalarının sayısı da belirtilir.",
+      "alwaysTreat": "Her zaman ' {0} ' olarak değerlendir",
+      "averageGainBinary": "{0} tedavisinin temel {1} değerine ayarlanmasından elde edilen ortalama kazanç.",
+      "averageGainContinuous": "Hiç '{0}' işlem olmamasına kıyasla alternatif ilkelerin ortalama kazanımları.",
+      "header": "Bu araçlar, gelecekteki müdahaleler için ilke oluşturmaya yardımcı olur. Örneğinizin hangi bölümlerinin nedensel özelliklerdeki veya tedavilerdeki değişikliklere yönelik en büyük yanıtlarla karşılaştığını belirleyebilir ve gelecekteki hangi popülasyonların belirli müdahaleler için hedeflenmesi gerektiğini tanımlayan kurallar oluşturabilirsiniz.",
+      "infoTitle": "Tedavi ilkesi hakkında ek bilgi",
+      "nSample": "n = {0}",
+      "noData": "Veri yok"
+    }
+  },
+  "Core": {
+    "ExpandableText": {
+      "SeeLess": "Daha az göster",
+      "SeeMore": "Daha fazla göster"
+    },
+    "NoData": {
+      "Title": "Veri yok"
+    },
+    "ComparisonTypes": {
+      "lt": "{0}, şundan azdır: {1}",
+      "lte": "{0}, şundan az veya şuna eşittir: {1}",
+      "gt": "{0}, şundan büyüktür: {1}",
+      "gte": "{0}, şundan büyük veya şuna eşittir: {1}",
+      "eq": "{0}, şuna eşittir: {1}",
+      "ne": "{0}, şuna eşit değildir: {1}",
+      "in": "{0}, ({1}) kümesinde",
+      "nin": "{0}, ({1}) kümesinde yok",
+      "rg": "{0}, şu aralıkta: ({1})",
+      "nrg": "{0}, şu aralıkta: ({1})",
+      "Unknown": "bilinmiyor"
+    },
+    "ShiftCohort": {
+      "apply": "Uygula",
+      "applyAriaLabel": "Apply cohort",
+      "cancel": "İptal et",
+      "title": "Kohort Değiştir",
+      "subText": "Kohort listesinden bir kohort seçin. Kohortu panoya uygulayın.",
+      "selectCohort": "Kohort seçin",
+      "cohortList": "Kohort listesi"
+    },
+    "PreBuiltCohort": {
+      "featureNameNotFound": "Özellik adı veri kümesinde bulunamadı",
+      "notACategoricalFeature": "Özellik kategorik değil"
+    },
+    "EmptyCohortDialog": {
+      "title": "Veri kümesi kohortta veri noktası yok",
+      "subText": "Veri kümesi kohortunuz veri noktası içermiyor. Kaydetmeden önce filtrelerinizi veri kümesi kohortunuzda en az bir veri noktası içerecek şekilde ayarlayın."
+    }
+  },
+  "Counterfactuals": {
+    "AriaLabel": "Counterfactual",
+    "CurrentTreatment": "Geçerli tedavi",
+    "EffectLowerBound": "CI_lower",
+    "EffectOfTreatment": "Öneri etkisi",
+    "EffectUpperBound": "CI upper",
+    "ErrorDialog": {
+      "Close": "Kapat",
+      "ErrorPrefix": "Karşılaşılan hata: {0}",
+      "PythonError": "Python hatası"
+    },
+    "RecommendedTreatment": "Önerilen işlem",
+    "WhatIf": {
+      "setValue": "Değeri Ayarla",
+      "sortFeatures": "Özellik sütunlarını karşıolgusal özellik önem derecesine göre sırala",
+      "percentCounterfactualLocalImportance": "Özelliği farklı yapan karşı işlem yüzdesi",
+      "toggleToolTipBody": "Karşı olgusal örnekler, istenen sınıf sınıflandırma senaryolarını veya regresyon senaryoları için istenen aralığı elde etmek için hangi üst özelliklerin en çok bozulduğunu gösteren yerel özellik önem dereceleri üretir.",
+      "toggleToolTipHeader": "Derecelendirilmiş karşı olgusal özellikler",
+      "predictedClass": "Tahmin edilen sınıf",
+      "predictedValue": "Tahmin edilen değer"
+    },
+    "Size": "Boyut",
+    "loading": "Yükleniyor...",
+    "counterfactualEx": "{0} karşıolgusal örneği",
+    "counterfactualName": "Etki değerlendirmesi karşıolgusal adı",
+    "createWhatIfCounterfactual": "Etki değerlendirmesi karşıolgusalı oluştur",
+    "createCounterfactual": "Counterfactual",
+    "counterfactualAriaLabel": "Counterfactual creation",
+    "revertToBubbleChart": "Kabarcık grafiğini görüntüle",
+    "createOwn": "Kendi karşıolgusalınızı oluşturun:",
+    "currentClass": "Geçerli sınıf",
+    "currentRange": "Geçerli aralık",
+    "decreaseByOne": "Değeri 1 azaltın",
+    "desiredClass": "Karşıolgusal(lar) için istenen sınıf",
+    "header": "Durum çözümlemesi karşıolgusalları",
+    "increaseByOne": "Değeri 1 artır",
+    "individualTreatment": "Önerilen bireysel işleme ilkesi",
+    "listChoose": "Görüntülemek istediğiniz en iyi k örneğini seçmek için çark denetimini kullanın.",
+    "listDescription": "Bu listede, tahmini nedensel modele dahil edilen tüm özelliklere bağlı olarak geçerli veri örneğindeki hangi veri noktalarının seçili tedaviye yönelik en büyük nedensel yanıtı olduğu gösterilir. Sol beş sütunda; tedavinin gözlem için önerilip önerilmediği, geçerli tedavi, tedavinin tahmini etkisi (ikili tedavi için hiçbir tedavinin olmadığı bir temelden tedavi uygulamanın veya tedavi özelliğini örnekteki tipik tedavi boyutunun %10’u kadar artırmanın/azaltmanın etkisi: [dinamik: kullandığımız tedavideki sayısal değişikliği bildirin] ) ve bu etkinin alt ve üst güvenilirlik aralıkları (CI) bildirilir. Kalan sütunlarda, geçerli tedavi durumu ve her gözlem için diğer özellikler gösterilir.",
+    "localImportanceDescription": "İstenen model tahminini elde etmek için {0} numaralı Satırdaki bozulacak en çok puan alan özellikler. {1} tahmini için durum çözümlemesi temel alınır",
+    "localImportanceSelectData": "Yerel önem derecesi grafiğini görüntülemek için bir veri noktası seçin",
+    "largeLocalImportanceSelectData": "Yerel önem derecesi grafiğini görüntülemek için bir kabarcık, ardından bir veri noktası seçin",
+    "localImportanceFetchError": "Yerel önem verileri getirilirken bir hata oluştu. Hata ayrıntıları: {0} Lütfen kullanılan verileri kontrol edin.",
+    "BubbleChartFetchError": "Veriler getirilirken bir hata oluştu. Hata ayrıntıları: {0} Lütfen kullanılan verileri kontrol edin.",
+    "noData": "Veri yok",
+    "noFeatures": "Kullanılabilir özellik yok",
+    "panelDescription": "Karşı işlemlere göz atın ve kendinizinkini oluşturun. Çeşitli karşı işlem örneklerinden önerilen değerleri görmek için özelliklerde ara yapın. Her bir karşı işlem adının altındaki \"Değer Ayarla\" metnine tıklayarak önerilen karşı işlem özellik değerlerini ayarlayın. Karşı işleminizi adlandırın ve kaydedin.",
+    "panelDescriptionWithoutSetValue": "Karşı işlemlere göz atın ve kendinizinkini oluşturun. Çeşitli karşı işlem örneklerinden önerilen değerleri görmek için özelliklerde ara yapın.",
+    "whatIfPanelHeader": "Etki değerlendirmesi karşıolgusalları",
+    "panelHeader": "Karşı olgusallar",
+    "recommendedPolicy": "Önerilen ilke kazancı",
+    "referenceDatapoint": "Başvuru veri noktası: {0} numaralı satır",
+    "saveAsNew": "Yeni veri noktası olarak kaydet",
+    "saveDescription": "Bu karşıolgusallar, modelin tahminini temel alır ve bu nedenle model tarafından alınan aynı bağıntıları yakalıyor olabilir. Kullanıcıların gerçek hayatta bu aracı temel alarak kararlar vermesini tavsiye etmiyoruz. Gerçek hayatta karar verme senaryoları için nedensel analiz araç setimizi kullanın.",
+    "seePrediction": "Tahmin deltalarını gör",
+    "selectedDatapoint": "Seçili veri noktası",
+    "showOnly": "Yalnızca gösterilecekler",
+    "showTop": "Tedavi özelliğine yönelik en büyük tahmini nedensel yanıtları olan veri noktaları: {0}",
+    "whatifDescription": "Durum çözümlemesi, herhangi bir giriş için özellikleri bozmanıza ve modelin tahmininin nasıl değiştiğini gözlemlemenize olanak tanır. Özellikleri kendiniz bozabilir veya istenen tahmine yol açacak orijinal girişe en yakın veri noktalarının bir listesini görmek için istediğiniz tahmini (ör. bir sınıflandırıcı için sınıf etiketi) belirtebilirsiniz. Bunları (tahmin karşıolgusalları olarak da bilinir) model tarafından öğrenilen ilişkileri keşfetmek; modelin tahminleri için önemli, gerekli özellikleri anlamak veya model için uç durumlarda hata ayıklamak üzere kullanabilirsiniz. Başlamak için, veri tablosundan veya dağılım çiziminden giriş noktalarını seçin."
+  },
+  "DataAnalysis": {
+    "TableView": {
+      "description": "View the dataset in a table representation with the ground truth and predicted labels. The table is separated into sub-tables of correct and incorrect predictions.",
+      "infoTitle": "Additional information on table view"
+    }
+  },
+  "ErrorAnalysis": {
+    "Cohort": {
+      "cohort": "Kohort",
+      "defaultLabel": "Tüm veriler"
+    },
+    "CohortBaseAndFilters": {
+      "globalCohortAndFilters": "Genel kohort ve filtreler",
+      "globalCohort": "Genel kohort:",
+      "errorExplorer": "Hata gezgini",
+      "filters": "Filtreler"
+    },
+    "CohortInfo": {
+      "baseCohortInstances": "Genel kohortdaki örnekler",
+      "basicInformation": "Temel Bilgiler",
+      "cohortInformation": "Kohort bilgileri",
+      "correct": "Doğru",
+      "filters": "filtreler",
+      "incorrect": "Yanlış",
+      "predictionPath": "Tahmin yolu (filtreler)",
+      "saveCohort": "Yeni kohort olarak kaydet",
+      "selectedCohortInstances": "Seçili kohortdaki örnekler",
+      "total": "Toplam"
+    },
+    "CohortList": {
+      "coverage": "Kapsam"
+    },
+    "EditCohort": {
+      "cohortName": "Kohort adı",
+      "subText": "Seçili kohort hakkında bilgi edinin. Kohort adını düzenleyin. Bu kohortu silin."
+    },
+    "FeatureList": {
+      "featureList": "Özellik Listesi",
+      "apply": "Uygula",
+      "features": "Özellikler",
+      "importances": "Önem dereceleri",
+      "treeMapDescription": "Ağaç haritasını yeniden eğitmek için aşağıdaki özellikleri seçin ve kaydedin. Özellik önem dereceleri, doğru etiketlerinde hata bulunan iki taraflı bilgiler kullanılarak hesaplanır. Ağaç haritasını eğitirken bunu kılavuz olarak kullanın.",
+      "staticTreeMapDescription": "Ağaç haritasını eğitmek için kullanılan özellikleri görüntüleyin. Özellik önem dereceleri, gerçek etiketlerde hatayla birlikte karşılıklı bilgiler kullanılarak hesaplandı.",
+      "searchResultMessage": "{searchValue} için {resultLength} içinde görüntülenen sonuçlar"
+    },
+    "TreeViewParameters": {
+      "maximumDepth": "En fazla derinlik",
+      "maximumDepthInfoText": "Hatalarla eğitilen vekil ağacın maksimum derinliği",
+      "maximumDepthTitle": "Maksimum derinlik hakkında ek bilgi",
+      "numLeaves": "Yaprak sayısı",
+      "numLeavesInfoText": "Hatalarla eğitilen vekil ağacın yaprak sayısı",
+      "numLeavesTitle": "Yaprak sayısı hakkında ek bilgi",
+      "minDataInLeaf": "Bir yapraktaki en az örnek sayısı",
+      "minDataInLeafInfoText": "Bir yaprak oluşturmak için gereken en az veri sayısı",
+      "minDataInLeafTitle": "Bir yaprakta en az örnek sayısı hakkında ek bilgi"
+    },
+    "TreeLegend": {
+      "clearSelection": "Seçimi temizle"
+    },
+    "FilterTooltip": {
+      "correctNum": "Doğru (#): ",
+      "countNum": "Sayı (#):",
+      "errorSum": "Hata toplamı: ",
+      "incorrectNum": "Yanlış (#): "
+    },
+    "InspectionView": {
+      "emptyError": "Onay kutularına tıklayarak yanlış ve doğru kategorilerindeki veri noktalarını seçin.",
+      "selectedDatapoints": "Seçili veri noktaları"
+    },
+    "InstanceView": {
+      "inspect": "İncele",
+      "selection": "{0} seçildi"
+    },
+    "MainMenu": {
+      "cohortInfo": "Kohort bilgileri",
+      "cohortList": "Kohort listesi",
+      "cohortSettings": "Kohort ayarları",
+      "errorAnalysisLabel": "Hata analizi",
+      "errorExplorer": "Hata gezgini",
+      "errorExplorerLabel": "Hata gezgini:",
+      "explanation": "Açıklama",
+      "featureList": "Özellik listesi",
+      "fullscreen": "Tam ekran",
+      "heatMap": "Isı haritası",
+      "newCohort": "Yeni kohort",
+      "shiftCohort": "Kohort değiştir",
+      "treeMap": "Ağaç harita",
+      "whatIf": "Etki değerlendirmesi"
+    },
+    "MapShift": {
+      "cancel": "İptal",
+      "close": "Kapat",
+      "move": "Taşı",
+      "saveAs": "Yeni kohort olarak kaydet",
+      "shift": "Kaydır",
+      "heatTitle": "Ağaç görünümünden çıkılsın mı?",
+      "heatSubText": "Ağaç görünümünden çıkmak istediğinizden emin misiniz? Cohort ayarlarından erişmek için filtrelerinizi yeni bir kohort olarak kaydedebilirsiniz. Aksi takdirde filtreleriniz kaybolur.",
+      "treeTitle": "Isı haritası görünümünden çıkılsın mı?",
+      "treeSubText": "Isı haritası görünümünden ayrılmak istediğinizden emin misiniz? Cohort ayarlarından erişmek için filtrelerinizi yeni bir kohort olarak kaydedebilirsiniz. Aksi takdirde filtreleriniz kaybolur."
+    },
+    "MatrixArea": {
+      "clearAll": "Tümünü temizle",
+      "emptyText": "Yukarıdaki açılan listeleri kullanarak iki özelik seçin. Verilerinizi iki boyut üzerinde kümeleyebilir ve filtreleyebilirsiniz.",
+      "selectAll": "Tümünü seç"
+    },
+    "MatrixFilter": {
+      "disabledWarning": "Genel kohort, tam veri kümesi için oluşturulan ısı haritası nedeniyle \"Tüm verileri\" temsil edecek şekilde değiştirilmediyse hata ısı haritası devre dışı bırakılır. Hata ısı haritasını görüntülemek için tam veri kümesine geri dönün."
+    },
+    "MatrixSummary": {
+      "heatMapInfoTitle": "Isı haritası hakkında ek bilgi",
+      "heatMapDescription": "Isı haritasıyla kesişen belirli özellik filtrelerine odaklanabilir ve bölünmüş hata oranlarını hesaplayabilirsiniz. Karşılaştırmak için iki veri kümesi özelliğiyle başlayın.",
+      "heatMapStaticDescription": "Isı haritasıyla belirli kesişim özellik filtrelerini ve ayrılmış hata oranlarını hesaplamaya odaklanabilirsiniz. Panoyu görüntülemeden önce SDK aracılığıyla ısı haritası oluşturmak için en fazla iki özellik seçilmelidir."
+    },
+    "MatrixOptions": {
+      "quantileBinningLabel": "Dağılım dilimi gruplaması",
+      "binningThresholdLabel": "Gruplama eşiği",
+      "toggleOnLabel": "Açık",
+      "toggleOffLabel": "Kapalı",
+      "quantileBinningInfoText": "Değerleri çeşitli bölme aralıkları arasında eşit olarak dağıtın",
+      "quantileBinningTitle": "Dağılım dilimi gruplaması hakkında ek bilgi",
+      "binningThresholdInfoText": "Gruplamadan önce gereken değer sayısı",
+      "binningThresholdTitle": "Bölme eşiği hakkında ek bilgi"
+    },
+    "Metrics": {
+      "AccuracyScore": {
+        "Name": "Doğruluk puanı",
+        "Info": "Doğruluk puanı, verideki doğru ve toplam örneklerin oranını temsil eder.",
+        "Short": "Doğruluk",
+        "Title": "Doğruluk puanı hakkında ek bilgiler"
+      },
+      "ErrorRate": {
+        "Name": "Hata oranı",
+        "Info": "Hata oranı, düğümde sistemin başarısız olduğu örneklerin yüzdesini temsil eder.",
+        "Short": "Hata oranı",
+        "Title": "Hata oranıyla ilgili ek bilgiler"
+      },
+      "F1Score": {
+        "Name": "F1 skoru",
+        "Info": "F1 skoru, duyarlık ve yakalama ölçümlerinin armonik ortalamasıdır.",
+        "Short": "F1 skoru",
+        "Title": "F1 skoru hakkında ek bilgi"
+      },
+      "MeanAbsoluteError": {
+        "Name": "Ortalama mutlak hata sayısı",
+        "Info": "Ortalama mutlak hata, hataların toplamının ortalamasıdır.",
+        "Short": "Ortalama mutlak hata",
+        "Title": "Ortalama mutlak hata hakkında ek bilgi"
+      },
+      "MeanSquaredError": {
+        "Name": "Ortalama hata karesi",
+        "Info": "Ortalama hata karesi hataların karelerinin ortalamasıdır.",
+        "Short": "Ortalama hata karesi",
+        "Title": "Ortalama hata karesi hakkında ek bilgiler"
+      },
+      "Precision": {
+        "Name": "Duyarlık puanı",
+        "Info": "Duyarlık, gerçek pozitiflerin tüm tahmin edilen pozitiflere oranıdır.",
+        "Short": "Duyarlık",
+        "Title": "Duyarlık hakkında ek bilgiler"
+      },
+      "Recall": {
+        "Name": "Yakalama puanı",
+        "Info": "Yakalama, gerçek pozitiflerin tüm pozitiflere oranıdır.",
+        "Short": "Yakalama",
+        "Title": "Yakalama hakkında ek bilgi"
+      },
+      "MacroPrecision": {
+        "Name": "Makro ortalama duyarlık puanı",
+        "Info": "Makro ortalama duyarlığı, sınıf başına bağımsız olarak hesaplanan ve ortalaması alınan tüm tahmin edilen pozitiflere göre gerçek pozitiflerin oranıdır.",
+        "Short": "Makro duyarlık",
+        "Title": "Makro ortalama duyarlığı hakkında ek bilgi"
+      },
+      "MicroPrecision": {
+        "Name": "Mikro ortalama duyarlık puanı",
+        "Info": "Mikro ortalama duyarlık, tüm sınıflar için toplanan tüm tahmin edilen pozitiflere göre gerçek pozitiflerin oranıdır.",
+        "Short": "Mikro duyarlık",
+        "Title": "Mikro ortalama duyarlığı hakkında ek bilgi"
+      },
+      "MacroRecall": {
+        "Name": "Makro ortalama yakalama puanı",
+        "Info": "Makro ortalama yakalama, sınıf başına bağımsız olarak hesaplanan ve ortalaması alınan tüm pozitiflere göre gerçek pozitiflerin oranıdır.",
+        "Short": "Makro yakalama",
+        "Title": "Makro ortalamasını yakalama hakkında ek bilgi"
+      },
+      "MicroRecall": {
+        "Name": "Mikro ortalama yakalama puanı",
+        "Info": "Mikro ortalama yakalama, tüm sınıflar için toplanan tüm gerçek pozitiflere göre gerçek pozitiflerin oranıdır.",
+        "Short": "Mikro yakalama",
+        "Title": "Mikro ortalamasını yakalama hakkında ek bilgiler"
+      },
+      "MacroF1Score": {
+        "Name": "Makro ortalama F1 skoru",
+        "Info": "Makro ortalama F1 skoru, makro ortalama duyarlık ve yakalama ölçümlerinin armonik ortalamasıdır.",
+        "Short": "Makro F1 skoru",
+        "Title": "Makro ortalama F1 skoru hakkında ek bilgi"
+      },
+      "MicroF1Score": {
+        "Name": "Mikro ortalama F1 skoru",
+        "Info": "Mikro ortalama F1 skoru, mikro ortalama duyarlık ve yakalama ölçümlerinin armonik ortalamasıdır.",
+        "Short": "Mikro F1 skoru",
+        "Title": "Mikro ortalama F1 skoru hakkında ek bilgi"
+      },
+      "MeanAveragePrecision": {
+        "Name": "Aritmetik ortalama duyarlık puanı",
+        "Info": "Nesne algılama modelleri için aritmetik ortalama duyarlık, tüm sınıflardaki AP (ortalama duyarlık) ortalamasıdır. Bu, nesne algılama modelinizin sağlamlık durumunu değerlendirir ve duyarlık ile geri çağırma arasındaki dengeyi içerir.",
+        "Short": "Aritmetik ort. duyarlık",
+        "Title": "Aritmetik ortalama duyarlık puanı hakkında ek bilgi"
+      },
+      "AveragePrecision": {
+        "Name": "Ortalama duyarlık puanı",
+        "Info": "Nesne algılama modelleri için ortalama duyarlık seçili bir sınıf için hesaplanır.",
+        "Short": "Ort. duyarlık",
+        "Title": "Ortalama duyarlık puanı hakkında ek bilgi"
+      },
+      "AverageRecall": {
+        "Name": "Ortalama geri çağırma puanı",
+        "Info": "Nesne algılama modelleri için ortalama geri çağırma, seçili bir sınıf için hesaplanır.",
+        "Short": "Ort. geri çağırma",
+        "Title": "Ortalama geri çağırma puanı hakkında ek bilgi"
+      },
+      "metricName": "Ölçüm adı",
+      "metricValue": "Ölçüm değeri"
+    },
+    "MetricSelector": {
+      "selectorLabel": "Ölçüm seçin",
+      "feature1SelectorLabel": "Satırlar: Özellik 1",
+      "feature2SelectorLabel": "Sütunlar: Özellik 2"
+    },
+    "Navigation": {
+      "cohortSaved": "Yeni kohort kaydedildi! Kohort ayarları altındaki Kohort listesine bakın.",
+      "dataExplorer": "Veri gezgini",
+      "errorExplorer": "Hata gezgini",
+      "globalExplanation": "Genel açıklama",
+      "localExplanation": "Yerel açıklama",
+      "localExplanationInspection": "Yerel açıklama (Denetleme)"
+    },
+    "SaveCohort": {
+      "cancel": "İptal",
+      "close": "Kapat",
+      "cohortName": "Kohort adı",
+      "move": "Taşı",
+      "save": "Kaydet",
+      "saveTitle": "Yeni kohort olarak kaydet",
+      "subText": "Geçerli kohortu, kohort listesine kaydedin. Kohort ayarları aracılığıyla kaydedilmiş kohortu yeniden ziyaret edebilirsiniz.",
+      "defaultLabelCopy": "Tüm veri kopyalama"
+    },
+    "TreeView": {
+      "ariaLabel": "Etkileşimli grafik",
+      "disabledArialLabel": "Devre dışı etkileşimli grafik",
+      "treeMapInfoTitle": "Ağaç haritası hakkında ek bilgi",
+      "treeDescription": "Ağaç görselleştirmesi, verilerde hiyerarşik olarak hata örneklerini başarı örneklerinden en iyi şekilde ayırmak için her bir özellik ve hata arasındaki karşılıklı bilgileri kullanır. Bu, yaygın hata desenlerini keşfetme ve vurgulama sürecini basitleştirir. Önemli hata desenlerini bulmak için, daha güçlü kırmızı renge (yani yüksek hata oranına) ve daha yüksek bir doldurma çizgisine (yani yüksek hata kapsamına) sahip düğümleri arayın. Ağaçta kullanılan özelliklerin listesini düzenlemek için \"Özellik listesi\" üzerine tıklayın. Hata ve başarı düğümlerinizin performansı hakkında daha fazla bilgi edinmek için \"metrik seç\" açılır menüsünü kullanın. Lütfen bu ölçüm seçiminin hata ağacınızın oluşturulma şeklini etkilemeyeceğini unutmayın.",
+      "treeStaticDescription": "Ağaç görselleştirmesi, verilerde hiyerarşik olarak hata örneklerini başarı örneklerinden en iyi şekilde ayırmak için her bir özellik ve hata arasındaki karşılıklı bilgileri kullanır. Bu, yaygın hata desenlerini keşfetme ve vurgulama sürecini basitleştirir. Önemli hata desenlerini bulmak için, daha güçlü kırmızı renge (yani yüksek hata oranına) ve daha yüksek bir doldurma çizgisine (yani yüksek hata kapsamına) sahip düğümleri arayın. Bu hata ağacını oluştururken kullanılan özelliklerin listesini görüntülemek için \"Özellik listesi\" üzerine tıklayın. Hata ve başarı düğümlerinizin performansı hakkında daha fazla bilgi edinmek için \"metrik seç\" açılır menüsünü kullanın. Lütfen bu ölçüm seçiminin hata ağacınızın oluşturulma şeklini etkilemeyeceğini unutmayın.",
+      "disabledWarning": "Genel kohort, tam veri kümesi için oluşturulan ağaç haritası nedeniyle \"Tüm verileri\" temsil edecek şekilde değiştirilmediyse hata ağaç haritası devre dışı bırakılır. Hata ağaç haritasını görüntülemek için tam veri kümesine geri dönün."
+    },
+    "WhatIfPanel": {
+      "whatIfHeader": "Etki değerlendirmesi"
+    },
+    "allSelected": "Tümü seçildi",
+    "cells": "Hücreler",
+    "cellsInfo": "Matris filtresinde seçilen hücre sayısı. Hiçbir hücre seçilmezse - (çizgi) görüntülenir ve tüm hücreler seçilmiş gibi genel kohort bilgileri gösterilir.",
+    "cellsTitle": "Hücrelerle ilgili ek bilgi",
+    "cohortInfo": "Kohort bilgileri",
+    "correctPrediction": "Doğru tahminler",
+    "correctTotal": "Doğru/Toplam",
+    "dataExploration": "Veri Kümesi Keşfi",
+    "dataExplorerView": "Veri gezgini",
+    "defaultClassNames": "{0} sınıfı",
+    "defaultFeatureNames": "{0} özelliği",
+    "errorCoverage": "Hata kapsamı",
+    "errorCoverageInfo": "Hata kapsamı, veri kümesinde mevcut olan tüm hatalar arasından seçimde yoğunlaşmış olan hataların yüzdesini gösterir.",
+    "errorCoverageTitle": "Hata kapsamıyla ilgili ek bilgiler",
+    "globalExplanationView": "Genel açıklama",
+    "globalImportance": "Genel önem derecesi",
+    "incorrectPrediction": "Yanlış tahminler",
+    "incorrectTotal": "Yanlış/Toplam",
+    "instanceView": "Örnek Görünümü",
+    "localExplanationView": "Yerel açıklama",
+    "noFeature": "Özellik yok",
+    "scaleWarning": "Kullanıcı arabiriminden kaynaklanan ölçekleme dolayısıyla, açıklamalar rastgele olarak aşağı örneklenmiştir",
+    "whatIfDatapoints": "Etki değerlendirmesi veri noktaları"
+  },
+  "Fairness": {
+    "ValidationErrors": {
+      "missingPerformanceMetric": "Performans ölçümü bulunamadı.",
+      "missingFairnessMetric": "Eşitlik ölçümü bulunamadı."
+    },
+    "BinDialog": {
+      "cancel": "İptal",
+      "cancelAriaLabel": "Cancel binning",
+      "categoryHeader": "Bölme değerleri:",
+      "header": "Bölmeleri yapılandır",
+      "makeCategorical": "Kategorik olarak değerlendir",
+      "numberOfBins": "Bölme sayısı:",
+      "save": "Kaydet",
+      "saveAriaLabel": "Save binning"
+    },
+    "DropdownHeaders": {
+      "errorMetric": "Hata çubuklarını etkinleştir",
+      "fairnessMetric": "Eşitlik ölçümü",
+      "performanceMetric": "Performans ölçümü",
+      "sensitiveFeature": "Hassas özellik"
+    },
+    "ErrorBounds": {
+      "howToRead": "Bu hata çubuklarını okumayı öğrenin",
+      "introModalText1": "Hata çubuklarında, değerlendirme verileri kümesinin boyutu nedeniyle ölçüm değerlerindeki belirsizlik gösterilir. Şu kullanılarak hesaplanan %95 güvenilirlik aralıkları gösterilir: ",
+      "wilsonScores": "Wilson puanları",
+      "introModalText2": " (ikili sınıflandırma için) veya ",
+      "normalApproximation": "normal tahmin",
+      "introModalText3": " (diğer görevler için)."
+    },
+    "Fairness": {
+      "body": "Eşitlik ölçümleri, modelinizin seçili özellikler arasındaki davranışının varyasyonunu ölçer. Çeşitli performans ölçümlerini temel alan bazı eşitlik ölçümü türleri vardır. Bunlar, gruplar genelinde aşırı değerler arasındaki farkı veya oranı yakalayabileceği gibi yanızca grubun en kötü değerini de yakalayabilir.",
+      "bodyLegacy": "Eşitlik ölçümleri, modelinizin seçilen özelliklerde gösterdiği davranışın varyasyon miktarını ölçer. İki eşitlik ölçümü vardır. Daha fazla ölçüm kullanıma sunulacak...",
+      "header": "Eşitlik, farklar temel alınarak ölçülür",
+      "pickerHeader": "Eşitliği nasıl ölçmek istiyorsunuz?"
+    },
+    "Feature": {
+      "body": "Eşitlik, modelinizin davranışındaki farklara yönelik olarak değerlendirilir. Verilerinizi seçilen her bir özelliğin değerlerine göre böleriz ve modelinizin performans ölçümü ile tahminlerinin bu bölmeler arasında nasıl farklılık gösterdiğini değerlendiririz.",
+      "categoriesOverflow": "   ve {0} kategori daha",
+      "editBinning": "Grupları düzenle",
+      "header": "Modelinizin eşitliğini hangi özelliklerle birlikte değerlendirmek istiyorsunuz?",
+      "hideCategories": "Daralt",
+      "learnMore": "Daha fazla bilgi",
+      "showCategories": "Tümünü göster",
+      "subgroups": "Alt gruplar",
+      "summaryCategoricalCount": "Bu özelliğin {0} benzersiz değeri var",
+      "summaryNumericCount": "Bu sayısal özellik {0} ile {1} aralığındadır ve {2} bölmeye gruplandırılmıştır."
+    },
+    "Footer": {
+      "back": "Geri",
+      "next": "Sonraki"
+    },
+    "Header": {
+      "documentation": "Belgeler",
+      "title": "Eşitlik"
+    },
+    "Intro": {
+      "explanatoryStep": "Değerlendirmeyi ayarlamak için hassas bir özellik, performans ölçümü veya eşitlik ölçümü belirtmeniz gerekir.",
+      "fairness": "Eşitlik ölçümleri",
+      "fairnessDashboard": "Eşitlik panosu",
+      "fairnessInfo": "Eşitlik ölçümleri, modelinizin genel ve her gruptaki kalitesini değerlendirmek için kullanılır. Eşitlik ölçümleri, performans ölçümünün uç değerleri arasındaki farkı veya oranı temsil edebileceği gibi yanızca grubun en kötü değerini de temsil edebilir.",
+      "features": "Hassas özellikler",
+      "featuresInfo": "Hassas özellikler, verilerinizi gruplara bölmek için kullanılır. Modelinizin bu gruplar arasındaki eşitliği, eşitlik ölçümleriyle ölçülür. Eşitlik ölçümleri, modelinizin bu gruplar arasında ne kadar değişiklik gösterdiğini ölçer.",
+      "getStarted": "Kullanmaya başlayın",
+      "introBody": "Eşitlik panosu, modellerinizin performansı ve eşitliği arasındaki karşılaştırmaları değerlendirmenizi sağlar",
+      "performance": "Performans ölçümü",
+      "performanceInfo": "Performans ölçümleri, modelinizin genel ve her gruptaki kalitesini değerlendirmek için kullanılır. Gruplar arasındaki performans ölçümünün uç değerleri arasındaki fark, performans farkı olarak bildirilir.",
+      "welcome": "Hoş geldiniz"
+    },
+    "Metrics": {
+      "Groups": {
+        "auc": "ROC eğrisinin altındaki alan",
+        "average": "Ortalama tahmin",
+        "classificationAccuracyAndErrorRate": "Doğruluk / hata oranı",
+        "custom": "Özel ölçümler",
+        "equalizedOdds": "Eşitlenmiş olasılık",
+        "f1_score": "F1 skoru",
+        "falseNegativeRate": "Hatalı negatif oranı / isabetsiz oranı",
+        "falsePositiveRate": "Hatalı pozitif oranı / dışta kalan",
+        "loss": "Kayıp",
+        "overUnderPrediction": "Fazla ve düşük tahmin",
+        "precision": "Duyarlık",
+        "r2_score": "R kare puanı",
+        "regressionError": "Hata",
+        "selectionRate": "Demografik Eşlik / Seçim oranı",
+        "trueNegativeRate": "Doğru negatif oranı / belirginlik",
+        "truePositiveRate": "Doğru pozitif oranı / yakalama / duyarlılık düzeyi"
+      },
+      "ROCAUCScoreMin": "En düşük ROC AUC puanı",
+      "ROCAUCScoreMinDescription": "Tüm grupların en küçük Alıcı Çalışma Özelliği Eğrisi (ROC AUC) Altındaki Alanı.",
+      "accuracyDescription": "Doğru olarak sınıflandırılmış veri noktalarının kesir değeri.",
+      "accuracyScore": "Doğruluk",
+      "accuracyScoreDifference": "Doğruluk puanı farkı",
+      "accuracyScoreDifferenceDescription": "İki grup arasındaki doğrulup puanında en büyük fark.",
+      "accuracyScoreMin": "En düşük doğruluk puanı",
+      "accuracyScoreMinDescription": "Tüm grupların en düşük doğruluk puanı.",
+      "accuracyScoreRatio": "Doğruluk puanı oranı",
+      "accuracyScoreRatioDescription": "İki grup arasındaki doğruluk puanında en düşük oran.",
+      "auc": "ROC eğrisinin altındaki alan",
+      "aucDescription": "Olumlu örnekleri olumsuz örneklerden ayırırken puan olarak görüntülenen tahminlerin kalitesi.",
+      "average": "Ortalama tahmin",
+      "balancedAccuracy": "Dengeli doğruluk",
+      "balancedAccuracyDescription": "Pozitif ve negatif örnekler eşit toplam ağırlığa sahip olacak şekilde yeniden ağırlıklandırılır. Bu, temel alınan verilerin fazla dengesiz olması durumunda uygundur.",
+      "balancedAccuracyScoreMin": "En düşük dengeli doğruluk puanı",
+      "balancedAccuracyScoreMinDescription": "Her sınıfta tüm grupların ortalama en düşük yakalaması (0 ve 1).",
+      "balancedRMSEDescription": "Pozitif ve negatif örnekler eşit toplam ağırlığa sahip olacak şekilde yeniden ağırlıklandırılır. Bu, temel alınan verilerin fazla dengesiz olması durumunda uygundur.",
+      "balancedRootMeanSquaredError": "Dengeli ortalama hata karesi kökü",
+      "demographicParityDifference": "Demografik eşlik farkı",
+      "demographicParityDifferenceDescription": "İki grup arasında tahmin etiketi 1 ile oranı gösteren, seçim oranındaki en büyük fark.",
+      "demographicParityRatio": "Demografik eşlik oranı",
+      "demographicParityRatioDescription": "İki grup arasında tahmin etiketi 1 ile oranı gösteren, seçim oranları arasındaki en düşük oran.",
+      "equalizedOddsDifference": "Eşitlenmiş olasılık farkı",
+      "equalizedOddsDifferenceDescription": "İki grubun doğru pozitif oranları arasındaki en büyük fark veya iki grubun hatalı pozitif oranları arasındaki en büyük fark (hangisi daha büyükse).",
+      "equalizedOddsRatio": "Eşitlenmiş olasılık oranı",
+      "equalizedOddsRatioDescription": "İki grubun doğru pozitif oranları arasındaki en düşük oran veya iki grubun hatalı pozitif oranları arasındaki en düşük oran (hangisi daha küçükse).",
+      "errorRateDifference": "Hata oranı farkı",
+      "errorRateDifferenceDescription": "İki grubun hata oranları arasındaki en büyük fark.",
+      "errorRateRatio": "Hata oranı",
+      "errorRateRatioDescription": "İki grubun hata oranları arasındaki en düşük oran.",
+      "f1Score": "F1 skoru",
+      "f1ScoreDescription": "F1 skoru, duyarlık ile yakalamanın harmonik ortalamasıdır.",
+      "f1ScoreMin": "En düşük F1 skoru",
+      "f1ScoreMinDescription": "Tüm grupların en düşük F1 skoru.",
+      "falloutRate": "Hata oranı",
+      "falseNegativeRate": "Hatalı negatif oranı",
+      "falseNegativeRateDescription": "Doğru etiketi 1 olanlar arasında yanlış sınıflandırılmış veri noktalarının kesir değeri.",
+      "falseNegativeRateDifference": "Hatalı negatif oranı farkı",
+      "falseNegativeRateDifferenceDescription": "İki grubun hatalı negatif oranları arasındaki en büyük fark. Bazen ıskalama oranı farkı olarak da adlandırılır.",
+      "falseNegativeRateRatio": "Hatalı negatif oranı",
+      "falseNegativeRateRatioDescription": "İki grubun hatalı negatif oranları arasındaki en düşük oran. Bazen ıskalama oranı olarak da adlandırılır.",
+      "falsePositiveRate": "Hatalı pozitif oranı",
+      "falsePositiveRateDescription": "Doğru etiketi 0 olanlar arasında yanlış sınıflandırılmış veri noktalarının kesir değeri.",
+      "falsePositiveRateDifference": "Hatalı pozitif oranı farkı",
+      "falsePositiveRateDifferenceDescription": "İki grubun hatalı pozitif oranları arasındaki en büyük fark. Bazen dışta kalan farkı olarak da adlandırılır.",
+      "falsePositiveRateRatio": "Hatalı pozitif oranı",
+      "falsePositiveRateRatioDescription": "İki grubun hatalı pozitif oranları arasındaki en düşük oran. Bazen dışta kalan oranı olarak da adlandırılır.",
+      "logLoss": "Günlük kaybı",
+      "logLossMax": "En yüksek günlük kaybı",
+      "logLossMaxDescription": "Tüm grupların en yüksek lojistik kaybı.",
+      "maxError": "Maksimum hata sayısı",
+      "meanAbsoluteError": "Ortalama mutlak hata sayısı",
+      "meanAbsoluteErrorDescription": "Hata mutlak değerlerinin ortalaması. Aykırı değerlere karşı MSE'den daha dayanıklıdır.",
+      "meanAbsoluteErrorMax": "En yüksek ortalama mutlak hata sayısı",
+      "meanAbsoluteErrorMaxDescription": "Tüm grupların en yüksek ortalama mutlak hata değeri.",
+      "meanSquaredError": " Ortalama hata karesi",
+      "meanSquaredErrorMax": "En yüksek ortalama hata karesi",
+      "meanSquaredErrorMaxDescription": "Tüm grupların en yüksek ortalama hata karesi.",
+      "meanSquaredLogError": "Ortalama günlük hatası karesi",
+      "medianAbsoluteError": "Ortanca mutlak hata",
+      "missRate": "İsabetsizlik oranı",
+      "mseDescription": "Hata karelerinin ortalaması.",
+      "overprediction": "Fazla tahmin",
+      "precisionDescription": "1 olarak sınıflandırılanların arasında doğru şekilde sınıflandırılmış veri noktalarının kesir değeri.",
+      "precisionScore": "Duyarlık",
+      "precisionScoreMin": "En düşük duyarlık puanı",
+      "precisionScoreMinDescription": "Tüm grupların en düşük duyarlık puanı.",
+      "r2Description": "Model tarafından açıklanan etiketlerdeki varyansın kesir değeri.",
+      "r2ScoreMin": "En düşük R2 puanı",
+      "r2ScoreMinDescription": "Tüm grupların en düşük R2 puanı.",
+      "r2_score": "R kare puanı",
+      "recallDescription": "Gerçek etiketi 1 olanların arasında doğru bir şekilde sınıflandırılmış veri noktalarının kesir değeri. Alternatif adlar: gerçek pozitif oran, hassasiyet.",
+      "recallScore": "Geri çağırma",
+      "recallScoreMin": "En düşük yakalama puanı",
+      "recallScoreMinDescription": "Tüm grupların en düşük yakalama puanı.",
+      "rms_error": "Ortalama hata karesi kökü",
+      "rmseDescription": "Hata karelerinin ortalamasının karekökü.",
+      "selectionRate": "Seçim oranı",
+      "specificityScore": "Belirginlik puanı",
+      "trueNegativeRateDifference": "Doğru negatif oranı farkı",
+      "trueNegativeRateDifferenceDescription": "İki grubun doğru negatif oranları arasındaki en büyük fark. Bazen belirginlik puanı farkı olarak da adlandırılır.",
+      "trueNegativeRateRatio": "Doğru negatif oranı",
+      "trueNegativeRateRatioDescription": "İki grubun doğru negatif oranları arasındaki en düşük oran. Bazen belirginlik puanı oranı olarak da adlandırılır.",
+      "truePositiveRateDifference": "Doğru pozitif oranı farkı",
+      "truePositiveRateDifferenceDescription": "İki grubun doğru pozitif oranları arasındaki en yüksek fark. Bazen eşit fırsat farkı veya yakalama puanı farkı olarak da adlandırılır.",
+      "truePositiveRateRatio": "Doğru pozitif oranı",
+      "truePositiveRateRatioDescription": "İki grubun doğru pozitif oranları arasındaki en düşük oran. Bazen eşit fırsat oranı veya yakalama puanı oranı olarak da adlandırılır.",
+      "underprediction": "Düşük tahmin",
+      "zeroOneLoss": "0-1 kayıp"
+    },
+    "ModelComparison": {
+      "disparity": " Fark ",
+      "disparityInOutcomes": "Tahmin farkı",
+      "disparityInPerformance": "{0} farkı",
+      "downloadReport": "Raporu indir",
+      "helpModalText1": "X ekseni performansı temsil eder ve {0} daha iyidir.",
+      "helpModalText2": "Y ekseni eşitlik ölçümü değerlerini temsil eder ve {0} daha iyidir.",
+      "higher": "daha yüksek",
+      "howToMeasureDisparity": "Fark nasıl ölçülür?",
+      "howToRead": "Bu grafiği okuma",
+      "howToReadText": "Bu grafik, {0} modelin her birini seçilebilir bir nokta olarak temsil eder. X ekseni {1} ölçümünü temsil eder, {2} değerler daha iyidir. Y ekseni farkı temsil eder, düşük değerler daha iyidir.",
+      "insights": "En önemli içgörüler",
+      "insightsLegacy": "İçgörüler",
+      "insightsText2": "{0}, {1} ile {2} arasındadır. {3}, {4} ile {5} arasındadır.",
+      "insightsText3": "En iyi performansa sahip model {0} / {1} ve {2} / {3} elde ediyor.",
+      "insightsText3v1FairnessMetric": "fark",
+      "insightsText4": "En iyi eşitlik ölçümü değerine sahip model {0} / {1} ve {2} / {3} elde ediyor.",
+      "introModalText": "Her model seçilebilir bir noktadır. Tam eşitlik değerlendirmesi için modele tıklayın veya dokunun.",
+      "lower": "daha düşük",
+      "period": ". ",
+      "rangesFrom": " aralığı ",
+      "title": "Model karşılaştırması",
+      "to": " - "
+    },
+    "Performance": {
+      "binary": "ikili",
+      "binaryClassifier": "ikili sınıflandırıcı",
+      "body": "Verileriniz {0} etiket ve {2} {1} tahmininizi içeriyor. Bu bilgilere dayanarak, aşağıdaki ölçümleri kullanmanızı öneririz. Lütfen listeden bir ölçüm seçin.",
+      "continuous": "sürekli",
+      "header": "Performansı nasıl ölçmek istiyorsunuz?",
+      "modelMakes": "model şunları yapar:",
+      "modelsMake": "modeller şunları yapar:",
+      "probabilisticRegressor": "probit regresörü",
+      "regressor": "regresör"
+    },
+    "Report": {
+      "assessmentResults": "Şunun için değerlendirme sonuçları:",
+      "backToComparisons": "Tüm modellere dön",
+      "backToComparisonsLegacy": "Çoklu model görünümü",
+      "chartChoiceDropdownHeader": "Grafikler",
+      "chartChoiceAriaLabel": "Chart selection",
+      "classificationOutcomesHowToRead": "Çubuk grafik, her gruptaki seçim oranını gösterir. Bu, 1 olarak sınıflandırılan noktaların kesir değerini ifade eder.",
+      "classificationPerformanceHowToRead1": "Çubuk grafik, her gruptaki hataların dağılımını gösterir.",
+      "classificationPerformanceHowToRead2": "Hatalar, fazla tahmin hataları (1 tahmin edilirken gerçek etiketin 0 olması) ve düşük tahmin hataları (0 tahmin edilirken gerçek etiketin 1 olması) olarak ayrılır.",
+      "classificationPerformanceHowToRead3": "Bildirilen oranlar, hata sayısı genel grup boyutuna bölünerek bulunur.",
+      "classificationPerformanceHowToReadV2": "Çubuk grafikte her gruptaki hatalı negatif ve hatalı pozitif oranları gösterilir.",
+      "collapseSensitiveAttributes": "Hassas öznitelikleri daralt",
+      "distributionOfErrors": "Hata dağılımı",
+      "distributionOfPredictions": "Tahmin dağılımı",
+      "editConfiguration": "Yapılandırmayı düzenle",
+      "expandSensitiveAttributes": "Hassas öznitelikleri genişlet",
+      "falseNegativeRate": "Hatalı negatif oranı",
+      "falsePositiveRate": "Hatalı pozitif oranı",
+      "globalPerformanceText": "Genel {0} ölçümü",
+      "groupLabel": "Alt grup",
+      "maxTag": "Maksimum",
+      "minTag": "Minimum",
+      "modelName": "{0} modeli",
+      "outcomesTitle": "Tahmin farkı",
+      "overallLabel": "Genel",
+      "overestimationError": "Fazla tahmin",
+      "overpredictionExplanation": "(tahmini = 1, true = 0)",
+      "performanceChartHeaderBinaryClassification": "Hatalı pozitif ve hatalı negatif oranları",
+      "performanceChartHeaderProbability": "Fazla ve düşük tahmin",
+      "performanceChartHeaderRegression": "Hata dağılımı",
+      "performanceDisparityText": "{0} farkıdır",
+      "probabilityPerformanceHowToRead1": "Çubuk grafik, her gruptaki ortalama mutlak hataları fazla tahmin ve düşük tahmin olarak ayrılmış şekilde gösterir.",
+      "probabilityPerformanceHowToRead2": "Her örnekte, tahmin ile etiket arasındaki farkı ölçeriz. Fark pozitifse fazla tahmin, negatifse düşük tahmin olarak adlandırırız.",
+      "probabilityPerformanceHowToRead3": "Fazla tahmin hataları ile düşük tahmin hatalarının toplamını toplam grup boyutuna bölerek bildiririz.",
+      "regressionOutcomesHowToRead": "Kutu grafikleri her gruptaki tahminlerin dağılımını gösterir. Veri noktaları ayrı ayrı olacak şekilde en üstte yer alır.",
+      "regressionPerformanceHowToRead": "Hata, tahmin ile etiket arasındaki farktır. Kutu grafikleri, her gruptaki hataların dağılımını gösterir. Veri noktaları ayrı ayrı olacak şekilde en üste yer alır.",
+      "title": "Performans farkı",
+      "tooltipError": "Hata: {0}",
+      "tooltipPrediction": "Tahmin: {0}",
+      "underestimationError": "Düşük tahmin",
+      "underpredictionExplanation": "(tahmini = 0, true = 1)"
+    },
+    "attributes": "Öznitelikler",
+    "attributesCount": "{0} hassas özellik",
+    "calculating": "Hesaplanıyor...",
+    "close": "Kapat",
+    "dataSpecifications": "Veri istatistikleri",
+    "defaultClassNames": "{0} sınıfı",
+    "defaultCustomMetricName": "Özel ölçüm {0}",
+    "defaultFeatureNames": "{0} hassas özelliği",
+    "defaultSingleFeatureName": "Hassas özellik",
+    "done": "Bitti",
+    "errorOnInputs": "Giriş hatası. Hassas özellikler şu anda kategorik değerler olmalıdır. Lütfen değerleri bölmelenmiş kategorilere eşleyip yeniden deneyin.",
+    "fairnessMetric": "03 Eşitlik ölçümleri",
+    "instanceCount": "{0} örnek",
+    "loremIpsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "modelComparisonTab": "Model karşılaştırması",
+    "opportunityTab": "Fırsat Eşitliği",
+    "performanceMetric": "02 Performans ölçümleri",
+    "performanceMetricLegacy": "Performans ölçümü",
+    "performanceTab": "Performans Eşitliği",
+    "sensitiveFeatures": "01 Hassas özellikler",
+    "singleAttributeCount": "1 hassas özellik",
+    "tableTab": "Ayrıntı görünümü"
+  },
+  "Interpret": {
+    "AggregateImportance": {
+      "featureLabel": "Özellik: {0}",
+      "high": "Yüksek",
+      "importanceLabel": "Önem derecesi: {0}",
+      "low": "Düşük",
+      "noColor": "Yok",
+      "predictedClass": "Tahmin edilen sınıf",
+      "predictedClassTooltip": "Tahmin edilen sınıf: {0}",
+      "predictedOutputTooltip": "Tahmin edilen çıkış: {0}",
+      "predictedValue": "Tahmin edilen değer",
+      "scaledFeatureValue": "Ölçeklendirilmiş özellik değeri",
+      "tooManyRows": "Sağlanan veri kümesi, bu grafiğin destekleyebileceğinden daha büyük",
+      "topKFeatures": "En Yüksek K Özellikleri:",
+      "topKInfo": "En yüksek k nasıl hesaplanır?",
+      "trueClass": "Doğru sınıf",
+      "trueClassTooltip": "Doğru sınıf: {0}",
+      "trueOutputTooltip": "Doğru çıkış: {0}",
+      "trueValue": "Doğru değer",
+      "valueLabel": "Özellik değeri: {0}"
+    },
+    "AxisConfigDialog": {
+      "TreatAsCategorical": "Kategorik olarak değerlendir",
+      "apply": "Uygula",
+      "binLabel": "Verilere gruplama uygula",
+      "countHelperText": "Nokta sayısının histogramı",
+      "ditherLabel": "Titreşmeli",
+      "groupByCohort": "Kohorta göre gruplandır",
+      "logarithmicScaling": "Logaritmik ölçeği etkinleştir",
+      "numOfBins": "Bölme sayısı",
+      "selectClass": "Sınıf seçin",
+      "selectFeature": "Özellik seçin",
+      "selectFilter": "Eksen değerinizi seçin"
+    },
+    "BarChart": {
+      "absoluteGlobal": "Mutlak genel",
+      "absoluteLocal": "Mutlak yerel",
+      "calculatingExplanation": "Hesaplama açıklaması",
+      "classLabel": "Sınıf: {0}",
+      "noData": "Veri yok",
+      "sortBy": "Sıralama ölçütü"
+    },
+    "Charts": {
+      "cohort": "Kohort",
+      "count": "Sayı",
+      "countTooltipPrefix": "Sayı: {0}",
+      "featureImportance": "Özelliğin önem derecesi",
+      "featurePrefix": "Özellik",
+      "howToRead": "Bu grafiği okuma",
+      "importancePrefix": "Önem derecesi",
+      "numberOfDatapoints": "Veri noktası sayısı",
+      "rowIndex": "Satır dizini",
+      "absoluteIndex": "Mutlak dizin",
+      "xValue": "X değeri",
+      "yValue": "Y değeri"
+    },
+    "Cohort": {
+      "cohort": "Kohort",
+      "defaultLabel": "Tüm veriler",
+      "temporaryCohort": "Geçici kohort"
+    },
+    "CohortBanner": {
+      "addCohort": "Yeni kohort",
+      "binaryClassifier": "İkili sınıflandırıcı",
+      "copy": " kopyası",
+      "dataStatistics": "Veri istatistikleri",
+      "datapoints": "{0} veri noktası",
+      "datasetCohorts": "Veri kümesi kohortları",
+      "details": "Ayrıntılar",
+      "duplicateCohort": "Çoğalt",
+      "edit": "Düzenle",
+      "editCohort": "Kohortu düzenle",
+      "features": "{0} özellik",
+      "filters": "{0} filtre",
+      "multiclassClassifier": "Çok sınıflı sınıflandırıcı",
+      "name": "Ad",
+      "regressor": "Regresör"
+    },
+    "CohortEditor": {
+      "columns": {
+        "index": "Dizin",
+        "dataset": "Veri kümesi",
+        "predictedY": "Tahmin edilen Y",
+        "trueY": "Doğru Y",
+        "classificationOutcome": "Sınıflandırma sonucu",
+        "regressionError": "Hata"
+      },
+      "TreatAsCategorical": "Kategorik olarak değerlendir",
+      "TreatAsCategoricalAriaLabelChecked": "Treat as categorical checked, number of unique values: {0}",
+      "TreatAsCategoricalAriaLabelUnchecked": "Treat as categorical unchecked, min value: {0}, max value: {1}",
+      "addFilter": "Filtre ekleme",
+      "addFilterAriaLabel": "Add cohort filter",
+      "addedFilters": "Filtreler",
+      "cancel": "İptal",
+      "cancelAriaLabel": "Cancel cohort",
+      "cancelExistingCohort": "Kohortu düzenlemeyi iptal etmek ve geri dönmek istediğinizden emin misiniz?",
+      "cancelNewCohort": "Yeni bir kohort oluşturmayı iptal etmek ve geri dönmek istediğinizden emin misiniz?",
+      "cancelNo": "Hayır",
+      "cancelTitle": "Kohortu iptal et",
+      "cancelYes": "Evet",
+      "cohortNameError": "Kohort adı eksik",
+      "cohortNameDupError": "Aynı ada sahip bir kohort zaten var.",
+      "cohortNameLabel": "Veri kümesi kohortu adı",
+      "cohortNamePlaceholder": "Kohortunuzu adlandırın",
+      "clearAllFilters": "Tüm filtreleri temizle",
+      "defaultFilterState": "Veri kümesi kohortunuza parametre eklemek için bir filtre seçin. Geçerli görüntüleme kohortunuzdan filtreler önceden doldurulur.",
+      "delete": "Sil",
+      "deleteAriaLabel": "Delete cohort",
+      "invalidValueError": "Değer {0} ile {1} arasında olmalıdır",
+      "minimumGreaterThanMaximum": "En düşük değer girişleri, en büyük değer giriş değerinden küçük olmalıdır.",
+      "noAddedFilters": "Filtre bulunamadı",
+      "placeholderName": "{0} kohortu",
+      "save": "Kaydet",
+      "saveAriaLabel": "Save cohort",
+      "saveAndSwitch": "Kaydet ve değiştir",
+      "selectFilter": "Filtre seçin",
+      "noFiltersApplied": "Filtre uygulanmadı",
+      "filterAdded": "Filtre eklendi"
+    },
+    "Columns": {
+      "classificationOutcome": "Sınıflandırma sonucu",
+      "dataset": "Veri kümesi",
+      "error": "Hata",
+      "falseNegative": "Hatalı negatif",
+      "falsePositive": "Hatalı pozitif",
+      "none": "Sayı",
+      "predictedProbabilities": "Tahmin olasılıkları",
+      "predictedLabels": "Tahmin edilen etiketler",
+      "trueLabels": "Doğru etiketler",
+      "regressionError": "Regresyon hatası",
+      "trueNegative": "Gerçek negatif",
+      "truePositive": "Doğru pozitif",
+      "correctlyClassified": "Doğru sınıflandırılmış",
+      "misclassified": "Yanlış sınıflandırılmış"
+    },
+    "CrossClass": {
+      "absoluteValInfo": "Mutlak değer ortalaması: Özelliğin tüm olası sınıflardaki önem derecesi toplamının sınıf sayısına bölümünü gösterir",
+      "close": "Kapat",
+      "crossClassWeights": "Sınıflar arası ağırlıklar",
+      "enumeratedClassInfo": "Listelenen sınıf adları: Tüm veri noktalarında yalnızca belirtilen sınıfın özellik önem derecesi değerlerini gösterir.",
+      "info": "Sınıflar arası hesaplama hakkında bilgiler",
+      "label": "Sınıflar arası ağırlık:",
+      "overviewInfo": "Çok sınıflı modeller, her sınıf için bağımsız bir özellik önem derecesi vektörü oluşturur. Her sınıfın özellik önem derecesi vektörü, sınıfı hangi özelliklerin daha olası veya daha az olası yaptığını gösterir. Sınıf başına özellik önem derecesi vektörlerinin ağırlığının tek bir değerde nasıl özetleneceğini seçebilirsiniz:",
+      "predictedClassInfo": "Tahmin edilen sınıf: Belirli bir noktanın tahmin edilen sınıfı için özellik önem derecesi değerini gösterir"
+    },
+    "DatasetExplorer": {
+      "aggregatePlots": "Kümelenmiş çizimler",
+      "chartType": "Grafik türü",
+      "colorValue": "Renk değeri",
+      "infoTitle": "Veri analizi grafiği görünümü hakkında ek bilgi",
+      "helperText": "Tahmin edilen sonuç, veri kümesi özellikleri ve hata grupları gibi filtreler boyunca veri kümesi istatistiklerini analiz etmek için veri kümesi kohortları oluşturun. Veri kümenizdeki fazla/eksik sunum hakkında bilgi edinin.",
+      "individualDatapoints": "Ayrı ayrı veri noktaları",
+      "missingParameters": "Bu sekme için değerlendirme veri kümesi sağlanması gerekir.",
+      "noColor": "Yok",
+      "datasetCohortDropdown": "Dataset cohort"
+    },
+    "DependencePlot": {
+      "featureImportanceOf": "Şu özellik için önem derecesi:",
+      "placeholder": "Bağımlılık çizimini göstermek için bir özellik seçin"
+    },
+    "ExplanationScatter": {
+      "class": "sınıf: ",
+      "colorValue": "Renk:",
+      "count": "Sayı",
+      "dataGroupLabel": "Veri",
+      "dataLabel": "Veri: {0}",
+      "importanceLabel": "Önem derecesi: {0}",
+      "index": "Dizin",
+      "output": "Çıkış",
+      "predictedY": "Tahmini Y",
+      "odIncorrect": "Incorrect",
+      "odCorrect": "Correct",
+      "probabilityLabel": "Olasılık: {0}",
+      "trueY": "Doğru Y",
+      "xValue": "X değeri:",
+      "yValue": "Y değeri:"
+    },
+    "ExplanationSummary": {
+      "clickHere": "Daha fazla bilgi",
+      "limeDescription": "Bu açıklayıcı, modelin doğrusal bir yaklaşımını sağlayan LIME kullanır. Bir açıklama almak için aşağıdakileri yaparız: örneği karıştırır, model tahminleri alır ve yerel olarak sadık olan seyrek bir doğrusal modeli öğrenmek için bu tahminleri etiket olarak kullanırız. Bu doğrusal modelin ağırlıkları 'özellik önem dereceleri' olarak kullanılır. Daha fazla bilgi için aşağıdaki bağlantıya tıklayın.",
+      "limeTitle": "LIME (Yerel Yorumlanabilir Modelden Bağımsız Açıklamalar)",
+      "mimicDescription": "Bu açıklayıcı, kara kutu modellerini taklit etmek için küresel vekil modellerini eğitme fikrine dayanmaktadır. Küresel bir vekil modeli, herhangi bir kara kutu modelini mümkün olduğunca doğru olarak tahmin etmek için eğitilmiş, içsel olarak yorumlanabilir bir modeldir. Özellik önem derecesi değerleri, temel vekil modelinizin (LightGBM veya Lineer Regresyon veya Stokastik Gradyan İniş veya Karar Ağacı) model tabanlı özellik önem derecesi değerleridir.",
+      "mimicTitle": "Taklit (Genel Vekil Açıklamaları)",
+      "pfiDescription": "Bu açıklayıcı, tüm veri kümesi için verileri tek tek özellik bazında rastgele karıştırır ve ilgilenilen performans ölçümündeki değişim oranını hesaplar (varsayılan performans ölçümleri: ikili sınıflandırma için F1, çok sınıflı sınıflandırma için mikro ortalamalı F1 Puanı ve regresyon için ortalama mutlak hata). Değişiklik ne kadar büyükse, bu özellik o kadar önemlidir. Bu açıklayıcı yalnızca temel modelin genel davranışını açıklayabilir, ancak tek tek tahminleri açıklamaz. Bir özelliğin önem değeri, bu özelliği değiştirerek modelin performansında elde edilen deltayı temsil eder.",
+      "pfiTitle": "Permütasyon özelliği önem derecesi (PFI)",
+      "shapDescription": "Bu açıklayıcı, modelleri açıklamaya yönelik bir oyun teorisi yaklaşımı olan SHAP'yi kullanır. Bu yöntemde özellik kümelerinin önemi, bu özellikleri marjinalleştirme yoluyla modelden \"gizleyerek\" ölçülür. Daha fazla bilgi için aşağıdaki bağlantıya tıklayın.",
+      "shapTitle": "Shapley değerleri",
+      "whatDoFeatureMean": "Bu özellik önem derecesi değerlerinin anlamı nedir?"
+    },
+    "FeatureImportanceWrapper": {
+      "barText": "Çubuk",
+      "beehiveText": "Swarm",
+      "boxText": "Kutu",
+      "chartType": "Grafik türü:",
+      "globalImportanceExplanation": "Genel özellik önem derecesi, tüm noktaların özellik önem derecelerine ait mutlak değerinin ortalaması alınarak hesaplanır (L1 normalleştirme). ",
+      "multiclassImportanceAddendum": "Tüm sınıflar için özelliğin önem derecesi hesaplanırken tüm noktalar dahil edilir ve fark ağırlığı kullanılmaz. Bu nedenle, 'A Sınıfı' olmadığı tahmin edilen çok sayıda nokta için büyük negatif önem derecesine sahip bir özellik, bu özelliğin 'A Sınıfı' önem derecesini büyük ölçüde artırır.",
+      "violinText": "Keman"
+    },
+    "FilterOperations": {
+      "equals": " şuna eşittir: {0}",
+      "excludes": " şunu dışlıyor: {0} ",
+      "greaterThan": " şundan büyüktür: {0}",
+      "greaterThanEquals": " şundan büyük veya şuna eşittir: {0}",
+      "inTheRangeOf": "[ {0} ]",
+      "includes": " şunu içerir: {0} ",
+      "lessThan": " şundan azdır: {0}",
+      "lessThanEquals": " şundan az veya şuna eşittir: {0}",
+      "overflowFilterArgs": "{0} ve {1} öğe daha"
+    },
+    "Filters": {
+      "categoricalIncludeValues": "Eklenen değerler:",
+      "equalComparison": "Eşittir",
+      "greaterThanComparison": "Şundan büyüktür:",
+      "greaterThanEqualToComparison": "Şundan büyüktür veya şuna eşittir:",
+      "inTheRangeOf": "Şu aralıkta:",
+      "lessThanComparison": "Şundan küçüktür:",
+      "lessThanEqualToComparison": "Şundan küçüktür veya şuna eşittir:",
+      "max": "En yüksek: {0}",
+      "maximum": "En Büyük",
+      "min": "En az: {0}",
+      "minimum": "Minimum",
+      "numericValue": "Değer",
+      "numericalComparison": "İşlem",
+      "uniqueValues": "Benzersiz değerlerin sayısı: {0}"
+    },
+    "GlobalOnlyChart": {
+      "helperText": "Genel model tahminlerinizi etkileyen en yüksek k önem düzeyindeki özellikleri keşfedin. Azalan özellik önceliklerini göstermek için kaydırıcıyı kullanın."
+    },
+    "GlobalTab": {
+      "absoluteValues": "Mutlak değerler olarak görüntüle",
+      "aggregateFeatureImportance": "Kümelenmiş özellik önem derecesi",
+      "collapsedHelperText": "Genel model tahminlerinizi etkileyen en yüksek k önem düzeyindeki özellikleri inceleyin.",
+      "datapoint": "Datapoint",
+      "datasetCohortSelector": "Veri kümesi kohortu seçin",
+      "datasetCohorts": "Veri kümesi kohortları",
+      "datasetRequired": "Bağımlılık çizimleri için değerlendirme veri kümesi ve yerel özellik önem dizisi gereklidir.",
+      "dependencePlotFeatureSelectPlaceholder": "Özellik seçin",
+      "dependencePlotHelperText": "Bu bağımlılık çizimi, bir özelliğin değerlerinin bunlara karşılık gelen özellik önem derecesi değerleriyle ilişkisini gösterir.",
+      "dependencePlotTitle": "Bağımlılık çizimleri",
+      "helperText": "Genel model tahminlerinizi etkileyen top-k önemli özelliklerini keşfedin (genel açıklama olarak da bilinir). Azalan özellik önem derecelerini göstermek için kaydırıcıyı kullanın. Tüm kohortların özellikleri yan yana gösterilir ve göstergede kohort seçilerek devre dışı bırakılabilir. Seçili özelliğin değerlerinin tahmini nasıl etkilediği ile ilgili aşağıdaki yoğunluk çizimini görmek için grafikteki özelliklerden herhangi birine tıklayın.",
+      "infoTitle": "Toplu özellik önem derecesi hakkında ek bilgi",
+      "legendHelpText": "Gösterge öğelerine tıklayarak çizimdeki kohortları açıp kapatın.",
+      "missingParameters": "Bu sekme için yerel özellik önem derecesi parametresinin sağlanması gerekir.",
+      "sortByCohort": "Kohorta göre sırala",
+      "sortBy": "Veri noktalarına göre sırala",
+      "topAtoB": "Önem derecelerine göre ilk {0} özellik",
+      "viewDependencePlotFor": "Şunun için bağımlılık çizimini görüntüle:",
+      "weightOptions": "Sınıf önem derecesi ağırlıkları",
+      "weightOptionsDropdown": "Sınıf önem derecesi ağırlıkları açılan listesi"
+    },
+    "IcePlot": {
+      "close": "Kapat",
+      "errorPrefix": "Hatayla karşılaşıldı: {0}",
+      "featurePickerLabel": "Özellik:",
+      "integerError": "Bir tamsayı olmalıdır",
+      "loadingMessage": "Veriler yükleniyor...",
+      "maximumInputLabel": "Maksimum:",
+      "minimumInputLabel": "Minimum:",
+      "noModelError": "ICE çizimlerindeki tahminleri keşfetmek için lütfen işlevselleştirilmiş bir model belirtin.",
+      "numericError": "Sayısal bir değer olmalıdır",
+      "predictedProbability": "Tahmini olasılık",
+      "prediction": "Tahmin",
+      "predictionLabel": "Tahmin: {0}",
+      "probabilityLabel": "Olasılık: {0}",
+      "pythonError": "Python hatası",
+      "stepInputLabel": "Adımlar:",
+      "submitPrompt": "ICE çizimini görüntülemek için bir aralık gönderin",
+      "topLevelErrorMessage": "Parametrede hata"
+    },
+    "ModelPerformance": {
+      "cohortPickerLabel": "Keşfedilecek veri kümesi kohortunu seçin",
+      "helperText": "Tahmin değerlerinizin dağılımını ve model performansı ölçümlerinizin değerlerini keşfederek modelinizin performansını değerlendirin. Veri kümenizin farklı kohortlarında veya alt gruplarında modelinizin performansının karşılaştırmalı analizine bakarak modelinizi daha ileri düzeyde araştırabilirsiniz. Farklı boyutlarda kesmek için y değeri ve x değeri boyunca filtreleri seçin.",
+      "missingParameters": "Bu sekme için modeldeki tahmini değerler dizisinin sağlanması gerekir.",
+      "missingTrueY": "Model performans istatistikleri için tahmini sonuçların yanı sıra, doğru sonuçların da sağlanması gerekir",
+      "modelStatistics": "Model istatistikleri"
+    },
+    "PerturbationExploration": {
+      "loadingMessage": "Yükleniyor...",
+      "perturbationLabel": "Sapma:"
+    },
+    "PredictionLabel": {
+      "predictedClassLabel": "Tahmin edilen sınıf: {0}",
+      "predictedValueLabel": "Tahmin edilen değer: {0}"
+    },
+    "Statistics": {
+      "accuracy": "Doğruluk: {0}",
+      "bleuScore": "Bleu skoru: {0}",
+      "bertScore": "Bert skoru: {0}",
+      "exactMatchRatio": "Tam eşleşme oranı: {0}",
+      "rougeScore": "Rouge Skoru: {0}",
+      "fnr": "Hatalı negatif oranı: {0}",
+      "fpr": "Hatalı pozitif oranı: {0}",
+      "hammingScore": "Hamming skoru: {0}",
+      "meanPrediction": "Ortalama tahmin {0}",
+      "meteorScore": "Meteor Skoru: {0}",
+      "mse": "Ortalama hata karesi: {0}",
+      "precision": "Duyarlık: {0}",
+      "rSquared": "R²: {0}",
+      "recall": "Yakalama: {0}",
+      "selectionRate": "Seçim oranı: {0}",
+      "mae": "Ortalama mutlak hata: {0}",
+      "f1Score": "F1 Skoru: {0}",
+      "samples": "Örnek boyutu: {0}",
+      "meanAveragePrecision": "Aritmetik ortalama duyarlık: {0}",
+      "averagePrecision": "Ortalama duyarlık: {0}",
+      "averageRecall": "Ortalama geri çekme: {0}"
+    },
+    "ValidationErrors": {
+      "addFilters": "Filtre ekle",
+      "datasizeError": "Seçilen kohort çok büyük. Kohortun boyutunu azaltmak için lütfen filtre ekleyin.",
+      "datasizeWarning": "Değerlendirme veri kümesi, bazı grafiklerde etkili bir şekilde görüntülenemeyecek kadar büyük. Lütfen kohortun boyutunu azaltmak için filtreler ekleyin. ",
+      "errorHeader": "Bazı giriş parametreleri tutarsız olduğundan kullanılmayacak: ",
+      "evalData": "Değerlendirme veri kümesi",
+      "globalFeatureImportance": "Genel özellik önem derecesi",
+      "inconsistentDimensions": "Boyutlar tutarsız. {0}, {1} boyutlarına sahip. {2} bekleniyordu",
+      "localFeatureImportance": "Yerel özellik önem derecesi",
+      "notArray": "{0} bir dizi değil. Beklenen boyut dizisi {1}",
+      "notNonEmpty": "{0} girişi, boş olmayan bir dizi değil",
+      "predictedProbability": "Tahmini olasılık",
+      "predictedY": "Tahmini Y",
+      "varyingLength": "Boyutlar tutarsız. {0}, çeşitli uzunlukta öğeler içeriyor"
+    },
+    "Violin": {
+      "groupBy": "Gruplama ölçütü",
+      "groupNone": "Gruplandırma yok",
+      "groupPredicted": "Tahmini Y",
+      "groupTrue": "Doğru Y"
+    },
+    "WhatIf": {
+      "closeAriaLabel": "Kapat",
+      "defaultCustomRootName": "{0} satırının kopyası",
+      "filterFeaturePlaceholder": "Özelliklerde arama yapın"
+    },
+    "WhatIfTab": {
+      "IceGetStartedText": "ICE çizimlerini görüntülemek için bir nokta seçin veya Etki Değerlendirmesi noktası oluşturun",
+      "classLabel": "Sınıf: {0}",
+      "classPickerLabel": "Sınıf",
+      "cohortPickerLabel": "Keşfedilecek veri kümesi kohortunu seçin",
+      "dataPointInfo": "Veri noktası bilgileri",
+      "deltaLabel": "Delta",
+      "disclaimer": "Yasal uyarı: Bunlar birçok tahmine dayanan açıklamalardır ve tahminlerin “nedeni” değildir. Nedensel çıkarımın sağlam matematiksel temeli olmadan kullanıcıların bu araca dayalı olarak gerçek hayata yönelik karar vermeleri önerilmez.",
+      "featureImportanceGetStartedText": "Yerel özellik önem derecelerini görüntülemek için yukarıdaki tablodan bir veri noktası seçin",
+      "featureImportanceLackingParameters": "Her özelliğin tahminleri nasıl etkilediğini görmek için yerel özellik önem derecelerini belirtin.",
+      "featureImportancePlot": "Özellik önem derecesi çizimi",
+      "featureValues": "Özellik değerleri",
+      "helperText": "Dağılımda bir veri noktasına tıklayıp tek bir veri noktası seçerek, aşağıda bu veri noktasının yerel özellik önem derecesi değerlerini ve sağdaki panelde özellik değerlerini görüntüleyin.",
+      "iceLackingParameters": "ICE çizimleri, kuramsal veri noktalarına yönelik tahminler yapmak için işlevselleştirilmiş bir model gerektirir.",
+      "icePlot": "Bireysel koşullu beklenti (ICE) çizimi",
+      "icePlotHelperText": "ICE çizimleri, seçilen veri noktasının tahmin değerlerinin en küçük ve en büyük değerler arasındaki özellik değerleri aralığı boyunca nasıl değiştiğini gösterir.",
+      "indexLabel": "Veri dizini",
+      "loading": "Yükleniyor...",
+      "localFeatureImportanceForPoint": "Seçili veri noktalarının yerel özellik önem derecesi",
+      "maxLabel": "Maksimum",
+      "minLabel": "Minimum",
+      "missingParameters": "Bu sekme için değerlendirme veri kümesi sağlanması gerekir.",
+      "newPredictedClass": "Tahmin edilen yeni sınıf: ",
+      "newPredictedValue": "Tahmin edilen yeni değer: ",
+      "newProbability": "Yeni olasılık: ",
+      "nonNumericValue": "Değer sayısal olmalıdır",
+      "noneCreatedYet": "Henüz oluşturulmadı",
+      "noneSelectedYet": "Henüz seçilmedi",
+      "notAvailable": "Etki Değerlendirmesi şu anda Studio’da desteklenmiyor. Etki Değerlendirmesini etkinleştirmek için bu pencere öğesini Jupyter Notebook’ta çalıştırın.",
+      "panelPlaceholder": "Yeni veri noktalarına yönelik tahminlerde bulunmak için bir model gerekir.",
+      "predictedClass": "Tahmin edilen sınıf: ",
+      "predictedValue": "Tahmini değer: ",
+      "probability": "Olasılık: ",
+      "probabilityLabel": "Olasılık",
+      "realPoint": "Gerçek veri noktaları",
+      "rowLabel": "Satır: {0}",
+      "saveAsNewPoint": "Yeni nokta olarak kaydet",
+      "saveChanges": "Değişiklikleri kaydet",
+      "scatterLegendText": "Gösterge öğelerine tıklayarak çizimdeki veri noktalarını açıp kapatın.",
+      "selectionLimit": "En fazla 3 nokta seçilebilir",
+      "showLabel": "Göster:",
+      "stepsLabel": "Adımlar",
+      "tooltipTitleFew": "Tahmin edilen sınıflar",
+      "tooltipTitleMany": "Tahmin edilen en iyi {0} sınıf",
+      "trueClass": "Doğru sınıf: ",
+      "trueValue": "Doğru değer: ",
+      "trueValue.comment": "regresyon için gerçek etiket ön eki",
+      "whatIfDatapoint": "Etki değerlendirmesi veri noktası",
+      "whatIfDatapoints": "Etki Değerlendirmesi veri noktaları",
+      "whatIfHelpText": "Çizimde bir nokta seçin veya değiştirmek ve yeni bir Etki Değerlendirmesi noktası olarak kaydetmek için bilinen bir veri noktası dizinini el ile girin.",
+      "whatIfNameLabel": "Etki Değerlendirmesi veri noktası adı",
+      "whatIfTooltipTitle": "Etki değerlendirmesi tahmin edilen sınıflar"
+    },
+    "absoluteAverage": "Mutlak değerin ortalaması",
+    "aggregateFeatureImportance": "Kümelenmiş özellik önem derecesi",
+    "calloutTitle": "Bilgi için tıklayın",
+    "clearSelection": "Seçimi temizle",
+    "dataExploration": "Veri kümesi araştırma",
+    "datasetExplorer": "Veri kümesi gezgini",
+    "defaultClassNames": "{0} sınıfı",
+    "defaultFeatureNames": "{0} özelliği",
+    "explanationExploration": "Açıklama araştırması",
+    "feature": "Özellik:",
+    "featureImportance": "Özelliğin önem derecesi",
+    "featureImportanceOf": "Özellik önem derecesi: {0}",
+    "globalImportance": "Genel önem derecesi",
+    "ice": "ICE",
+    "individualAndWhatIf": "Bireysel özellik önem derecesi ve etki değerlendirmesi",
+    "individualImportance": "Bireysel özellik önem derecesi",
+    "intercept": "Kesim noktası",
+    "localFeatureImportance": "Yerel özellik önem derecesi",
+    "modelPerformance": "Model performansı",
+    "perturbationExploration": "Sapma araştırması",
+    "predictedClass": "Tahmin edilen sınıf",
+    "selectPoint": "Yerel açıklamasını görmek için bir nokta seçin",
+    "summaryImportance": "Özet önem derecesi"
+  },
+  "InterpretText": {
+    "View": {
+      "interpretibilityDashboard": "Yorumlanabilirlik Panosu",
+      "importantWords": "En önemli sözcükleri göster",
+      "topFeatureList": "En çok kullanılan özellikler listesinin analizi",
+      "allButton": "TÜM ÖZELLİKLER",
+      "negButton": "NEGATİF ÖZELLİKLER",
+      "posButton": "POZİTİF ÖZELLİKLER",
+      "legendText": "Pozitif skaler özellik önem dereceleri, sözcüğün seçili etiketinizin sınıflandırması için önemli olduğu kapsamı temsil eder, negatif skaler özellik önem dereceleri ise modelinizi seçili etiketinizden uzaklaştıran sözcükleri temsil eder.",
+      "legendTextForQA": "Sol metin kutusu ve çubuk grafik modelin tahminlerini görüntüler. Doğru metin kutusu, seçili bir belirteçle ilişkili özellik önem derecesini gösterir. Pozitif özellik önem dereceleri, sözcüklerin seçili belirteci yanıtın başlangıç/bitiş konumu olarak işaretlemek için önemli olduğu kapsamı temsil eder.",
+      "label": "Etiket",
+      "colon": ": ",
+      "startingPosition": "BAŞLANGIÇ KONUMU",
+      "endingPosition": "BİTİŞ KONUMU",
+      "predictedAnswer": "Tahmin edilen yanıt: ",
+      "trueAnswer": "Doğru yanıt: ",
+      "inputs": "Girişler",
+      "outputs": "Çıkışlar",
+      "sliderAriaLabel": "En önemli sözcükler için kaydırıcı"
+    },
+    "Legend": {
+      "featureLegend": "METİN ÖZELLİĞİ GÖSTERGESİ",
+      "posFeatureImportance": "POZİTİF ÖZELLİK ÖNEM DERECESİ",
+      "negFeatureImportance": "NEGATİF ÖZELLİK ÖNEM DERECESİ",
+      "cls": "CLS: tümcenin başlangıcı",
+      "sep": "SEP: tümcenin sonu",
+      "selectedWord": "Seçili sözcük: "
+    },
+    "BarChart": {
+      "featureImportance": "ÖZELLİK ÖNEM DERECESİ"
+    }
+  },
+  "InterpretVision": {
+    "Cohort": {
+      "close": "Kapat",
+      "errorCohortName": "Lütfen benzersiz bir kohort adı seçin.",
+      "errorNumSelected": "Lütfen en az bir (1) öğe seçin.",
+      "itemsSelectedSingular": "öğe seçildi",
+      "itemsSelectedPlural": "seçilen öğeler",
+      "save": "Kohortu kaydet",
+      "saveAndClose": "Kaydet ve kapat",
+      "saveAndSwitch": "Kaydet ve değiştir",
+      "textField": "Yeni kohort adı",
+      "title": "Yeni kohort kaydet"
+    },
+    "Dashboard": {
+      "allData": "Tüm Veriler",
+      "columnOne": "Resim",
+      "columnTwo": "Endeks",
+      "columnThree": "Doğru Y",
+      "columnFour": "Tahmini Y",
+      "columnThreeOD": "Doğru",
+      "columnFourOD": "Yanlış",
+      "columnFive": "Diğer meta veriler",
+      "chooseObject": "Algılanan bir nesne seçin",
+      "examples": "örnekler",
+      "filter": "Filtre",
+      "indexLabel": "Resim ",
+      "labelTypeDropdown": "Etiket türünü seçin",
+      "labelTypeAriaLabel": "Label type",
+      "labelVisibilityDropdown": "Görüntülenecek etiketleri seçin",
+      "labelVisibilityAriaLabel": "Label visibility",
+      "legendFailure": "hata",
+      "legendSuccess": "başarılı",
+      "loading": "Computing explanation for image of index",
+      "multiselect": "Çoklu Seçim",
+      "notdefined": "nesne senaryosu tanımlanmadı",
+      "objectSelect": "Nesne Seçimi",
+      "pageSize": "Sayfa boyutu: ",
+      "panelTitle": "Seçili örnek",
+      "panelExplanation": "Açıklama",
+      "panelInformation": "Bilgi",
+      "predictedLabel": "Tahmin edilen etiket",
+      "predictedY": "Tahmin Edilen: ",
+      "correctDetections": "Doğru algılamalar: ",
+      "incorrectDetections": "Yanlış algılamalar: ",
+      "prefix": "Nesne: ",
+      "rows": "Satırlar: ",
+      "rowsAriaLabel": "Number of rows per page",
+      "search": "Ara",
+      "selectAll": "Tümünü seç",
+      "settings": "Ayarlar",
+      "showAll": "Tümünü göster",
+      "tabOptionFirst": "Görüntü gezgini görünümü",
+      "tabOptionSecond": "Tablo görünümü",
+      "tabOptionThird": "Sınıf görünümü",
+      "thumbnailSize": "Küçük resim boyutu",
+      "titleBarError": "Hata örnekleri",
+      "titleBarSuccess": "Başarı örnekleri",
+      "trueY": "Gerçek değer: "
+    }
+  },
+  "ModelAssessment": {
+    "AddingTab": {
+      "AddButtonText": "Ekle",
+      "CalloutContent": "Bazı bileşenlerin (hata ağaç görünümü, hata ısı haritası) eklenmesi, aşağıdaki bileşenlerde gördüğünüz genel kohort verilerini filtrelemenizi sağlar.",
+      "AddComponentAriaLabel": "Add dashboard component",
+      "AddButtonAriaLabel": "Add dashboard",
+      "CalloutTitle": "Bileşen ekle",
+      "TabAddedMessage": {
+        "DataAnalysis": "Veri analizi bileşeni eklendi",
+        "FeatureImportances": "Özellik önem derecesi bileşeni eklendi",
+        "ErrorAnalysis": "Hata analizi bileşeni eklendi",
+        "Fairness": "Eşitlik bileşeni eklendi",
+        "ModelOverview": "Modele genel bakış bileşeni eklendi",
+        "CausalAnalysis": "Nedensel analiz bileşeni eklendi",
+        "Counterfactuals": "Karşıolgusallar bileşeni eklendi",
+        "Vision": "Görüntü veri gezgini bileşeni eklendi",
+        "Forecasting": "Eklenen etki değerlendirmesi bileşeni tahmin etme"
+      }
+    },
+    "CausalAnalysis": {
+      "Table": {
+        "ciLower": "Güvenilirlik aralığı (alt)",
+        "ciUpper": "Güvenilirlik aralığı (üst)",
+        "name": "Özellik",
+        "pValue": "P-value",
+        "point": "Etki tahmini",
+        "stderr": "Standart hata",
+        "zstat": "Z puanı"
+      }
+    },
+    "Cohort": {
+      "apply": "Uygula",
+      "delete": "Sil",
+      "deleteAriaLabel": "Delete cohort",
+      "cancel": "İptal",
+      "cancelAriaLabel": "Cancel cohort",
+      "cohortInfo": "Kohort bilgileri",
+      "cohortList": "Kohort listesi",
+      "deleteCohort": "{0} silinsin mi?",
+      "deleteConfirm": "Bu kohortu silmek istediğinizden emin misiniz?",
+      "selectCohort": "Kohort seçin",
+      "selectCohortAriaLabel": "Cohort selection",
+      "shiftCohort": "Kohort değiştir",
+      "shiftCohortAriaLabel": "Switch cohort",
+      "shiftCohortDescription": "Kohort listesinden bir kohort seçin. Kohortu panoya uygulayın."
+    },
+    "CohortInformation": {
+      "ShiftCohort": "Kohort değiştir",
+      "SwitchTimeSeries": "Zaman serisini değiştir",
+      "NewCohort": "Yeni kohort",
+      "DataPoints": "Veri noktası sayısı",
+      "DefaultCohort": " (varsayılan)",
+      "Filters": "Filtre sayısı",
+      "GlobalCohort": "Genel kohort: "
+    },
+    "CohortSettings": {
+      "CohortSettingsDescription": "Global kohortlar, el ile filtreler ekleyerek veya seçili bir grubu hata analizi bileşenine kaydederek oluşturulan veri alt kümeleridir. Kohortları görüntüleyin, oluşturun, düzenleyin, çoğaltın ve silin.",
+      "CohortSettingsTitle": "Kohort ayarları"
+    },
+    "ComponentNames": {
+      "ChartView": "Grafik görünümü",
+      "CausalAnalysis": "Nedensel analiz",
+      "Counterfactuals": "Karşı olgusallar",
+      "DataAnalysis": "Veri analizi",
+      "DataBalance": "Veri dengesi",
+      "DataExplorer": "Veri gezgini",
+      "ErrorAnalysis": "Hata analizi",
+      "Fairness": "Eşitlik",
+      "FeatureImportances": "Özellik önem dereceleri",
+      "Forecasting": "Tahmin etme",
+      "ModelOverview": "Modele genel bakış",
+      "TableView": "Tablo görünümü",
+      "VisionTab": "Görüntü veri gezgini"
+    },
+    "DashboardSettings": {
+      "Content": "Bu liste, panonun düzenini gösterir. Aşağıdaki bileşenlerde görüntülenmek üzere, hata analizi bileşenini kullanarak verileri filtreleyebilirsiniz.",
+      "DashboardComponents": "Pano bileşenleri",
+      "DataPoints": "Veri noktası sayısı",
+      "DeleteDialog": {
+        "Cancel": "İptal",
+        "Content": "{0} öğesini silmek istediğinizden emin misiniz?",
+        "Delete": "Sil",
+        "Title": "{0} silinsin mi?"
+      },
+      "Title": "Pano yapılandırması"
+    },
+    "DataBalance": {
+      "AggregateBalanceMeasures": {
+        "Callout": {
+          "Description": "Toplam denge ölçüleri, veri kümemizdeki eşitsizlik hakkında daha gelişmiş bilgiler elde etmemizi sağlar. İlgili sütun kümesi üzerinde hesaplanır ve etiket sütununa bağımlı değildir. Bu ölçüler, ilgili sütunlarımıza ait tüm özellik değeri kombinasyonları genelinde kayıtların dağılımını gösterir.",
+          "Title": "Toplam denge ölçüleri nedir?"
+        },
+        "Measures": {
+          "AtkinsonIndex": {
+            "Description": "Atkinson Endeksi, bir toplumdaki vatandaşlar arasında gelir dağılımının daha eşit olması için o toplumun feragat etmesi gereken toplam gelir yüzdesini ifade eden bir gelir eşitsizliği ölçüsüdür. Veri kümesi için bu, ilgili sütunlarla ilişkili olarak mükemmel dengeye sahip bir veri kümesine sahip olmak için atılacak kayıtların yüzdesini temsil eder. Endeksin değer aralığı 0 ile 1 arasındadır ve burada daha küçük endeks değerleri düşük eşitsizlik düzeylerini gösterir.",
+            "Name": "Atkinson Endeksi"
+          },
+          "TheilLIndex": {
+            "Description": "Theil L Endeksi, α = 0 değerli Genelleştirilmiş Entropi Endeksi kullanılarak hesaplanan gelir eşitsizliği ölçüsüdür ve bu yüzden dağılımın alt sonundaki farklılıklara daha duyarlıdır. Bu endeks, veri kümesinde sıklıkla oluşmayan kayıt kombinasyonlarını daha iyi yakalar. Ayrıca ortalama log sapması ölçüsü olarak da adlandırılır.",
+            "Name": "Theil Endeksi (L)"
+          },
+          "TheilTIndex": {
+            "Description": "Theil T Endeksi, α = 1 değerli Genelleştirilmiş Entropi Endeksi kullanılarak hesaplanan gelir eşitsizliği ölçüsüdür ve bu yüzden dağılımın üst sonundaki farklılıklara daha duyarlıdır. Bu endeks, veri kümesinde sıklıkla oluşan kayıt kombinasyonlarını daha iyi yakalar.",
+            "Name": "Theil Endeksi (T)"
+          }
+        },
+        "MeasuresNotComputed": "Toplam denge ölçüleri hesaplanmadı. Bunları hesaplamak için lütfen: (1) görev türünün 'sınıflandırma' olduğundan, (2) kategorik özellikler listesinin geçerli olup boş olmadığından ve (3) içgörüler hesaplanırken hata oluşmadığından emin olun.",
+        "Name": "Toplam denge ölçüleri",
+        "Table": {
+          "Description": "Açıklama",
+          "FeatureName": "Özellik adı",
+          "FeatureValue": "Özellik değeri"
+        }
+      },
+      "DistributionBalanceMeasures": {
+        "Callout": {
+          "Description": "Dağılım dengesi ölçüleri, verilerimizi referans bir tekdüze dağılımla karşılaştırmamızı sağlar. Bu ölçüler ilgili sütun başına hesaplanır ve etiket sütununa bağımlı değildir.",
+          "Title": "Dağılım dengesi ölçüleri nedir?"
+        },
+        "Chart": {
+          "Axes": {
+            "DistributionMeasure": "Dağılım ölçüsü",
+            "MeasureValue": "Ölçü değeri"
+          },
+          "Title1": "Karşılaştırma",
+          "Title2": "Tekdüze Dağılım ile"
+        },
+        "Measures": {
+          "ChiSquarePValue": {
+            "Description": "Ki-kare testinin p-değeri, gözlemlenen ve beklenen sıklıklar arasındaki farkın rastgele olduğunu belirten sıfır hipotezinin aleyhinde kanıtlar sağlar.",
+            "Name": "Ki-Kare P-Değeri"
+          },
+          "ChiSquareStatistic": {
+            "Description": "Ki-kare testi, kategorik verilerin her kategorideki beklenen sıklıklarla karşılaştırıldığında belirtilen sıklıklara sahip olduğu sıfır hipotezini doğrular.",
+            "Name": "Ki-Kare (χ2) İstatistiği"
+          },
+          "CrossEntropy": {
+            "Description": "İki olasılık dağılımı arasındaki log kaybı olarak da bilinen çapraz entropi, veri kümemizin olasılık dağılımının negatif toplamını referans olasılık dağılımının log ölçüsüyle çarparak hesaplayan bir bilişim kuramı ölçüsüdür.",
+            "Name": "Çapraz Entropi"
+          },
+          "InfiniteNormDistance": {
+            "Description": "Chebyshev mesafesi veya satranç tahtası mesafesi olarak da bilinen sonsuzluk norm mesafesi, iki vektör arasındaki mesafenin herhangi bir koordinat boyutu boyunca bu vektörler arasındaki en büyük fark olduğunu belirten bir ölçüdür. Ölçü negatif değerli değildir ve 0 değeri iki dağılımın eşit olduğu anlamına gelir.",
+            "Name": "Sonsuzluk Norm Mesafesi"
+          },
+          "JSDistance": {
+            "Description": "Jensen-Shannon (JS) mesafesi iki olasılık dağılımı arasındaki benzerliği ölçer. Kullback-Leibler (KL) sapmasının simetrik ve düz hali ve JS sapmasının kareköküdür. [0, 1] değer aralığına sahiptir ve bu aralıkta 0 ölçü değeri dağılımın tamamen dengeli olduğu anlamına gelir.",
+            "Name": "Jensen-Shannon Mesafesi"
+          },
+          "KLDivergence": {
+            "Description": "Bu Kullback-Leibler (KL) sapması, bir olasılık dağılımının ikinci bir olasılık dağılımından nasıl farklı olduğunun bir ölçüsüdür. Bir dağılım diğer bir dağılımı yaklaşık olarak tahmin etmek için kullanıldığında kaybolan bilgi miktarını temsil eder. Ölçü negatif değerli değildir ve 0 değeri iki dağılımın eşit olduğu anlamına gelir.",
+            "Name": "Kullback-Leibler Sapması"
+          },
+          "TotalVariationDistance": {
+            "Description": "Toplam varyasyon mesafesi, iki dağılım arasındaki Manhattan (L1) mesafesinin yarısına eşittir. İki dağılım arasındaki mutlak değer farklarının toplamı kullanılarak hesaplanır. Ölçü negatif değerli değildir ve 0 değeri iki dağılımın eşit olduğu anlamına gelir.",
+            "Name": "Toplam Varyasyon Mesafesi"
+          },
+          "WassersteinDistance": {
+            "Description": "Wasserstein mesafesi, bir dağılımı başka bir dağılıma dönüştürmek için gereken minimum 'iş' miktarı olarak düşünülebileceğinden, toprak taşıma mesafesi olarak da bilinir. Taşınması gereken dağılım ağırlığının miktarının, dağılımın taşınması gereken mesafeyle çarpımı olarak ölçülür. Ölçü negatif değerli değildir ve 0 değeri iki dağılımın eşit olduğu anlamına gelir.",
+            "Name": "Wasserstein Mesafesi"
+          }
+        },
+        "MeasuresNotComputed": "Dağılım dengesi ölçüleri hesaplanmadı. Bunları hesaplamak için lütfen: (1) görev türünün 'sınıflandırma' olduğundan, (2) kategorik özellikler listesinin geçerli olup boş olmadığından ve (3) içgörüler hesaplanırken hata oluşmadığından emin olun.",
+        "Name": "Dağılım dengesi ölçüleri"
+      },
+      "FeatureBalanceMeasures": {
+        "Callout": {
+          "Description": "Özellik dengesi ölçüleri, tüm özellik değerleri kombinasyonlarının dengeli olasılıkta pozitif sonucu (doğru tahmin) alıp almayacağını görmemizi sağlar.",
+          "Title": "Özellik dengesi ölçüleri nedir?"
+        },
+        "Chart": {
+          "Axes": {
+            "ClassA": "A Sınıfı",
+            "ClassB": "B Sınıfı"
+          },
+          "Tooltip": {
+            "And": "ve",
+            "ValueDescription1": "değer",
+            "ValueDescription2": "/"
+          }
+        },
+        "Description1": "Gösterilen",
+        "Description2": "tüm sınıflarda ölçülen farklar",
+        "Description3": "etiket için",
+        "FeaturePicker": "Özellik",
+        "LabelPicker": "Pozitif etiket",
+        "MeasurePicker": "Ölçü",
+        "Measures": {
+          "JaccardIndex": {
+            "Description": "Jaccard İndeksi farkı, A Sınıfının Jaccard İndeksi ile B Sınıfının Jaccard İndeksi arasındaki farkı temsil eder. Jaccard İndeksi, bir birlik üzerinden kesişim ölçüsüdür. Bu nedenle [0, 1] aralığına sahiptir ve bu aralıkta 0 dağılımların tamamen ayrı olduğunu ifade ederken 1 dağılımların tamamen aynı olduğunu ifade eder.",
+            "Name": "Jaccard İndeksi"
+          },
+          "KendallRankCorrelation": {
+            "Description": "(KRC) farkı, A Sınıfının KRC değeri ile B Sınıfının KRC değeri arasındaki farkı temsil eder. Kendall Sıralı Korelasyonu ölçülen iki miktar arasındaki sırasal ilişkilendirmeyi ölçmek için kullanılan bir bağıntı istatistiğidir. İki değişken için gözlemler benzer sıraya sahipse ölçü yüksektir ve bu iki değişken benzer olmayan sıraya sahip olduğunda ise ölçü düşüktür.",
+            "Name": "Kendall Sıralı Korelasyonu"
+          },
+          "LogLikelihoodRatio": {
+            "Description": "(LLR) farkı, A Sınıfının LLR değeri ile B Sınıfının LLR değeri arasındaki farkı temsil eder. Log Olasılık Oranı pozitif etikete sahip bir özelliğin olasılığı ile pozitif etiketin olasılığı arasındaki oranı ölçmek için kullanılan bir bağıntı istatistiğidir.",
+            "Name": "Log Olasılık Oranı"
+          },
+          "PointwiseMutualInformation": {
+            "Description": "(PMI) farkı, A Sınıfının PMI değeri ile B Sınıfının PMI değeri arasındaki farkı temsil eder. Noktasal Karşılıklı Bilgi, A Sınıfı ve B Sınıfı örnekleri için ifade edilecek olursa, bu sınıfların ortak dağılımları ve kendi (birbirinden bağımsız varsayılan) dağılımları dikkate alındığında bunların çakışma olasılığı arasındaki farkını nicel olarak değerlendiren bir entropi ölçüsüdür.",
+            "Name": "Noktasal Karşılıklı Bilgi"
+          },
+          "SorensenDiceCoefficient": {
+            "Description": "(SDC) farkı, A Sınıfının SDC değeri ile B Sınıfının SDC değeri arasındaki farkı temsil eder. Sørensen-Dice Katsayısı, iki örneğin benzerliğini ölçmek için kullanılan bir birlik üzerinden kesişim ölçüsüdür. F1 puanıyla ilişkilidir ve her iki kümede ortak olan öğe sayısının her bir kümedeki öğe sayısının toplamına bölümünün iki katına eşittir.",
+            "Name": "Sørensen-Dice Katsayısı"
+          },
+          "StatisticalParity": {
+            "Description": "(SP) farkı, A Sınıfının SP değeri ile B Sınıfının SP değeri arasındaki farkı temsil eder. İstatistiksel Eşlik pozitif oranını yani bir sınıfın ne kadar pozitif sonuç aldığını ölçer. Fark, iki sınıfın pozitif oranları arasındaki farkı ölçer. 0’a yakın bir değer, her iki sınıfın pozitif sonucu eşit oranlarda aldığı anlamına gelir. Pozitif bir değer ilk sınıfın pozitif etiketini ikinci sınıftan daha çok gördüğü anlamına gelir. Negatif bir değer ise tam tersine işaret eder.",
+            "Name": "İstatistiksel Eşlik"
+          },
+          "TTest": {
+            "Description": "boşluk, A Sınıfı ile B Sınıfının t-testi arasındaki farkı temsil eder. t-testi, iki grubun (eşleştirilmiş) ortalamasını karşılaştırmak için kullanılan bir bağıntı istatistiğidir. İki grubun önemli ölçüde farklı olup olmadığını görmek için t-dağıtım tablosundaki boşluk değerine bakılır.",
+            "Name": "t-test"
+          },
+          "TTestPValue": {
+            "Description": "boşluk, A Sınıfı ile B Sınıfı arasındaki t-test boşluğunun istatistiksel önemini temsil eder. t-test boşluğu değeri ve serbestlik derecesi, p-değerini hesaplamak için kullanılır.",
+            "Name": "t-test p-değeri"
+          }
+        },
+        "MeasuresNotComputed": "Özellik bakiyesi ölçüleri hesaplanmadı. Bunları hesaplamak için lütfen: (1) görev türünün 'sınıflandırma' olduğundan, (2) kategorik özellikler listesinin geçerli olup boş olmadığından, (3) içgörüler hesaplanırken hata oluşmadığından emin olun.",
+        "Name": "Özellik bakiyesi ölçüleri"
+      },
+      "LearnMore": "Daha fazla bilgi edinin",
+      "MeasuresNotComputed": "Bu sekme, bu veri kümesi için veri dengeleme ölçülerini hesaplamayı gerektirir. Ölçüler, bir 'sınıflandırma' görev türü ve boş olmayan kategorik özellikler listesi belirtildiğinde hesaplanır."
+    },
+    "FeatureImportances": {
+      "CorrectPredictions": "Doğru tahminler",
+      "GlobalExplanation": "Kümelenmiş özellik önem derecesi",
+      "IncorrectPredictions": "Yanlış tahminler",
+      "InfoTitle": "Additional information on feature importance values",
+      "IndividualFeatureTabular": "Yerel özellik önem değerlerini (yerel açıklama) ve bireysel koşullu beklenti (ICE) grafiğini görüntülemek için tabloda bir veri noktasına (5 veri noktasına kadar) tıklayarak bir veri noktası seçin.",
+      "IndividualFeatureText": "Select a datapoint by clicking on a datapoint in the table to view the local feature importance values (local explanation) from SHAP's text explainer.",
+      "LocalExplanation": "Bireysel özellik önem derecesi",
+      "SelectionCounter": "{0}/{1} veri noktası seçildi",
+      "SelectionLimit": "Şu anda en fazla 5 veri noktası seçilebilir.",
+      "RowCheckboxAriaLabel": "Satır onay kutusu",
+      "SelectionColumnAriaLabel": "Seçimi değiştirin"
+    },
+    "IndividualFeatureImportanceView": {
+      "SmallInstanceSelection": "Örnek seçimi"
+    },
+    "MainMenu": {
+      "DashboardSettings": "Pano yapılandırması",
+      "cohortInfo": "Kohort bilgileri",
+      "cohortList": "Kohort listesi",
+      "cohortSettings": "Kohort ayarları",
+      "createCohort": "Kohort oluştur",
+      "shiftCohort": "Kohort değiştir"
+    },
+    "Navigation": {
+      "modelStatistics": "Model istatistikleri"
+    },
+    "ModelOverview": {
+      "metrics": {
+        "accuracy": {
+          "name": "Doğruluk puanı",
+          "description": "Doğru olarak sınıflandırılmış veri noktalarının kesir değeri."
+        },
+        "exactMatchRatio": {
+          "name": "Tam eşleşme oranı",
+          "description": "Her etiket için doğru sınıflandırılmış örneklerin oranı."
+        },
+        "meteorScore": {
+          "name": "Meteor Skoru",
+          "description": "METEOR Skoru, duyarlık ve geri çağırmanın harmonik ortalaması temel alınarak hesaplanıp soru yanıtlama görevinde geri çağırma, duyarlıktan daha fazla ağırlıklıdır."
+        },
+        "bleuScore": {
+          "name": "Bleu Skoru",
+          "description": "Bleu Skoru, soru yanıtlama görevinde başvuru metninde görünüp makine tarafından oluşturulan metinlerdeki sözcüklerde (ve/veya n gram) oranını ölçer."
+        },
+        "bertScore": {
+          "name": "Bert Skoru",
+          "description": "BERTScore, soru yanıtlama görevinde başvuru belirteçleri ile makine tarafından oluşturulan metinler arasındaki anlamsal benzerliği hesaplamaya odaklanır."
+        },
+        "rougeScore": {
+          "name": "Rouge Skoru",
+          "description": "Rouge Skoru, soru yanıtlama görevinde başvuru metninde görünüp makine tarafından oluşturulan başvuru metinindeki sözcüklerde (ve/veya n gram) oranını ölçer."
+        },
+        "hammingScore": {
+          "name": "Hamming skoru",
+          "description": "Çoklu etiket görevinde 1 olarak sınıflandırılanlar arasında doğru sınıflandırılan etiketlerin ortalama oranı."
+        },
+        "f1Score": {
+          "name": "F1 skoru",
+          "description": "F1 skoru, duyarlık ile yakalamanın harmonik ortalamasıdır."
+        },
+        "f1ScoreMacro": {
+          "name": "Makro F1 skoru",
+          "description": "Makro F1 skoru, her sınıf için duyarlık ve geri çağırmanın harmonik ortalaması olup her sınıf eşit ağırlıklıdır."
+        },
+        "f1ScoreMicro": {
+          "name": "Mikro F1 skoru",
+          "description": "Makro F1 skoru, her sınıf için duyarlık ve geri çağırmanın harmonik ortalaması olup her sınıf, içerdiği örnek sayısına göre eşit ağırlıklıdır."
+        },
+        "meanAbsoluteError": {
+          "name": "Ortalama mutlak hata",
+          "description": "Hata mutlak değerlerinin ortalaması. Aykırı değerlere karşı MSE'den daha dayanıklıdır."
+        },
+        "meanSquaredError": {
+          "name": "Ortalama hata karesi",
+          "description": "Hata karelerinin ortalaması."
+        },
+        "precision": {
+          "name": "Duyarlık puanı",
+          "description": "1 olarak sınıflandırılanların arasında doğru şekilde sınıflandırılmış veri noktalarının kesir değeri."
+        },
+        "precisionMacro": {
+          "name": "Makro Duyarlık skoru",
+          "description": "Her sınıfın, eşit ağırlıklandırıldığı ve her sınıf için 1 olarak sınıflandırılanlar arasında doğru bir şekilde sınıflandırılan veri noktalarının oranı."
+        },
+        "precisionMicro": {
+          "name": "Mikro Duyarlık skoru",
+          "description": "Her sınıfın, içerdiği örneklerin sayısına göre ağırlıklandırıldığı ve her sınıf için 1 olarak sınıflandırılanlar arasında doğru bir şekilde sınıflandırılan veri noktalarının oranı."
+        },
+        "recall": {
+          "name": "Yakalama puanı",
+          "description": "Gerçek etiketi 1 olanların arasında doğru bir şekilde sınıflandırılmış veri noktalarının kesir değeri. Alternatif adlar: gerçek pozitif oran, hassasiyet."
+        },
+        "recallMacro": {
+          "name": "Makro Geri Çağırma skoru",
+          "description": "Her sınıfın eşit ağırlıklandırıldığı ve her sınıf için gerçek etiketi 1 olanlar arasında doğru bir şekilde sınıflandırılan veri noktalarının oranı."
+        },
+        "recallMicro": {
+          "name": "Mikro Geri Çağırma skoru",
+          "description": "Her sınıfın, içerdiği örneklerin sayısına göre ağırlıklandırıldığı ve her sınıf için gerçek etiketi 1 olanlar arasında doğru bir şekilde sınıflandırılan veri noktalarının oranı."
+        },
+        "falsePositiveRate": {
+          "name": "Hatalı pozitif oranı",
+          "description": "Doğru etiketi 0 olanlar arasında yanlış sınıflandırılmış veri noktalarının kesir değeri."
+        },
+        "falseNegativeRate": {
+          "name": "Hatalı negatif oranı",
+          "description": "Doğru etiketi 1 olanlar arasında yanlış sınıflandırılmış veri noktalarının kesir değeri."
+        },
+        "selectionRate": {
+          "name": "Seçim oranı",
+          "description": "Etiketi 1 olan tahminlerin yüzdesi."
+        },
+        "meanPrediction": {
+          "name": "Ortalama tahmin",
+          "description": "Tüm tahminlerin ortalaması."
+        },
+        "meanAveragePrecision": {
+          "name": "Aritmetik Ortalama Duyarlık skoru",
+          "description": "Nesne algılama modelleri için aritmetik ortalama duyarlık, tüm sınıflardaki AP (ortalama duyarlık) ortalamasıdır. Bu, nesne algılama modelinizin sağlamlık durumunu değerlendirir ve duyarlık ile geri çağırma arasındaki dengeyi içerir."
+        },
+        "averagePrecision": {
+          "name": "Ortalama Duyarlık skoru",
+          "description": "Nesne algılama modelleri için ortalama duyarlık seçili bir sınıf için hesaplanır."
+        },
+        "averageRecall": {
+          "name": "Ortalama Geri Çağırma skoru",
+          "description": "Nesne algılama modelleri için ortalama geri çağırma, seçili bir sınıf için hesaplanır."
+        },
+        "fairnessMetricDifference": "Fark",
+        "fairnessMetricRatio": "Oran"
+      },
+      "metricsDropdown": "Ölçüm(ler)",
+      "metricsTypeDropdown": "Toplama yöntemi",
+      "metricTypes": {
+        "macro": "Makro",
+        "micro": "Mikro"
+      },
+      "classSelectionDropdown": "Sınıf seçin",
+      "iouThresholdDropdown": {
+        "name": "IOU Eşiği:",
+        "description": "Birleşim üzerindeki kesişim, görüntüde algılanan bir nesnenin tahmini ve gerçek değer sınırlayıcı kutusu arasındaki çakışma derecesini belirtir. Örneğin, IoU eşiğinin %70 olarak ayarlanması, %70'in üzerinde bir tahminle gerçek değerle örtüşmenin True olduğu anlamına gelir. Bu da tahmin doğruluğunun tanımını ve diğer performans ölçümlerini hesaplamayı etkiler.",
+        "iconId": "iouThresholdIconId",
+        "title": "IoU eşiği hakkında bilgi edinin"
+      },
+      "notAvailable": "YOK",
+      "countColumnHeader": "Örneklem büyüklüğü",
+      "dataCohortsHeatmapHeader": "Kohortlar",
+      "dataCohortsChartSelectionHeader": "Veri kümesi kohortları",
+      "featureBasedCohortsChartSelectionHeader": "Özellik kohortları",
+      "disaggregatedAnalysisHeatmapHeader": "Özellik kohortları",
+      "fairnessMetricsHeatmapHeader": "Eşitlik ölçümleri",
+      "featuresDropdown": "Özellik(ler)",
+      "metricChartDropdownSelectionHeader": "Ölçüm",
+      "probabilityForClassSelectionHeader": "Sınıf olasılığı",
+      "targetSelectionHeader": "Hedef",
+      "metricSelectionDropdownPlaceholder": "Kohortlarınızı karşılaştırmak için ölçümleri seçin.",
+      "classSelectionDropdownPlaceholder": "Sınıf tabanlı analiz için sınıf adı seçin.",
+      "featureSelectionDropdownPlaceholder": "Özellik tabanlı analiz için kullanmak üzere özellikleri seçin.",
+      "probabilityDistributionPivotItem": "Olasılık dağılımı",
+      "regressionDistributionPivotItem": "Hedef dağıtımı",
+      "metricsVisualizationsPivotItem": "Ölçüm görselleştirmeleri",
+      "confusionMatrixPivotItem": "Karışıklık matrisi",
+      "disaggregatedAnalysisFeatureSelectionPlaceholder": "Özellik tabanlı analiz oluşturmak için özellikleri seçin.",
+      "tableCountTooltip": "Kohort {0}, {1} örnek içerir.",
+      "tableMetricTooltip": "Kohort {1} üzerinde modele ait {0} şudur: {2}.",
+      "tableDifferenceTooltip": "{0} farkı {1}. Kohort {3} üzerindeki en düşük {2} değerini kohort {5} üzerindeki en büyük {4} değerinden çıkararak hesaplanır.",
+      "tableRatioTooltip": "{0} oranı {1}. Kohort {3} üzerindeki en düşük {2} değerini kohort {5} üzerindeki en düşük {4} değerine bölerek hesaplanır.",
+      "boxPlotPlaceholder": "Kutu grafiğini görüntülemek için en az bir kohort seçin.",
+      "chartCohortSelectionPlaceholder": "Grafiği görüntülemek için genel olarak en az bir kohort seçin.",
+      "metricSelectionButton": "Ölçüm seçin",
+      "cohortSelectionButton": "Kohortları seçin",
+      "probabilityLabelSelectionButton": "Etiket seçin",
+      "regressionTargetSelectionButton": "Hedef seç",
+      "selectAllCohortsOption": "Tümünü seç",
+      "other": "Diğer",
+      "BoxPlot": {
+        "outlierProbability": "olasılık",
+        "outlierLabel": "Aykırı değerler",
+        "boxPlotSeriesLabel": "Kutu Grafiği",
+        "lowerWhisker": "Alt çizgi",
+        "upperWhisker": "Üst çizgi",
+        "median": "Ortanca değer",
+        "lowerQuartile": "Alt dörttebirlik",
+        "upperQuartile": "Üst dörttebirlik"
+      },
+      "chartConfigApply": "Uygula",
+      "chartConfigCancel": "İptal",
+      "chartConfigDatasetCohortSelectionPlaceholder": "Veri kümesi kohortlarını seçin",
+      "chartConfigFeatureBasedCohortSelectionPlaceholder": "Özellik tabanlı kohortları seçin",
+      "confusionMatrix": {
+        "confusionMatrixCohortSelectionLabel": "Veri kümesi kohortlarını seçin",
+        "confusionMatrixClassSelectionLabel": "Sınıf seçin",
+        "confusionMatrixClassMinSelectionError": "Karışıklık matrisini görselleştirmek en az bir {0} sınıfı seçin.",
+        "confusionMatrixClassMaxSelectionError": "Karışıklık matrisini görselleştirmek en fazla bir {0} sınıfı seçin.",
+        "confusionMatrixClassSelectionDefaultPlaceholder": "Sınıfları seçin",
+        "confusionMatrixHeatmapTooltip": "{0} veri noktaları {1}olmalı, {2} olduğu tahmin ediliyor",
+        "confusionMatrixYAxisLabel": "Doğru Sınıf",
+        "confusionMatrixXAxisLabel": "Tahmin Edilen Sınıf",
+        "class": "Sınıf"
+      },
+      "nA": "YOK",
+      "disaggregatedAnalysisBaseCohortDisclaimer": "Aşağıdaki özellik tabanlı analizdeki kohortlar genel kohorta bağlıdır, {0}.",
+      "disaggregatedAnalysisBaseCohortWarning": "{0} kohortdan farklı olarak, {1} filtre içerir. Sonuç olarak, tüm veri kümesinin yalnızca bir alt kümesini yakalar ve içgörüler tam veri kümesine genelleştirilemeyebilir.",
+      "probabilitySplineChartToggleLabel": "Eğri grafiği kullan",
+      "countAxisLabel": "Sayı",
+      "helpMeChooseFeaturesButton": "Özellikleri seçmeme yardımcı olun",
+      "helpMeChooseMetricsButton": "Ölçümleri seçmeme yardımcı olun",
+      "featureConfiguration": {
+        "flyoutHeader": "Özelliklerinizi seçin",
+        "flyoutSubHeader": "Modelinizin eşitliğini hangi özelliklerle birlikte değerlendirmek istiyorsunuz?",
+        "flyoutDescription": "Eşitlik, modelinizin davranışındaki farklara göre değerlendirilir. Verilerinizi seçilen her bir özelliğin değerlerine göre böleriz ve modelinizin performans ölçümleri ile tahminlerinin bu bölmeler arasında nasıl farklılık gösterdiğini değerlendiririz.",
+        "selectAllRowsAriaLabel": "Select all rows",
+        "flyoutAriaLabel": "Aggregate balance measures",
+        "featureColumnHeader": "Özellikler",
+        "featureSelectionAriaLabel": "Feature selection table",
+        "metricSelectionAriaLabel": "Metric selection table",
+        "groupsColumnHeader": "Gruplar",
+        "categoricalGroupsCountRemark": "Bu özelliğin {0} benzersiz değeri var.",
+        "continuousGroupsCountRemark": "Bu özellik süreklidir ve {0} bölmeye bölünmüştür.",
+        "continuousFeatureBinningLabel": "Bölme sayısını değiştirme",
+        "tooManyFeaturesSelectedWarning": "Lütfen en fazla iki özellik seçin."
+      },
+      "metricConfiguration": {
+        "flyoutHeader": "Ölçümlerinizi seçin",
+        "flyoutSubHeader": "Modelinizin performansını nasıl ölçmek istiyorsunuz?",
+        "flyoutDescription": "Model türünüz temel alındığında, önerilen performans ölçümleri bunlardır. Eşitlik analizi veya ayrıştırılmış analiz, modelinizin performansının özellik alt grupları arasında nasıl farklılık gösterdiğini değerlendirerek gerçekleştirilir.",
+        "noMetricsSelectedWarning": "Lütfen en az bir ölçüm seçin.",
+        "metricNameColumnHeader": "Ölçüm adı",
+        "metricDescriptionColumnHeader": "Ölçüm Açıklaması"
+      },
+      "cohortSelection": {
+        "flyoutHeader": "Kohortları seçin",
+        "flyoutDescription": "Veri kümesi kohortları veya özellik kohortları görüntülemeyi seçebilirsiniz. Özellik kohortları kullanılamıyorsa öncelikle özellik kohortları görünümünde bir veya daha fazla özellik seçmeniz gerekir. Ardından özellik kohortları oluşturulur ve böylece özellik kohortlarını burada seçebilirsiniz."
+      },
+      "regressionTargetOptions": {
+        "predictedY": "Tahmin edilen Y",
+        "trueY": "Doğru Y",
+        "error": "Hata"
+      },
+      "topLevelDescription": "Tahmin değerlerinizin dağılımını ve model performans ölçümlerinin değerlerini inceleyerek modelinizin performansını değerlendirin. Önceden oluşturulmuş veya yeni oluşturulmuş farklı veri kümesi gruplarındaki performansının karşılaştırmalı bir analizine bakarak modelinizi incelemek için \"Veri kümesi grupları\" sekmesini kullanın. Hassas/hassas olmayan özellik alt gruplarındaki performansının karşılaştırmalı bir analizine bakarak modelinizi incelemek için \"Özellik kohortları\"nı kullanın. (ör. farklı cinsiyetler veya gelir düzeyleri arasındaki performans)",
+      "infoTitle": "Modele genel bakış hakkında ek bilgi",
+      "visualDisplayToggleLabel": "Isı haritasını göster",
+      "featureBasedViewDescription": "Özellik tabanlı (tek özelliğin seçili olması durumunda) ve kesişimli (iki özelliğin seçili olması durumunda) kohortlar arasında model performans çözümlemesini görmek için en fazla iki özellik seçin."
+    },
+    "TableViewTab": {
+      "Heading": "Veri kümesini tüm özellikler ve satırlar için tablo biçiminde görüntüleyin."
+    }
+  },
+  "Forecasting": {
+    "target": "Hedef",
+    "whatIfForecastingHeader": "Etki değerlendirmesi analizi",
+    "forecastHeader": "Tahmin analizi",
+    "whatIfForecastingDescription": "Etki değerlendirmesi, tüm zaman seriniz için özellikleri karıştırmanıza ve model tahmininin nasıl değiştiğini gözlemlemenize olanak sağlar.",
+    "whatIfForecastingChooseTimeSeries": "Başlamak için aşağıdaki seçeneklerden bir zaman serisi seçin.",
+    "forecastDescription": "Tahmin analizi, modelinizin tahminlerini zaman serinizin gerçek değerleriyle karşılaştırır. Etki değerlendirmesi analizini etkinleştirmek için özellikler içeren bir veri kümesi sağlayın.",
+    "timeSeries": "Zaman serisi",
+    "selectTimeSeries": "Zaman serisi seç.",
+    "singleTimeSeries": "Veri kümesi, varsayılan olarak seçilmiş yalnızca tek bir '{0}' zaman serisi içeriyor.",
+    "trueY": "Doğru Y",
+    "baselinePrediction": "Temel tahmin",
+    "forecastComparisonHeader": "Etki Değerlendirmesi Tahminlerini Karşılaştır",
+    "forecastComparisonChartTitle": "Tahminler",
+    "forecastComparisonChartTimeAxisLabel": "Zaman",
+    "Transformations": {
+      "multiply": "çarp",
+      "divide": "böl",
+      "add": "ekle",
+      "subtract": "çıkar",
+      "change": "şununla değiştir:"
+    },
+    "TransformationCreation": {
+      "title": "Etki değerlendirmesi senaryosu oluştur",
+      "nameLabel": "Etki değerlendirmesi senaryosu adı",
+      "featureInstructions": "Karıştırmak için bir özellik seçin.",
+      "operationInstructions": "Özelliğe uygulanacak bir işlem seçin.",
+      "operationDropdownHeader": "İşlem",
+      "featureDropdownHeader": "Özellik",
+      "valueSpinButtonHeader": "Değer",
+      "scenarioNamingInstructionsPlaceholder": "Benzersiz bir ad girin",
+      "scenarioNamingInstructions": "Etki değerlendirmesi senaryonuz için bir ad girin.",
+      "scenarioNamingCollisionMessage": "Bu ad zaten var. Lütfen benzersiz bir ad girin.",
+      "scenarioNamingLengthMessage": "Ad 1 ile 50 karakter arasında olmalıdır. Gerçek uzunluk {0}.",
+      "scenarioNamingInvalidCharactersMessage": "Ad yalnızca alfasayısal karakterler, boşluklar, kısa çizgiler veya alt çizgi içerebilir ve alfasayısal bir karakterle başlamalıdır.",
+      "valueErrorMessage": "{0} işlemi için lütfen {1} haricinden bir değer seçin.",
+      "invalidCombinationErrorMessage": "Bu, mevcut bir etki değerlendirmesi senaryosuyla aynı. Lütfen özelliği, işlemi veya değeri değiştirin.",
+      "addTransformationButton": "Dönüşüm Ekle",
+      "divisionAndMultiplicationBy": "gerçekleştiren"
+    },
+    "TransformationTable": {
+      "nameColumnHeader": "Ad",
+      "methodColumnHeader": "Yöntem",
+      "divisionAndMultiplicationBy": "gerçekleştiren ",
+      "header": "Etki Değerlendirmesi Tahminleri ({0})"
+    },
+    "TimeSeries": {
+      "apply": "Uygula",
+      "cancel": "İptal",
+      "cohortList": "Zaman serisi listesi",
+      "selectCohort": "Zaman serisi seç",
+      "selectCohortAriaLabel": "Time series selection",
+      "shiftCohort": "Zaman serisini değiştir",
+      "shiftCohortAriaLabel": "Switch time series",
+      "shiftCohortDescription": "Zaman serisi listesinden bir zaman serisi seçin. Zaman serisini panoya uygulayın."
+    },
+    "TimeSeriesSettings": {
+      "CohortSettingsDescription": "Zaman serisi, sütunları tanımlayan zaman serisine göre önceden tanımlanmıştır.",
+      "CohortSettingsTitle": "Zaman serisi ayarları"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+import { ScatterChart } from "../../../util/ScatterChart";
+import { IInterpretData } from "../IInterpretData";
+
+import { describeSubBarChart } from "./describeSubBarChart";
+import { describeSubLineChart } from "./describeSubLineChart";
+
+export function describeDataPointChart(dataShape: IInterpretData): void {
+  describe("Individual datapoints chart", () => {
+    const props = {
+      chart: undefined as unknown as ScatterChart,
+      dataShape
+    };
+    beforeEach(() => {
+      props.chart = new ScatterChart("#IndividualFeatureImportanceChart");
+    });
+    it("should render right number of points", () => {
+      // Wait for the chart to be fully rendered by checking for the scatter plot points
+      // Using the same selector pattern as ScatterChart.Elements getter
+      cy.get("#IndividualFeatureImportanceChart .trace.scatter .points path", {
+        timeout: 10000
+      }).should("have.length", dataShape.datapoint);
+    });
+
+    describe("Scatter chart clickable", () => {
+      it("should select none by default", () => {
+        cy.get(
+          '#IndividualFeatureContainer div[class^="legendAndText"] div[class^="clickTarget"]'
+        ).should("not.exist");
+      });
+      it("should show message on sub chart", () => {
+        const message =
+          !dataShape.noLocalImportance && !dataShape.noFeatureImportance
+            ? "Select a datapoint in the table above to view its local feature importances"
+            : "Provide local feature importances to see how each feature impacts individual predictions.";
+        cy.get("#subPlotContainer").should("contain.text", message);
+      });
+      it("should select the first point", () => {
+        props.chart.clickNthPoint(0);
+        cy.get(
+          '#IndividualFeatureContainer  div[class^="legendAndText"] div[class^="clickTarget"]'
+        ).should("contain.text", "Row");
+        cy.get("#noPointSelectedInfo").should("not.exist");
+        props.chart.clickNthPoint(0);
+      });
+    });
+
+    if (!dataShape.noLocalImportance && !dataShape.noFeatureImportance) {
+      describeSubBarChart(dataShape);
+    }
+    if (!dataShape.noPredict) {
+      describeSubLineChart(dataShape);
+    }
+  });
+}

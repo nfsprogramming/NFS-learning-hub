@@ -1,0 +1,153 @@
+parameters:
+  conda: #
+  azureSubscription: #
+  azure_subscription: #
+  azureresourcegroup: #
+  workspacename: defaultworkspacename
+  azureregion: #
+  location: #
+  pylint_fail: True
+  set_vars: true
+  aksimagename: "x"
+  aks_service_name: "x"
+  aks_name: "x"
+  deep_aksimagename: "mydeepimage"
+  deep_aks_service_name: "deepaksservice"
+  deep_aks_name: "deepakscluster"
+  sql_server_name: "x"
+  sql_database_name: "x"
+  sql_username: "x"
+  sql_password: "x"
+  datastore_rg: "x"
+  container_name: "x"
+  account_name: "x"
+  account_key: "x"
+  
+
+steps:
+- task: AzureCLI@1
+  displayName: "Set Vars"
+  condition: eq('${{ parameters.set_vars }}', true)
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    scriptLocation: 'inlineScript'
+    failOnStderr: True
+    inlineScript: |
+      pwd
+      source activate ${{parameters.conda}}
+
+      rm -f workspace_conf.yml
+      
+      echo "subscription_id:  ${{parameters.azure_subscription}}" >> workspace_conf.yml
+      echo "resource_group:  ${{parameters.azureresourcegroup}}" >> workspace_conf.yml
+      echo "workspace_name:  ${{parameters.workspacename}}" >> workspace_conf.yml
+      echo "workspace_region:  ${{parameters.azureregion}}" >> workspace_conf.yml
+      
+      echo "image_name:  ${{parameters.aksimagename}}" >> workspace_conf.yml
+      echo "aks_service_name:  ${{parameters.aks_service_name}}" >> workspace_conf.yml      
+      echo "aks_name:  ${{parameters.aks_name}}" >> workspace_conf.yml
+      echo "aks_location:  ${{parameters.azureregion}}" >> workspace_conf.yml      
+      
+      echo "sql_server_name:  ${{parameters.sql_server_name}}" >> workspace_conf.yml
+      echo "sql_database_name:  ${{parameters.sql_database_name}}" >> workspace_conf.yml      
+      echo "sql_username:  ${{parameters.sql_username}}" >> workspace_conf.yml
+      echo "sql_password:  ${{parameters.sql_password}}" >> workspace_conf.yml
+      
+      echo "datastore_rg:  ${{parameters.datastore_rg}}" >> workspace_conf.yml
+      echo "container_name:  ${{parameters.container_name}}" >> workspace_conf.yml      
+      echo "account_name:  ${{parameters.account_name}}" >> workspace_conf.yml
+      echo "account_key:  ${{parameters.account_key}}" >> workspace_conf.yml
+
+      cp workspace_conf.yml ../
+      
+      rm -f project.yml
+      
+      echo "project_name: AI Default Project"  >> project.yml
+      echo "settings:"  >> project.yml
+      echo "- subscription_id:"  >> project.yml
+      echo "  - description: Azure Subscription Id"  >> project.yml
+      echo "  - value: ${{parameters.azure_subscription}}"  >> project.yml
+      echo "- resource_group:"  >> project.yml
+      echo "  - description: Azure Resource Group Name"  >> project.yml
+      echo "  - value: ${{parameters.azureresourcegroup}}"  >> project.yml
+      echo "- workspace_name:"  >> project.yml
+      echo "  - description: Azure ML Workspace Name"  >> project.yml
+      echo "  - value: ${{parameters.workspacename}}"  >> project.yml
+      echo "- workspace_region:"  >> project.yml
+      echo "  - description: Azure ML Workspace Region"  >> project.yml
+      echo "  - value: ${{parameters.azureregion}}"  >> project.yml
+      echo "- image_name:"  >> project.yml
+      echo "  - description: Docker Container Image Name"  >> project.yml
+      echo "  - value:  ${{parameters.aksimagename}}"  >> project.yml
+      echo "- aks_service_name:"  >> project.yml
+      echo "  - description: AKS Service Name"  >> project.yml
+      echo "  - value: ${{parameters.aks_service_name}}"  >> project.yml
+      echo "- aks_name:"  >> project.yml
+      echo "  - description: AKS Cluster Name"  >> project.yml
+      echo "  - value: ${{parameters.aks_name}}"  >> project.yml
+      echo "- aks_location:"  >> project.yml
+      echo "  - description: AKS Azure Region"  >> project.yml
+      echo "  - value: ${{parameters.azureregion}}"  >> project.yml
+      echo "- deep_image_name:"  >> project.yml
+      echo "  - description: Docker Container Image Name"  >> project.yml
+      echo "  - value:  ${{parameters.deep_aksimagename}}"  >> project.yml
+      echo "- deep_aks_service_name:"  >> project.yml
+      echo "  - description: AKS Service Name"  >> project.yml
+      echo "  - value: ${{parameters.deep_aks_service_name}}"  >> project.yml
+      echo "- deep_aks_name:"  >> project.yml
+      echo "  - description: AKS Cluster Name"  >> project.yml
+      echo "  - value: ${{parameters.deep_aks_name}}"  >> project.yml
+      echo "- deep_aks_location:"  >> project.yml
+      echo "  - description: AKS Azure Region"  >> project.yml
+      echo "  - value: ${{parameters.azureregion}}"  >> project.yml
+      
+      cat project.yml
+      cp project.yml ../
+
+- task: AzureCLI@1
+  displayName: "pytests - tests"
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    scriptLocation: 'inlineScript'
+    failOnStderr: True
+    inlineScript: |
+      source activate ${{parameters.conda}}
+      pip install -U .
+      pip install pytest-nunit
+      pytest tests --doctest-modules --nunit-xml=test-nunitresults.xml --cov=. --cov-report=xml
+
+- task: AzureCLI@1
+  displayName: "PyLint Notebooks Check"
+  condition: succeededOrFailed()
+  continueOnError: true
+  inputs:
+    azureSubscription: ${{parameters.azureSubscription}}
+    scriptLocation: 'inlineScript'    
+    inlineScript: |
+      source activate ${{parameters.conda}}
+
+      if [ -d "notebooks" ]; then
+        jupyter nbconvert --to python notebooks/*.ipynb
+      
+        pylint --output-format=junit notebooks/*.py >> test-pylint-results.xml
+        pylint notebooks/*.py
+      fi
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: NUnit
+    testResultsFiles: '**/test-nunitresults.xml'
+    failTaskOnFailedTests: true
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/test-*.xml'
+  condition: succeededOrFailed()  
+  inputs:
+    testResultsFiles: '**/test-*.xml'
+
+- task: PublishCodeCoverageResults@1
+  condition: succeededOrFailed()
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'

@@ -1,0 +1,97 @@
+[
+    {
+        "section": "Archive",
+        "lessons": [
+            {
+                "title": "03B Use Prompt Flow Ner",
+                "path": "Instructions/archive/03b-Use-prompt-flow-NER.md",
+                "notebooks": []
+            },
+            {
+                "title": "Code First Development",
+                "path": "Instructions/archive/08-Code-first-development.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Exercises",
+        "lessons": [
+            {
+                "title": "Explore Ai Studio",
+                "path": "Instructions/Exercises/01-Explore-ai-studio.md",
+                "notebooks": []
+            },
+            {
+                "title": "Model Catalog Evaluation",
+                "path": "Instructions/Exercises/02-model-catalog-evaluation.md",
+                "notebooks": []
+            },
+            {
+                "title": "Foundry Sdk",
+                "path": "Instructions/Exercises/03-foundry-sdk.md",
+                "notebooks": []
+            },
+            {
+                "title": "04A Use Own Data",
+                "path": "Instructions/Exercises/04a-use-own-data.md",
+                "notebooks": []
+            },
+            {
+                "title": "04B Finetune Model",
+                "path": "Instructions/Exercises/04b-finetune-model.md",
+                "notebooks": []
+            },
+            {
+                "title": "Explore Content Filters",
+                "path": "Instructions/Exercises/06-Explore-content-filters.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Instructions",
+        "lessons": [
+            {
+                "title": "Explore Ai Studio",
+                "path": "Instructions/01-Explore-ai-studio.md",
+                "notebooks": []
+            },
+            {
+                "title": "Explore Model Catalog",
+                "path": "Instructions/02-Explore-model-catalog.md",
+                "notebooks": []
+            },
+            {
+                "title": "02A Ai Foundry Sdk",
+                "path": "Instructions/02a-AI-foundry-sdk.md",
+                "notebooks": []
+            },
+            {
+                "title": "Use Prompt Flow Chat",
+                "path": "Instructions/03-Use-prompt-flow-chat.md",
+                "notebooks": []
+            },
+            {
+                "title": "Use Own Data",
+                "path": "Instructions/04-Use-own-data.md",
+                "notebooks": []
+            },
+            {
+                "title": "Finetune Model",
+                "path": "Instructions/05-Finetune-model.md",
+                "notebooks": []
+            },
+            {
+                "title": "Explore Content Filters",
+                "path": "Instructions/06-Explore-content-filters.md",
+                "notebooks": []
+            },
+            {
+                "title": "Evaluate Prompt Flow",
+                "path": "Instructions/07-Evaluate-prompt-flow.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

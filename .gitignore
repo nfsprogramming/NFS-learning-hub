@@ -1,0 +1,38 @@
+# ── Translations & localisation ──────────────────────────────────────────────
+translations/
+translated_images/
+
+# ── Heavy image / media folders ──────────────────────────────────────────────
+images/
+img/
+sketchnotes/
+slides/
+pdf/
+
+# ── Course-internal folders not needed in the hub ────────────────────────────
+solutions/
+start/
+quiz-app/
+examples/
+etc/
+data/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+dist/
+.next/
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+*.log

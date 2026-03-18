@@ -1,0 +1,216 @@
+[
+    {
+        "section": "Erroranalysis",
+        "lessons": [
+            {
+                "title": "Erroranalysis",
+                "path": "erroranalysis/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tests",
+                "path": "erroranalysis/tests/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Libs",
+        "lessons": [
+            {
+                "title": "Causality",
+                "path": "libs/causality/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Core Ui",
+                "path": "libs/core-ui/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Counterfactuals",
+                "path": "libs/counterfactuals/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dataset Explorer",
+                "path": "libs/dataset-explorer/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "E2E",
+                "path": "libs/e2e/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Error Analysis",
+                "path": "libs/error-analysis/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Fairness",
+                "path": "libs/fairness/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Forecasting",
+                "path": "libs/forecasting/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Interpret Text",
+                "path": "libs/interpret-text/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Interpret Vision",
+                "path": "libs/interpret-vision/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Interpret",
+                "path": "libs/interpret/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Localization",
+                "path": "libs/localization/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Mlchartlib",
+                "path": "libs/mlchartlib/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Model Assessment",
+                "path": "libs/model-assessment/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Nlp Feature Extractors",
+        "lessons": [
+            {
+                "title": "Nlp Feature Extractors",
+                "path": "nlp_feature_extractors/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Notebooks",
+        "lessons": [
+            {
+                "title": "Cognitive Services Examples",
+                "path": "notebooks/cognitive-services-examples/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Face Verification",
+                "path": "notebooks/cognitive-services-examples/face-verification/README.md",
+                "notebooks": [
+                    "analyze_face_fairness.ipynb"
+                ]
+            },
+            {
+                "title": "Speech To Text",
+                "path": "notebooks/cognitive-services-examples/speech-to-text/README.md",
+                "notebooks": [
+                    "analyze_stt_fairness.ipynb"
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Rai Core Flask",
+        "lessons": [
+            {
+                "title": "Rai Core Flask",
+                "path": "rai_core_flask/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Rai Test Utils",
+        "lessons": [
+            {
+                "title": "Rai Test Utils",
+                "path": "rai_test_utils/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tests",
+                "path": "rai_test_utils/tests/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Raiutils",
+        "lessons": [
+            {
+                "title": "Raiutils",
+                "path": "raiutils/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tests",
+                "path": "raiutils/tests/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Raiwidgets",
+        "lessons": [
+            {
+                "title": "Raiwidgets",
+                "path": "raiwidgets/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tests",
+                "path": "raiwidgets/tests/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Responsibleai",
+        "lessons": [
+            {
+                "title": "Responsibleai",
+                "path": "responsibleai/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tests",
+                "path": "responsibleai/tests/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Responsibleai Text",
+        "lessons": [
+            {
+                "title": "Responsibleai Text",
+                "path": "responsibleai_text/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Responsibleai Vision",
+        "lessons": [
+            {
+                "title": "Responsibleai Vision",
+                "path": "responsibleai_vision/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFS Programming | Microsoft Course Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Premium learning portal for Microsoft's official curriculum. Master AI, Web Dev, ML, and more with NFS Programming.">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">NFS</div>
+            <div class="logo-text">Learning Hub</div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Courses</a>
+            <a href="#">Roadmaps</a>
+            <a href="#">Resources</a>
+            <a href="#">Community</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-glass"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn-premium" onclick="openPremiumModal()">Premium Pro</button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1 class="hero-title">Master the <span class="gradient-text">Future</span></h1>
+            <p class="hero-subtitle">Premium learning paths featuring <b>Microsoft's Official Open-Source Curriculum</b>. High-quality interactive lessons, curated by NFS Hub.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">13+</span>
+                    <span class="stat-label">Full Courses</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Interactive</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Free</span>
+                    <span class="stat-label">Access</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="course-section">
+            <div class="section-header">
+                <h2 class="section-title">Beginner Level</h2>
+                <p class="section-desc">Start your journey with fundamental concepts and hands-on projects.</p>
+            </div>
+            <div class="course-grid">
+                <a href="Web-Dev-For-Beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="course-name">Web Dev for Beginners</h3>
+                    <p class="course-info">HTML, CSS, JS, and essential web technologies.</p>
+                    <div class="course-tag">24 Lessons</div>
+                </a>
+                <a href="ML-For-Beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3 class="course-name">ML for Beginners</h3>
+                    <p class="course-info">Covers: ML basics, regression, classification. Includes notebooks + exercises.</p>
+                    <div class="course-tag">26 Lessons</div>
+                </a>
+                <a href="Data-Science-For-Beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="course-name">Data Science for Beginners</h3>
+                    <p class="course-info">Covers: Python, pandas, visualization. Very beginner friendly.</p>
+                    <div class="course-tag">20 Lessons</div>
+                </a>
+                <a href="AI-For-Beginners/index.html" class="course-card active">
+                    <div class="course-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="course-name">AI for Beginners</h3>
+                    <p class="course-info">Covers: search, NLP, computer vision. 12-week structured course.</p>
+                    <div class="course-tag">24 Lessons</div>
+                    <div class="status-badge">Completed</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="course-section">
+            <div class="section-header">
+                <h2 class="section-title">Intermediate Level</h2>
+                <p class="section-desc">Level up your skills with advanced tools and trending technologies.</p>
+            </div>
+            <div class="course-grid">
+                <a href="generative-ai-for-beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="course-name">Generative AI</h3>
+                    <p class="course-info">Covers: LLMs, prompt engineering, RAG.</p>
+                    <div class="course-tag">18 Lessons</div>
+                </a>
+                <a href="ai-agents-for-beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3 class="course-name">AI Agents</h3>
+                    <p class="course-info">Covers: AutoGen, agent workflows. One of the most trending topics now.</p>
+                    <div class="course-tag">15 Lessons</div>
+                </a>
+                <a href="mslearn-github-copilot-dev-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-brands fa-github"></i></div>
+                    <h3 class="course-name">GitHub Copilot</h3>
+                    <p class="course-info">Learn how to use AI coding assistants effectively in your workflow.</p>
+                    <div class="course-tag">10 Lessons</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="course-section">
+            <div class="section-header">
+                <h2 class="section-title">Advanced Level</h2>
+                <p class="section-desc">Master the architecture and implementation of enterprise AI systems.</p>
+            </div>
+            <div class="course-grid">
+                <a href="IoT-For-Beginners-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="course-name">IoT for Beginners</h3>
+                    <p class="course-info">Build connected devices and understand the IoT ecosystem.</p>
+                    <div class="course-tag">24 Lessons</div>
+                </a>
+                <a href="AI-102-AIEngineer-master/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <h3 class="course-name">AI-102 AI Engineer</h3>
+                    <p class="course-info">Covers: Azure AI services. Real-world labs for certification.</p>
+                    <div class="course-tag">Labs Included</div>
+                </a>
+                <a href="mslearn-ai-studio-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3 class="course-name">Azure AI Studio</h3>
+                    <p class="course-info">Build and deploy AI applications using AI Studio & AI Foundry.</p>
+                    <div class="course-tag">Hands-on</div>
+                </a>
+                <a href="AI-master/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3 class="course-name">Microsoft AI Arch</h3>
+                    <p class="course-info">Real-world architectures and best practices for AI systems.</p>
+                    <div class="course-tag">Architect Level</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="course-section">
+            <div class="section-header">
+                <h2 class="section-title">Industry & Production</h2>
+                <p class="section-desc">Tools and practices for deploying and managing AI at scale.</p>
+            </div>
+            <div class="course-grid">
+                <a href="Deploy-Your-AI-Application-In-Production-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="course-name">AI Deployment (MLOps)</h3>
+                    <p class="course-info">Learn model deployment, CI/CD, and scalability pipelines.</p>
+                    <div class="course-tag">Production</div>
+                </a>
+                <a href="responsible-ai-toolbox-main/index.html" class="course-card">
+                    <div class="course-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="course-name">Responsible AI</h3>
+                    <p class="course-info">Ethics, bias, and reliability tools for enterprise AI development.</p>
+                    <div class="course-tag">Ethics</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">NFS Course Hub</div>
+            <p>A premium learning experience for Microsoft Official Curriculums. All course content is provided by Microsoft Open Source, with UX/UI powered by NFS Hub.</p>
+            <div class="social-links">
+                <a href="https://github.com/nfsprogramming" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nfs-photography" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 NFS Programming. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Premium Pro Modal -->
+    <div id="premium-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(5,6,10,0.92); backdrop-filter:blur(30px); justify-content:center; align-items:center; padding: 2rem;">
+        <div style="max-width:560px; width:100%; background:rgba(15,16,22,0.95); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:3rem; position:relative; box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
+            <!-- Close -->
+            <button onclick="closePremiumModal()" style="position:absolute; top:1.2rem; right:1.2rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1rem;"><i class="fa-solid fa-xmark"></i></button>
+
+            <!-- Badge -->
+            <div style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(255,200,0,0.15), rgba(255,140,0,0.1)); border:1px solid rgba(255,190,0,0.3); border-radius:50px; padding:6px 16px; margin-bottom:1.5rem;">
+                <i class="fa-solid fa-crown" style="color:#ffc107;"></i>
+                <span style="font-size:0.8rem; font-weight:700; color:#ffc107; letter-spacing:1px;">PREMIUM PRO</span>
+            </div>
+
+            <!-- Title -->
+            <h2 style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:0.75rem; line-height:1.2;">Unlock Your <span style="background:linear-gradient(135deg,#ffc107,#ff6b00); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Certificate</span> 🎓</h2>
+            <p style="color:#94a3b8; line-height:1.7; margin-bottom:2rem;">Support the hub and unlock a verifiable <strong style="color:#fff;">Completion Certificate</strong> for every course you finish. Certificates will be personally issued once you support the project.</p>
+
+            <!-- Features -->
+            <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:2rem;">
+                <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:14px 16px;">
+                    <i class="fa-solid fa-certificate" style="color:#ffc107; font-size:1.2rem; width:24px;"></i>
+                    <div><div style="font-weight:700; color:#fff; font-size:0.95rem;">Completion Certificate</div><div style="color:#64748b; font-size:0.82rem;">Issued per course upon 100% completion</div></div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:14px 16px;">
+                    <i class="fa-solid fa-star" style="color:#ffc107; font-size:1.2rem; width:24px;"></i>
+                    <div><div style="font-weight:700; color:#fff; font-size:0.95rem;">Support the Project</div><div style="color:#64748b; font-size:0.82rem;">Help us keep this hub free for everyone</div></div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:14px 16px;">
+                    <i class="fa-solid fa-infinity" style="color:#ffc107; font-size:1.2rem; width:24px;"></i>
+                    <div><div style="font-weight:700; color:#fff; font-size:0.95rem;">All 13 Courses Included</div><div style="color:#64748b; font-size:0.82rem;">One support = certificates for all courses</div></div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="https://buymeacoffee.com" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:12px; background:linear-gradient(135deg,#ffc107,#ff8c00); color:#000; font-weight:800; font-size:1rem; padding:1rem 2rem; border-radius:14px; text-decoration:none; transition:all 0.25s; box-shadow:0 8px 30px rgba(255,193,7,0.35);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(255,193,7,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(255,193,7,0.35)';">
+                <i class="fa-solid fa-mug-hot" style="font-size:1.2rem;"></i>
+                Buy Me a Coffee — Unlock Certificates
+            </a>
+
+            <p style="text-align:center; color:#475569; font-size:0.8rem; margin-top:1rem;">After supporting, DM us on <a href="https://github.com/nfsprogramming" target="_blank" style="color:#ffc107; text-decoration:none;">GitHub</a> or <a href="https://www.linkedin.com/in/nfs-photography" target="_blank" style="color:#ffc107; text-decoration:none;">LinkedIn</a> with your screenshot to get your certificate issued.</p>
+        </div>
+    </div>
+
+    <script>
+        function openPremiumModal() {
+            const m = document.getElementById('premium-modal');
+            m.style.display = 'flex';
+            void m.offsetWidth;
+            m.style.opacity = '0';
+            m.style.transition = 'opacity 0.3s ease';
+            requestAnimationFrame(() => m.style.opacity = '1');
+        }
+        function closePremiumModal() {
+            const m = document.getElementById('premium-modal');
+            m.style.opacity = '0';
+            setTimeout(() => m.style.display = 'none', 300);
+        }
+        document.getElementById('premium-modal').addEventListener('click', function(e) {
+            if (e.target === this) closePremiumModal();
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+    </script>
+
+    <script>
+        async function updateHubLessonCounts() {
+            const cards = Array.from(document.querySelectorAll('.course-grid .course-card[href$="/index.html"]'));
+            await Promise.all(cards.map(async (card) => {
+                const href = card.getAttribute('href');
+                if (!href) return;
+                const courseDir = href.replace('/index.html', '');
+                const tag = card.querySelector('.course-tag');
+                if (!tag) return;
+                try {
+                    const res = await fetch(`${courseDir}/lessons_data.json`);
+                    if (!res.ok) return;
+                    const data = await res.json();
+                    const total = data.reduce((sum, sec) => sum + ((sec.lessons && sec.lessons.length) || 0), 0);
+                    if (total > 0) tag.textContent = `${total} Lessons`;
+                } catch (e) {
+                    // Keep fallback hardcoded tag if JSON can't be read.
+                }
+            }));
+        }
+
+        updateHubLessonCounts();
+    </script>
+</body>
+</html>
+
+

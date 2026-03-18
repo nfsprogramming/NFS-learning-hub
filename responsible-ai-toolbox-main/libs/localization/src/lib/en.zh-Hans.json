@@ -1,0 +1,1789 @@
+{
+  "Common": {
+    "close": "关闭",
+    "tooltipButton": "工具提示按钮",
+    "identityFeature": "标识特征",
+    "infoTitle": "其他信息",
+    "spinButton": "旋转",
+    "editButton": "编辑",
+    "decreaseValue": "将值减少",
+    "increaseValue": "增加价值",
+    "decreaseValueByOne": "将值减少 1",
+    "increaseValueByOne": "将值增加 1",
+    "loading": "正在加载..."
+  },
+  "ChartContextMenu": {
+    "hideData": "隐藏数据表",
+    "viewData": "查看数据表",
+    "viewInFullScreen": "全屏查看",
+    "printChart": "打印图表",
+    "downloadCSV": "下载 CSV",
+    "downloadPNG": "下载 PNG 图像",
+    "downloadJPEG": "下载 JPEG 图像",
+    "downloadPDF": "下载 PDF 文档",
+    "downloadSVG": "下载 SVG 矢量映像",
+    "downloadXLS": "下载 XLS"
+  },
+  "CausalAnalysis": {
+    "AggregateView": {
+      "binary": "二元治疗:",
+      "binaryDescription": "在此示例中，启用此功能将导致类/标签“{0}”的概率平均增加 X 单位。",
+      "regressionDescription": "在此示例中，平均而言，启用此功能将导致目标的预测增加/减少 X 个单位。",
+      "causalPoint": "因果效果点",
+      "confidenceLower": "置信区间(下部)",
+      "confidenceUpper": "置信区间(上部)",
+      "confoundingFeature": "混杂特征与治疗和所关注结果都有关联。混杂因素在直接因果效应之外创建了一条从治疗到结果的额外关联路径。除非已测量混杂特征并将其纳入模型中，否则这些额外关联可以使因果效应的估计值产生偏差。偏差可以是正的或负的，具体取决于忽略的混杂因素、治疗和结果之间的关联方向。",
+      "continuous": "持续治疗: ",
+      "continuousDescription": "在此示例中，平均而言，将此功能增加 1 个单位将导致类/标签“{0}”的概率增加 X 个单位。",
+      "continuousRegressionDescription": "在此示例中，平均而言，将此功能增加 1 个单位将导致目标预测增加/减少 X 个单位。",
+      "description": "因果分析回答“假设”问题，即在不同的策略选择下，现实世界结果会如何变化，例如产品的不同定价策略或患者的替代治疗方法。与识别重要关联模式的模型预测不同，这些工具可帮助你识别直接影响所关注结果的最重要的因果关系特征。这些模型在保持其他混杂特征不变的情况下可确定一个特征(通常称为“治疗”)的因果效应。为了获得最佳结果，请确保完整数据集包含所有可能作为混杂因素而与结果关联的可用特征。",
+      "directAggregate": "每种处理的直接聚合因果效应(置信区间为 95%)",
+      "here": "此处",
+      "infoTitle": "有关聚合因果效应的其他信息",
+      "lasso": "套索(或逻辑回归，如果 y 是二元的)适合从 X[-i] 预测 y，套索(或逻辑回归，如果 X[i] 是分类的)适合从 X[-i] 预测 X[i]。可将因果效应视为两个预测任务的残差/意外变体的平均相关性。了解有关双重机器学习的详细信息",
+      "unconfounding": "什么是混杂特征?"
+    },
+    "IndividualView": {
+      "currentOutcome": "当前结果",
+      "currentTreatment": "当前处理值",
+      "dataRequired": "此选项卡要求选择一个数据点。",
+      "selectedDatapoint": "所选数据点",
+      "description": "个体因果效应可以为个性化干预提供信息，例如针对客户的针对性促销或个性化治疗计划。具有一组特定特征的个人如何响应因果特征或治疗中的变化? 如果更改特定个体的治疗级别，则因果 what-if 工具将计算特定个体在现实世界中的边际更改。通过此分析，可以了解在不同的策略选择(例如产品的不同定价策略或患者的替代治疗方法)下现实世界结果的更改情况。请指定感兴趣的治疗方法，并观察现实世界结果将如何变化。",
+      "directIndividual": "每种处理的直接个体因果效应(置信区间为 95%)",
+      "index": "数据点索引",
+      "infoTitle": "有关单个因果关系模拟的其他信息",
+      "missingParameters": "此选项卡要求提供评估数据集。",
+      "newOutcome": "新结果",
+      "selectTreatment": "选择处理",
+      "setNewTreatment": "设置新的处理值",
+      "treatmentValue": "治疗值最小值: {0} ({1})，最大值: {2} ({3})"
+    },
+    "MainMenu": {
+      "aggregate": "聚合因果效应",
+      "cohortInfo": "因果分析目前不支持全局队列。所有数据都将显示所有因果分析。",
+      "header": "因果分析",
+      "individual": "个体因果 what-if",
+      "learnMore": "了解详细信息",
+      "title": "每个特性的直接因果关系具有 90% 的置信区间",
+      "treatment": "处理策略",
+      "why": "为什么包含混杂特征很重要?"
+    },
+    "TreatmentPolicy": {
+      "BarDescriptionBinary": "此图显示与不向人群中任何人提供 {0} 治疗的基线相对的各种治疗策略的平均增益。",
+      "BarDescriptionContinuous": "此图显示各种治疗策略相对于基线(不更改给予人群中所有人的当前治疗值)的平均增益。",
+      "BarTextBinary": "如果应用了上述建议的全局治疗策略，则第一个条形表示平均相对增益。报告的增益报告所使用治疗中的数值变化。第二个条形指示通过对所有人启用二元治疗产生的相对增益(或损失)。",
+      "BarTextContinuous": "如果应用了上述建议的全局治疗策略，则第一个条形表示平均相对增益。报告的增益反映治疗特征增加/减少了示例中典型治疗大小的 10%。第二个条形指示连续治疗增减 10% 的相对增益(或损失)。",
+      "Description": "这些工具有助于构建策略以供将来干预。你可以确定示例的哪些部分会遇到对因果驱动程序 (即处理) 的最大响应，或构造规则来定义将来哪些人口将具有最大的治疗效果。",
+      "Left": "{0} 小于或等于 {1}",
+      "Recommended": "建议的处理 = {0}",
+      "Right": "{0} 大于 {1}",
+      "SelectPolicy": "设置治疗功能",
+      "Size": "样本大小的可解释建议全局治疗策略(n) = {0}",
+      "Table": "可以通过获取一行，然后获取该特定行的列来读取表。",
+      "TableDescription": "此表显示了可应用于当前数据样本或其他人群的建议治疗策略。该表提供了一个简单的规则，以根据对于个体是否响应所选治疗方法具有最大影响的特征，将观察结果切分为数据队列。该表还指定了分配给每个段的当前数据样本中的数据点数量。",
+      "alwaysTreat": "始终处理“{0}”",
+      "averageGainBinary": "将治疗 {0} 设置为其基线值 {1} 的平均增益。",
+      "averageGainContinuous": "替代策略相对于无“{0}”治疗的平均增益。",
+      "header": "这些工具有助于构建策略以供进行干预。你可以确定示例的哪些部分对因果特征或治疗的变化做出最大响应，并构造规则来定义特定干预未来应针对哪些人群。",
+      "infoTitle": "有关治疗策略的其他信息",
+      "nSample": "n = {0}",
+      "noData": "无数据"
+    }
+  },
+  "Core": {
+    "ExpandableText": {
+      "SeeLess": "查看更少",
+      "SeeMore": "查看更多"
+    },
+    "NoData": {
+      "Title": "无数据"
+    },
+    "ComparisonTypes": {
+      "lt": "{0} 小于 {1}",
+      "lte": "{0} 小于或等于 {1}",
+      "gt": "{0} 大于 {1}",
+      "gte": "{0} 大于或等于 {1}",
+      "eq": "{0} 等于 {1}",
+      "ne": "{0} 不等于 {1}",
+      "in": "{0} 在({1})的集中",
+      "nin": "{0} 不在({1})的集中",
+      "rg": "{0} 在 ({1}) 的范围内",
+      "nrg": "{0} 在 ({1}) 的范围内",
+      "Unknown": "未知"
+    },
+    "ShiftCohort": {
+      "apply": "应用",
+      "applyAriaLabel": "Apply cohort",
+      "cancel": "取消",
+      "title": "切换队列",
+      "subText": "从队列列表中选择队列。将该队列应用到仪表板。",
+      "selectCohort": "选择队列",
+      "cohortList": "队列列表"
+    },
+    "PreBuiltCohort": {
+      "featureNameNotFound": "在数据集中找不到功能名称",
+      "notACategoricalFeature": "功能不是分类的"
+    },
+    "EmptyCohortDialog": {
+      "title": "数据集队列不包含任何数据点",
+      "subText": "数据集队列似乎不包含任何数据点，请调整筛选器，以在保存前在数据集队列中包含至少一个数据点。"
+    }
+  },
+  "Counterfactuals": {
+    "AriaLabel": "Counterfactual",
+    "CurrentTreatment": "当前治疗",
+    "EffectLowerBound": "CI 下限",
+    "EffectOfTreatment": "建议的效果",
+    "EffectUpperBound": "CI 上限",
+    "ErrorDialog": {
+      "Close": "关闭",
+      "ErrorPrefix": "遇到错误: {0}",
+      "PythonError": "Python 错误"
+    },
+    "RecommendedTreatment": "建议的治疗",
+    "WhatIf": {
+      "setValue": "设置值",
+      "sortFeatures": "按反事实特征重要性对特征列排序",
+      "percentCounterfactualLocalImportance": "改变功能的反事实百分比",
+      "toggleToolTipBody": "反事实示例生成本地特征重要性，可以指示哪些主要功能最受干扰，以实现回归方案所需的类分类方案或所需范围。",
+      "toggleToolTipHeader": "已设置级别的反事实功能",
+      "predictedClass": "预测类",
+      "predictedValue": "预测值"
+    },
+    "Size": "大小",
+    "loading": "正在加载...",
+    "counterfactualEx": "反事实示例 {0}",
+    "counterfactualName": "模拟反事实名",
+    "createWhatIfCounterfactual": "创建 What-if 反事实",
+    "createCounterfactual": "反事实",
+    "counterfactualAriaLabel": "Counterfactual creation",
+    "revertToBubbleChart": "查看气泡图",
+    "createOwn": "创建自己的反事实:",
+    "currentClass": "当前类",
+    "currentRange": "当前范围",
+    "decreaseByOne": "将值减少 1",
+    "desiredClass": "反事实的所需类",
+    "header": "What-If 反事实",
+    "increaseByOne": "将值增加 1",
+    "individualTreatment": "建议的单个治疗策略",
+    "listChoose": "使用旋转图标控件选择要查看的前 K 个示例。",
+    "listDescription": "此列表根据估计因果模型中包含的所有特征，显示当前数据示例中的哪些数据点对所选治疗具有最大的因果响应。左五列报告是否建议治疗用于观察、当前治疗、估计的治疗效果(对二元治疗从无治疗的基线应用治疗的效果，或将治疗特征增加/减少示例中典型治疗大小的 10% 的效果: [动态: 报告所用治疗中的数值变化])，以及此效果的下部和上部置信区间(CI)。其余列显示当前治疗状态和每次观察的其他特征。",
+    "localImportanceDescription": "要扰乱以实现所需模型预测的行 {0} 中排在前列的特征。基于对预测 {1} 的模拟分析",
+    "localImportanceSelectData": "选择数据点以查看本地重要性图表",
+    "largeLocalImportanceSelectData": "选择气泡，后跟一个数据点以查看本地重要性图表",
+    "localImportanceFetchError": "提取本地重要性数据时出错。错误详细信息: {0} 请检查使用的数据。",
+    "BubbleChartFetchError": "提取数据时出错。错误详细信息: {0} 请检查使用的数据。",
+    "noData": "无数据",
+    "noFeatures": "无可用特征",
+    "panelDescription": "浏览并创建自己的反事实。搜索特征以查看一组不同的反事实示例中的建议值。通过单击每个反事实名称下的“设置值”文本，设置建议的反事实特征值。为反事实命名并保存它。",
+    "panelDescriptionWithoutSetValue": "浏览反事实并创建自己的反事实。搜索功能以查看一组不同的反事实示例中的建议值。",
+    "whatIfPanelHeader": "What-If 反事实",
+    "panelHeader": "反事实",
+    "recommendedPolicy": "建议的策略增益",
+    "referenceDatapoint": "引用数据点: 行 {0}",
+    "saveAsNew": "另存为新数据点",
+    "saveDescription": "这些反事实基于模型的预测，因此可能捕获模型所选取的相同关联。我们不建议用户基于此工具做出实际决策。请使用工具包对现实世界中的决策方案进行因果分析。",
+    "seePrediction": "查看预测增量",
+    "selectedDatapoint": "所选数据点",
+    "showOnly": "仅显示",
+    "showTop": "对治疗特征具有最大估计因果响应的数据点: {0}",
+    "whatifDescription": "通过 What-if，可以干扰任何输入的特征，并观察模型的预测如何变化。可以手动干扰特征，或指定所需的预测(例如分类器的类标签)，以查看将导致所需预测的最接近原始输入的数据点列表。这些也称为预测反事实，可以用于探索模型所学习到的关系，了解模型预测的重要和必要特征，或调试模型的边缘案例。若要开始，请从数据表或散点图中选择输入点。"
+  },
+  "DataAnalysis": {
+    "TableView": {
+      "description": "以表的表示形式查看数据集，其中包含真实值和预测的标签。表分隔为包含正确预测和错误预测的子表。",
+      "infoTitle": "有关表视图的其他信息"
+    }
+  },
+  "ErrorAnalysis": {
+    "Cohort": {
+      "cohort": "队列",
+      "defaultLabel": "所有数据"
+    },
+    "CohortBaseAndFilters": {
+      "globalCohortAndFilters": "全局队列和筛选器",
+      "globalCohort": "全局队列",
+      "errorExplorer": "错误资源管理器",
+      "filters": "筛选器"
+    },
+    "CohortInfo": {
+      "baseCohortInstances": "全局队列中的实例",
+      "basicInformation": "基本信息",
+      "cohortInformation": "队列信息",
+      "correct": "正确",
+      "filters": "筛选器",
+      "incorrect": "不正确",
+      "predictionPath": "预测路径(筛选器)",
+      "saveCohort": "另存为新队列",
+      "selectedCohortInstances": "所选队列中的实例",
+      "total": "总计"
+    },
+    "CohortList": {
+      "coverage": "覆盖"
+    },
+    "EditCohort": {
+      "cohortName": "队列名称",
+      "subText": "了解选中的队列。编辑其队列名。删除此队列。"
+    },
+    "FeatureList": {
+      "featureList": "功能列表",
+      "apply": "应用",
+      "features": "特征",
+      "importances": "重要性",
+      "treeMapDescription": "若要重新训练树状图，请选择并保存下面的特征。特征重要性使用共同信息计算得出(错误标注在真实标签上)。 请将其用做训练树状图的指南。",
+      "staticTreeMapDescription": "查看用于训练树状图的功能。使用相互信息计算特征重要性，并在真实标签上显示错误。",
+      "searchResultMessage": "为 {searchValue} 显示 {resultLength} 之外的结果"
+    },
+    "TreeViewParameters": {
+      "maximumDepth": "最大深度",
+      "maximumDepthInfoText": "针对错误训练的代理项树的最大深度",
+      "maximumDepthTitle": "有关最大深度的其他信息",
+      "numLeaves": "叶数",
+      "numLeavesInfoText": "针对错误训练的代理项树的叶数",
+      "numLeavesTitle": "有关叶数的其他信息",
+      "minDataInLeaf": "一个叶中示例的最小数目",
+      "minDataInLeafInfoText": "创建一个叶所需的最小数据数",
+      "minDataInLeafTitle": "有关一个叶中最小示例数的其他信息"
+    },
+    "TreeLegend": {
+      "clearSelection": "清除所选内容"
+    },
+    "FilterTooltip": {
+      "correctNum": "正确(#): ",
+      "countNum": "计数(#): ",
+      "errorSum": "错误总和: ",
+      "incorrectNum": "不正确(#): "
+    },
+    "InspectionView": {
+      "emptyError": "请通过单击复选框选择不正确和正确类别中的数据点。",
+      "selectedDatapoints": "选择的数据点"
+    },
+    "InstanceView": {
+      "inspect": "检查",
+      "selection": "已选择 {0}"
+    },
+    "MainMenu": {
+      "cohortInfo": "队列信息",
+      "cohortList": "队列列表",
+      "cohortSettings": "队列设置",
+      "errorAnalysisLabel": "错误分析",
+      "errorExplorer": "错误资源管理器",
+      "errorExplorerLabel": "错误资源管理器:",
+      "explanation": "说明",
+      "featureList": "特征列表",
+      "fullscreen": "全屏",
+      "heatMap": "热度地图",
+      "newCohort": "新建队列",
+      "shiftCohort": "切换队列",
+      "treeMap": "树形图",
+      "whatIf": "What-If"
+    },
+    "MapShift": {
+      "cancel": "取消",
+      "close": "关闭",
+      "move": "移动",
+      "saveAs": "另存为新队列",
+      "shift": "移动",
+      "heatTitle": "是否离开树视图?",
+      "heatSubText": "是否确实要离开树视图? 可以将筛选器另存为新队列，以便可以在队列设置中访问它们。否则，筛选器将丢失。",
+      "treeTitle": "是否离开热度地图视图?",
+      "treeSubText": "是否确实要离开热度地图视图? 可以将筛选器另存为新队列，以便可以在队列设置中访问它们。否则，筛选器将丢失。"
+    },
+    "MatrixArea": {
+      "clearAll": "全部清除",
+      "emptyText": "使用上面的下拉列表选择两个特征。你可以沿两个维度对数据进行群集和筛选。",
+      "selectAll": "选择全部"
+    },
+    "MatrixFilter": {
+      "disabledWarning": "除非将全局队列切换为表示“全部数据”，否则禁用错误热度地图，因为正在为完整数据集生成热度地图。切换回完整数据集以查看错误热度地图。"
+    },
+    "MatrixSummary": {
+      "heatMapInfoTitle": "热度地图上的其他信息",
+      "heatMapDescription": "借助热度地图，可以专注于特定的相交特征筛选器和计算非聚合错误率。请从要比较的两个数据集特征开始。",
+      "heatMapStaticDescription": "借助热度地图，可以专注于特定的交集功能筛选器和计算非聚合错误率。在查看仪表板之前，必需最多选择两个功能才能通过 SDK 创建热度地图。"
+    },
+    "MatrixOptions": {
+      "quantileBinningLabel": "分位数分箱",
+      "binningThresholdLabel": "分箱阈值",
+      "toggleOnLabel": "开",
+      "toggleOffLabel": "关",
+      "quantileBinningInfoText": "在不同范围的箱之间均匀分布值",
+      "quantileBinningTitle": "有关分位数分箱的其他信息",
+      "binningThresholdInfoText": "分箱前所需值的数目",
+      "binningThresholdTitle": "有关分箱阈值的其他信息"
+    },
+    "Metrics": {
+      "AccuracyScore": {
+        "Name": "准确度分数",
+        "Info": "准确度分数表示数据中正确实例数与实例总数的比率。",
+        "Short": "准确度",
+        "Title": "有关准确度分数的其他信息"
+      },
+      "ErrorRate": {
+        "Name": "错误率",
+        "Info": "错误率表示系统失败节点中实例的百分比。",
+        "Short": "错误率",
+        "Title": "有关错误率的其他信息"
+      },
+      "F1Score": {
+        "Name": "F1 分数",
+        "Info": "F1 分数是精准率和召回率指标的调和平均值。",
+        "Short": "F1 分数",
+        "Title": "有关 F1 分数的其他信息"
+      },
+      "MeanAbsoluteError": {
+        "Name": "平均绝对误差",
+        "Info": "平均绝对误差是误差总和的平均值。",
+        "Short": "平均 abs. 误差",
+        "Title": "有关平均绝对误差的其他信息"
+      },
+      "MeanSquaredError": {
+        "Name": "均方误差",
+        "Info": "均方误差是错误平方的平均值。",
+        "Short": "平均 sq. 误差",
+        "Title": "有关均方误差的其他信息"
+      },
+      "Precision": {
+        "Name": "精准率分数",
+        "Info": "精准率是真阳性与所有预测阳性的比率。",
+        "Short": "精准率",
+        "Title": "有关精准率的其他信息"
+      },
+      "Recall": {
+        "Name": "召回率分数",
+        "Info": "召回率是指真阳性与所有实际阳性之比。",
+        "Short": "召回率",
+        "Title": "有关召回率的其他信息"
+      },
+      "MacroPrecision": {
+        "Name": "宏平均精准率分数",
+        "Info": "宏平均精准率是指真阳性与按每个类和平均独立计算的所有预测阳性之间的比率。",
+        "Short": "宏精准率",
+        "Title": "有关宏平均精准率的其他信息"
+      },
+      "MicroPrecision": {
+        "Name": "微平均精准率分数",
+        "Info": "微平均精准率是指真阳性与所有类聚合的所有预测阳性之比。",
+        "Short": "微精准率",
+        "Title": "有关微平均精准率的其他信息"
+      },
+      "MacroRecall": {
+        "Name": "宏平均召回率分数",
+        "Info": "宏平均召回率是指真阳性与按每个类和平均独立计算的所有实际阳性之间的比率。",
+        "Short": "宏召回率",
+        "Title": "有关宏平均召回率的其他信息"
+      },
+      "MicroRecall": {
+        "Name": "微平均召回率分数",
+        "Info": "微平均召回率是指真阳性与所有类聚合的所有实际阳性之比。",
+        "Short": "微召回率",
+        "Title": "有关微平均召回率的其他信息"
+      },
+      "MacroF1Score": {
+        "Name": "宏平均 F1 分数",
+        "Info": "宏平均 F1 分数是宏平均精准率和召回率指标的调和平均值。",
+        "Short": "宏 F1 分数",
+        "Title": "有关宏平均 F1 分数的其他信息"
+      },
+      "MicroF1Score": {
+        "Name": "微平均 F1 分数",
+        "Info": "微平均 F1 分数是微平均精度和召回率指标的调和平均值。",
+        "Short": "微 F1 分数",
+        "Title": "有关微平均召回率 F1 分数的其他信息"
+      },
+      "MeanAveragePrecision": {
+        "Name": "平均精度分数",
+        "Info": "对象检测模型的平均精度是所有类中 AP 的平均精度(平均精度)。这将评估对象检测模型的可靠性，并封装精度和召回率之间的权衡。",
+        "Short": "平均精度平均值",
+        "Title": "有关平均精确度平均值的其他信息"
+      },
+      "AveragePrecision": {
+        "Name": "平均精度分数",
+        "Info": "为所选类计算对象检测模型的平均精度。",
+        "Short": "平均精度",
+        "Title": "有关平均精度分数的其他信息"
+      },
+      "AverageRecall": {
+        "Name": "平均召回率分数",
+        "Info": "为所选类计算对象检测模型的平均召回率。",
+        "Short": "平均召回率",
+        "Title": "有关平均召回率分数的其他信息"
+      },
+      "metricName": "指标名",
+      "metricValue": "指标值"
+    },
+    "MetricSelector": {
+      "selectorLabel": "选择指标",
+      "feature1SelectorLabel": "行: 功能 1",
+      "feature2SelectorLabel": "列: 功能 2"
+    },
+    "Navigation": {
+      "cohortSaved": "已保存新队列! 请参阅队列设置下的队列列表。",
+      "dataExplorer": "数据资源管理器",
+      "errorExplorer": "错误资源管理器",
+      "globalExplanation": "全局说明",
+      "localExplanation": "局部解释",
+      "localExplanationInspection": "局部解释(检查)"
+    },
+    "SaveCohort": {
+      "cancel": "取消",
+      "close": "关闭",
+      "cohortName": "队列名称",
+      "move": "移动",
+      "save": "保存",
+      "saveTitle": "另存为新队列",
+      "subText": "将当前队列保存到队列设置。可通过队列设置重新访问已保存的队列。",
+      "defaultLabelCopy": "所有数据复制"
+    },
+    "TreeView": {
+      "ariaLabel": "交互式图表",
+      "disabledArialLabel": "禁用的交互式图表",
+      "treeMapInfoTitle": "有关树状图的其他信息",
+      "treeDescription": "树可视化效果使用每个功能和错误之间的相互信息，以最好地将错误实例与数据中的成功实例进行分层分离。这简化了发现和突出显示常见失败模式的过程。要查找重要的失败模式，请查找红色更深的节点(即高错误率)和较高的填充线(即高错误覆盖率)。要编辑树中正在使用的功能列表，请单击“功能列表”。使用“选择指标”下拉菜单以详细了解错误和成功节点的性能。请注意，此指标选择将不会影响错误树的生成方式。",
+      "treeStaticDescription": "树可视化效果使用每个功能和错误之间的相互信息，以最好地将错误实例与数据中的成功实例进行分层分离。这简化了发现和突出显示常见失败模式的过程。要查找重要的失败模式，请查找红色更深的节点(即高错误率)和较高的填充线(即高错误覆盖率)。要查看创建此错误树时使用的功能列表，请单击“功能列表”。使用“选择指标”下拉菜单以详细了解错误和成功节点的性能。请注意，此指标选择将不会影响错误树的生成方式。",
+      "disabledWarning": "除非全局队列切换为表示“所有数据”，否则将禁用错误树状图，因为正在为完整数据集生成树状图。切换回完整数据集以查看错误树状图。"
+    },
+    "WhatIfPanel": {
+      "whatIfHeader": "What-If"
+    },
+    "allSelected": "已选择全部",
+    "cells": "单元格",
+    "cellsInfo": "矩阵筛选器中选择的单元格数。未选中任何单元格时，将显示 - (破折号)，并像选择全部单元格一样显示全局队列信息。",
+    "cellsTitle": "有关单元格的其他信息",
+    "cohortInfo": "队列信息",
+    "correctPrediction": "正确的预测",
+    "correctTotal": "正确/总计",
+    "dataExploration": "数据集探索",
+    "dataExplorerView": "数据资源管理器",
+    "defaultClassNames": "{0} 类",
+    "defaultFeatureNames": "特征 {0}",
+    "errorCoverage": "错误覆盖率",
+    "errorCoverageInfo": "错误覆盖率显示集中在数据集中所有错误的选择中的错误百分比。",
+    "errorCoverageTitle": "有关错误覆盖率的其他信息",
+    "globalExplanationView": "全局说明",
+    "globalImportance": "全局重要性",
+    "incorrectPrediction": "不正确的预测",
+    "incorrectTotal": "不正确/总计",
+    "instanceView": "实例视图",
+    "localExplanationView": "局部解释",
+    "noFeature": "无特征",
+    "scaleWarning": "由于 UI 的缩放原因，解释会随机向下采样",
+    "whatIfDatapoints": "What-If 数据点"
+  },
+  "Fairness": {
+    "ValidationErrors": {
+      "missingPerformanceMetric": "找不到性能指标。",
+      "missingFairnessMetric": "找不到公平度指标。"
+    },
+    "BinDialog": {
+      "cancel": "取消",
+      "cancelAriaLabel": "Cancel binning",
+      "categoryHeader": "箱值:",
+      "header": "配置箱",
+      "makeCategorical": "视为类别",
+      "numberOfBins": "箱数:",
+      "save": "保存",
+      "saveAriaLabel": "Save binning"
+    },
+    "DropdownHeaders": {
+      "errorMetric": "启用错误栏",
+      "fairnessMetric": "公平性指标",
+      "performanceMetric": "性能指标",
+      "sensitiveFeature": "敏感特征"
+    },
+    "ErrorBounds": {
+      "howToRead": "如何读取这些错误栏",
+      "introModalText1": "错误栏显示由于评估数据集的大小而导致指标值的不确定性。我们显示使用以下条件计算的 95% 置信区间 ",
+      "wilsonScores": "Wilson 分数",
+      "introModalText2": " (用于二元分类)或",
+      "normalApproximation": "正态近似法",
+      "introModalText3": " (适用于其他任务)。"
+    },
+    "Fairness": {
+      "body": "公平性指标量化所选特征之间模型行为的变化。基于不同性能指标的公平性指标有多种。它们可捕获各组间极值的差异或比率，或者只捕获任意组中最差的值。",
+      "bodyLegacy": "公平性指标量化了模型在所选特征之间的行为变化。公平性指标有两种: 即将推出更多...",
+      "header": "根据差异衡量公平性",
+      "pickerHeader": "要如何测量公平性?"
+    },
+    "Feature": {
+      "body": "根据模型行为差异评估公平性。我们将根据每个所选特征的值来拆分数据，并评估这些拆分数据的模型性能指标和预测之间的差异。",
+      "categoriesOverflow": "   和 {0} 个附加类别",
+      "editBinning": "编辑组",
+      "header": "你想要通过哪些特征评估模型的公平性?",
+      "hideCategories": "折叠",
+      "learnMore": "了解更多",
+      "showCategories": "全部显示",
+      "subgroups": "子组",
+      "summaryCategoricalCount": "此特征具有 {0} 个唯一值",
+      "summaryNumericCount": "此数值特征的范围从 {0} 到 {1}，并被划分到 {2} 个箱中。"
+    },
+    "Footer": {
+      "back": "上一步",
+      "next": "下一步"
+    },
+    "Header": {
+      "documentation": "文档",
+      "title": "公平度"
+    },
+    "Intro": {
+      "explanatoryStep": "若要设置评估，需要指定一个敏感特征、一个性能指标和一个公平性指标。",
+      "fairness": "公平性指标",
+      "fairnessDashboard": "公平性仪表板",
+      "fairnessInfo": "公平性指标用于评估模型的总体质量以及模型在每个组中的质量。公平性指标可能表示性能指标极值之间的差异或比率，或表示任意组中最差的值。",
+      "features": "敏感特征",
+      "featuresInfo": "使用敏感特征可以将数据拆分为组。通过公平性指标衡量模型在这些组之间的公平性。公平性指标将量化模型在这些组之间的行为变化。",
+      "getStarted": "开始使用",
+      "introBody": "借助公平性仪表板，可以评估模型的性能和公平性之间的权衡",
+      "performance": "性能指标",
+      "performanceInfo": "性能指标用于评估模型的总体质量以及在每个组中的模型质量。各组的性能指标极值之间的差异称为性能差异。",
+      "welcome": "欢迎使用"
+    },
+    "Metrics": {
+      "Groups": {
+        "auc": "ROC 曲线下的面积",
+        "average": "平均值预测",
+        "classificationAccuracyAndErrorRate": "准确度/错误率",
+        "custom": "自定义指标",
+        "equalizedOdds": "均衡的几率",
+        "f1_score": "F1-分数",
+        "falseNegativeRate": "假负率/漏检率",
+        "falsePositiveRate": "假正率",
+        "loss": "损失",
+        "overUnderPrediction": "过度预测和过低预测",
+        "precision": "精准率",
+        "r2_score": "R 平方分数",
+        "regressionError": "错误",
+        "selectionRate": "人口统计学奇偶校验/选择率",
+        "trueNegativeRate": "真负率/特异度",
+        "truePositiveRate": "真正率/召回率/敏感度"
+      },
+      "ROCAUCScoreMin": "最低 ROC AUC 分数",
+      "ROCAUCScoreMinDescription": "所有组接收方操作特征曲线(ROC AUC)下的最小面积。",
+      "accuracyDescription": "正确分类的数据点的分数。",
+      "accuracyScore": "准确度",
+      "accuracyScoreDifference": "准确度分数差异",
+      "accuracyScoreDifferenceDescription": "任意两个组之间的准确度分数的最大差异。",
+      "accuracyScoreMin": "最低准确度分数",
+      "accuracyScoreMinDescription": "所有组的最低准确度分数。",
+      "accuracyScoreRatio": "准确度分数比率",
+      "accuracyScoreRatioDescription": "任意两个组之间准确度分数的最小比率。",
+      "auc": "ROC 曲线下的面积",
+      "aucDescription": "将正负样本分隔开的预测质量(以分数形式表示)。",
+      "average": "平均预测",
+      "balancedAccuracy": "平衡准确度",
+      "balancedAccuracyDescription": "对正样本和负样本重新进行加权以具有同等的总权重。适用于基础数据高度不均衡的情况。",
+      "balancedAccuracyScoreMin": "平衡准确度分数的最低值",
+      "balancedAccuracyScoreMinDescription": "所有组针对每一类的平均召回率最小值(0 和 1)。",
+      "balancedRMSEDescription": "对正样本和负样本重新进行加权以具有同等的总权重。适用于基础数据高度不均衡的情况。",
+      "balancedRootMeanSquaredError": "平衡均方根误差",
+      "demographicParityDifference": "人口统计学奇偶校验差异",
+      "demographicParityDifferenceDescription": "选择率的最大差异，即任意两个组之间带预测标签 1 的分数。",
+      "demographicParityRatio": "人口统计学奇偶校验比率",
+      "demographicParityRatioDescription": "选择率的最小比率，即任意两个组之间带有预测标签 1 的分数。",
+      "equalizedOddsDifference": "均衡的几率差异",
+      "equalizedOddsDifferenceDescription": "任意两个组真正率之间的最大差异，或者两个组假正率的最大差异(以较大者为准)。",
+      "equalizedOddsRatio": "均衡的几率比率",
+      "equalizedOddsRatioDescription": "任意两个组真正率之间的最小比率，或者两个组假正率的最小比率(以较小者为准)。",
+      "errorRateDifference": "错误率差异",
+      "errorRateDifferenceDescription": "任意两个组错误率之间的最大差异。",
+      "errorRateRatio": "错误率比率",
+      "errorRateRatioDescription": "任意两个组错误率之间的最小比率。",
+      "f1Score": "F1-分数",
+      "f1ScoreDescription": "F1-分数是精准率和召回率的调和平均值。",
+      "f1ScoreMin": "最低 F1-分数",
+      "f1ScoreMinDescription": "所有组的最低 F1-分数。",
+      "falloutRate": "错检率",
+      "falseNegativeRate": "假负率",
+      "falseNegativeRateDescription": "真实标签为 1 的数据点中不正确分类的数据点分数。",
+      "falseNegativeRateDifference": "假负率差异",
+      "falseNegativeRateDifferenceDescription": "任意两个组假负率之间的最大差异。有时也称作“漏检率”差异。",
+      "falseNegativeRateRatio": "假负率比率",
+      "falseNegativeRateRatioDescription": "任意两个组假负率的最小比率。有时也称作“漏检率”。",
+      "falsePositiveRate": "假正率",
+      "falsePositiveRateDescription": "真实标签为 0 的数据中不正确分类的数据点的分数。",
+      "falsePositiveRateDifference": "假正率差异",
+      "falsePositiveRateDifferenceDescription": "任意两个组假正率之间的最大差异。有时也称作 fall-out 差异。",
+      "falsePositiveRateRatio": "假正率比率",
+      "falsePositiveRateRatioDescription": "任意两个组假正率的最小比率。有时也称作 fall-out 比率。",
+      "logLoss": "日志丢失",
+      "logLossMax": "最大日志损失",
+      "logLossMaxDescription": "所有组的最大逻辑损失。",
+      "maxError": "最大误差",
+      "meanAbsoluteError": "平均绝对误差",
+      "meanAbsoluteErrorDescription": "误差绝对值的平均值。与 MSE 相比，对离群值更具健壮性。",
+      "meanAbsoluteErrorMax": "最大平均绝对误差",
+      "meanAbsoluteErrorMaxDescription": "所有组的最大平均绝对误差。",
+      "meanSquaredError": " 均方误差",
+      "meanSquaredErrorMax": "最大均方误差",
+      "meanSquaredErrorMaxDescription": "所有组的最大均方误差。",
+      "meanSquaredLogError": "均方对数误差",
+      "medianAbsoluteError": "中值绝对误差",
+      "missRate": "漏检率",
+      "mseDescription": "平方误差的平均值。",
+      "overprediction": "过高预测",
+      "precisionDescription": "分类为 1 的数据中正确分类的数据点的分数。",
+      "precisionScore": "精准率",
+      "precisionScoreMin": "最低精准率分数",
+      "precisionScoreMinDescription": "所有组的最低精准率分数。",
+      "r2Description": "模型解释的标签差异的分数。",
+      "r2ScoreMin": "最低 R2-分数",
+      "r2ScoreMinDescription": "所有组的最低 R2-分数。",
+      "r2_score": "R 平方分数",
+      "recallDescription": "真实标签为 1 的数据中正确分类的数据点的分数。其他名称: 真正率、敏感度。",
+      "recallScore": "召回",
+      "recallScoreMin": "最低召回率分数",
+      "recallScoreMinDescription": "所有组的最低召回率分数。",
+      "rms_error": "均方根误差",
+      "rmseDescription": "方差平均值的平方根。",
+      "selectionRate": "选择率",
+      "specificityScore": "特异性分数",
+      "trueNegativeRateDifference": "真负率差异",
+      "trueNegativeRateDifferenceDescription": "任意两个组真负率之间的最大差异。有时也称为特异度分数差异。",
+      "trueNegativeRateRatio": "真负率比率",
+      "trueNegativeRateRatioDescription": "任意两个组的真负率的最小比率。有时也称作特异度分数比率。",
+      "truePositiveRateDifference": "真正率差异",
+      "truePositiveRateDifferenceDescription": "任何两个组真负率之间的最大差异。有时也称为均等机会差异或召回率分数差异。",
+      "truePositiveRateRatio": "真正率比率",
+      "truePositiveRateRatioDescription": "任意两个组真正率的最小比率。有时也称为均等机会比率或召回率分数比率。",
+      "underprediction": "过低预测",
+      "zeroOneLoss": "0-1 损失"
+    },
+    "ModelComparison": {
+      "disparity": " 差异 ",
+      "disparityInOutcomes": "预测差异",
+      "disparityInPerformance": "{0} 差异",
+      "downloadReport": "下载报告",
+      "helpModalText1": "x 轴表示性能，{0} 表示性能更优。",
+      "helpModalText2": "y 轴表示公平性指标值，其中 {0} 表示指标更好。",
+      "higher": "偏高",
+      "howToMeasureDisparity": "如何衡量差异?",
+      "howToRead": "如何阅读此图表",
+      "howToReadText": "此图表将每个 {0} 模型表示为一个可选择的点。X 轴表示 {1}，越 {2} 越好。Y 轴表示差异，越低越好。",
+      "insights": "关键见解",
+      "insightsLegacy": "见解",
+      "insightsText2": "{0} 的范围为 {1} 到 {2}。 {3} 的范围为 {4} 到 {5}。",
+      "insightsText3": "性能最佳的模型实现 {0}/{1} 和 {2}/{3}。",
+      "insightsText3v1FairnessMetric": "差异",
+      "insightsText4": "公平性指标值最佳的模型实现 {0}/{1} 和 {2}/{3}。",
+      "introModalText": "每个模型都是一个可选择点。单击或点击某个模型进行完整的公平性评估。",
+      "lower": "偏低",
+      "period": "。 ",
+      "rangesFrom": " 范围涵盖 ",
+      "title": "模型比较",
+      "to": " 至 "
+    },
+    "Performance": {
+      "binary": "二进制",
+      "binaryClassifier": "二元分类器",
+      "body": "你的数据包含 {0} 个标签和 {2} {1} 预测。根据此信息，我们推荐以下指标。请从列表中选择一个指标。",
+      "continuous": "连续",
+      "header": "你想如何衡量性能?",
+      "modelMakes": "模型",
+      "modelsMake": "模型",
+      "probabilisticRegressor": "Probit 回归量",
+      "regressor": "回归量"
+    },
+    "Report": {
+      "assessmentResults": "评估结果",
+      "backToComparisons": "返回到所有模型",
+      "backToComparisonsLegacy": "多模型视图",
+      "chartChoiceDropdownHeader": "图表",
+      "chartChoiceAriaLabel": "Chart selection",
+      "classificationOutcomesHowToRead": "条形图显示每组的选择率，表示分类为 1 的点的分数。",
+      "classificationPerformanceHowToRead1": "条形图显示每个组的误差分布。",
+      "classificationPerformanceHowToRead2": "误差分为“过高预测”误差(true 标签为 0 时预测值为 1)和“过低预测”误差(true 标签为 1 时预测值为 0)。",
+      "classificationPerformanceHowToRead3": "通过将误差数除以组总大小得到报告率。",
+      "classificationPerformanceHowToReadV2": "条形图显示每个组中假负率和假正率。",
+      "collapseSensitiveAttributes": "折叠敏感属性",
+      "distributionOfErrors": "误差分布",
+      "distributionOfPredictions": "预测分布",
+      "editConfiguration": "编辑配置",
+      "expandSensitiveAttributes": "展开敏感属性",
+      "falseNegativeRate": "假负率",
+      "falsePositiveRate": "假正率",
+      "globalPerformanceText": "是整体 {0}",
+      "groupLabel": "子组",
+      "maxTag": "最大值",
+      "minTag": "最小值",
+      "modelName": "模型 {0}",
+      "outcomesTitle": "预测差异",
+      "overallLabel": "总体",
+      "overestimationError": "过高预测",
+      "overpredictionExplanation": "(预测值 = 1，true = 0)",
+      "performanceChartHeaderBinaryClassification": "假正率和假负率",
+      "performanceChartHeaderProbability": "过度预测和过低预测",
+      "performanceChartHeaderRegression": "错误分布",
+      "performanceDisparityText": "是 {0} 的差异",
+      "probabilityPerformanceHowToRead1": "条形图显示各组的平均绝对误差，分为“过高预测”和“过低预测”。",
+      "probabilityPerformanceHowToRead2": "我们对每个样本测量预测值和标签值之间的差异。如果是正值，则视为过高预测，如果是负值，则视为过低预测。",
+      "probabilityPerformanceHowToRead3": "我们报告“过高预测”误差总数与“过低预测”误差总数除以组总大小后的值。",
+      "regressionOutcomesHowToRead": "箱形图显示每个组的预测值分布。各个数据点在顶部重叠。",
+      "regressionPerformanceHowToRead": "误差是预测值和标签值之间的差异。箱形图显示每个组的误差分布。各个数据点在顶部重叠。",
+      "title": "性能差异",
+      "tooltipError": "错误: {0}",
+      "tooltipPrediction": "预测: {0}",
+      "underestimationError": "过低预测",
+      "underpredictionExplanation": "(预测值 = 0，true = 1)"
+    },
+    "attributes": "特性",
+    "attributesCount": "{0} 个敏感特征",
+    "calculating": "正在计算...",
+    "close": "关闭",
+    "dataSpecifications": "数据统计信息",
+    "defaultClassNames": "{0} 类",
+    "defaultCustomMetricName": "自定义指标 {0}",
+    "defaultFeatureNames": "敏感特征 {0}",
+    "defaultSingleFeatureName": "敏感特征",
+    "done": "完成",
+    "errorOnInputs": "输入出错。目前敏感特征必须是分类值。请将值映射到已装箱的类别，然后重试。",
+    "fairnessMetric": "03 公平性指标",
+    "instanceCount": "{0} 个实例",
+    "loremIpsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "modelComparisonTab": "模型比较",
+    "opportunityTab": "机会的公平性",
+    "performanceMetric": "02 性能指标:",
+    "performanceMetricLegacy": "性能指标",
+    "performanceTab": "性能的公平性",
+    "sensitiveFeatures": "01 敏感特征",
+    "singleAttributeCount": "1 个敏感特征",
+    "tableTab": "详细信息视图"
+  },
+  "Interpret": {
+    "AggregateImportance": {
+      "featureLabel": "特征: {0}",
+      "high": "高",
+      "importanceLabel": "重要性: {0}",
+      "low": "低",
+      "noColor": "无",
+      "predictedClass": "预测类",
+      "predictedClassTooltip": "预测类: {0}",
+      "predictedOutputTooltip": "预测输出: {0}",
+      "predictedValue": "预测值",
+      "scaledFeatureValue": "缩放的特征值",
+      "tooManyRows": "提供的数据集大于此图表可支持的数据集",
+      "topKFeatures": "前 K 个特征:",
+      "topKInfo": "前 k 个重要特征的计算方式",
+      "trueClass": "真实类",
+      "trueClassTooltip": "真实类: {0}",
+      "trueOutputTooltip": "真实输出: {0}",
+      "trueValue": "真实值",
+      "valueLabel": "特征值: {0}"
+    },
+    "AxisConfigDialog": {
+      "TreatAsCategorical": "视为类别",
+      "apply": "应用",
+      "binLabel": "对数据应用分箱",
+      "countHelperText": "点数直方图",
+      "ditherLabel": "应抖动",
+      "groupByCohort": "按队列分组",
+      "logarithmicScaling": "启用对数缩放",
+      "numOfBins": "箱数",
+      "selectClass": "选择类",
+      "selectFeature": "选择特征",
+      "selectFilter": "选择轴值"
+    },
+    "BarChart": {
+      "absoluteGlobal": "绝对全局",
+      "absoluteLocal": "绝对局部",
+      "calculatingExplanation": "计算说明",
+      "classLabel": "类: {0}",
+      "noData": "无数据",
+      "sortBy": "排序依据"
+    },
+    "Charts": {
+      "cohort": "队列",
+      "count": "计数",
+      "countTooltipPrefix": "计数: {0}",
+      "featureImportance": "特征重要性",
+      "featurePrefix": "特征",
+      "howToRead": "如何阅读此图表",
+      "importancePrefix": "重要性",
+      "numberOfDatapoints": "数据点数量",
+      "rowIndex": "行索引",
+      "absoluteIndex": "绝对索引",
+      "xValue": "X 值",
+      "yValue": "Y 值"
+    },
+    "Cohort": {
+      "cohort": "队列",
+      "defaultLabel": "所有数据",
+      "temporaryCohort": "临时队列"
+    },
+    "CohortBanner": {
+      "addCohort": "新建队列",
+      "binaryClassifier": "二元分类器",
+      "copy": " 副本",
+      "dataStatistics": "数据统计信息",
+      "datapoints": "{0} 个数据点",
+      "datasetCohorts": "数据集队列",
+      "details": "详细信息",
+      "duplicateCohort": "复制",
+      "edit": "编辑",
+      "editCohort": "编辑队列",
+      "features": "{0} 个特征",
+      "filters": "{0} 个筛选器",
+      "multiclassClassifier": "多类分类器",
+      "name": "名称",
+      "regressor": "回归量"
+    },
+    "CohortEditor": {
+      "columns": {
+        "index": "索引",
+        "dataset": "数据集",
+        "predictedY": "预测的 Y",
+        "trueY": "真实 Y",
+        "classificationOutcome": "分类结果",
+        "regressionError": "错误"
+      },
+      "TreatAsCategorical": "视为类别",
+      "TreatAsCategoricalAriaLabelChecked": "Treat as categorical checked, number of unique values: {0}",
+      "TreatAsCategoricalAriaLabelUnchecked": "Treat as categorical unchecked, min value: {0}, max value: {1}",
+      "addFilter": "添加筛选器",
+      "addFilterAriaLabel": "Add cohort filter",
+      "addedFilters": "筛选器",
+      "cancel": "取消",
+      "cancelAriaLabel": "Cancel cohort",
+      "cancelExistingCohort": "是否确定要取消编辑新队列并返回?",
+      "cancelNewCohort": "是否确定要取消创建新队列并返回?",
+      "cancelNo": "否",
+      "cancelTitle": "取消队列",
+      "cancelYes": "是",
+      "cohortNameError": "缺少队列名",
+      "cohortNameDupError": "同名队列已存在。",
+      "cohortNameLabel": "数据集队列名",
+      "cohortNamePlaceholder": "命名你的队列",
+      "clearAllFilters": "清除所有筛选器",
+      "defaultFilterState": "选择一个筛选器，以将参数添加到数据集队列。预填充当前查看队列中的筛选器。",
+      "delete": "删除",
+      "deleteAriaLabel": "Delete cohort",
+      "invalidValueError": "值应介于 {0} 和 {1} 之间。",
+      "minimumGreaterThanMaximum": "最小值输入必须小于最大值输入。",
+      "noAddedFilters": "无筛选器",
+      "placeholderName": "队列 {0}",
+      "save": "保存",
+      "saveAriaLabel": "Save cohort",
+      "saveAndSwitch": "保存并切换",
+      "selectFilter": "选择筛选器",
+      "noFiltersApplied": "未应用任何筛选器",
+      "filterAdded": "已添加筛选器"
+    },
+    "Columns": {
+      "classificationOutcome": "分类结果",
+      "dataset": "数据集",
+      "error": "错误",
+      "falseNegative": "假负",
+      "falsePositive": "假正",
+      "none": "计数",
+      "predictedProbabilities": "预测概率",
+      "predictedLabels": "预测的标签",
+      "trueLabels": "True 标签",
+      "regressionError": "回归错误",
+      "trueNegative": "真负",
+      "truePositive": "真正",
+      "correctlyClassified": "已正确分类",
+      "misclassified": "分类错误"
+    },
+    "CrossClass": {
+      "absoluteValInfo": "绝对值的平均值: 显示所有可能类中特征重要性的总和，除以类的数量",
+      "close": "关闭",
+      "crossClassWeights": "交叉类权重",
+      "enumeratedClassInfo": "枚举的类名: 仅显示所有数据点中指定类的特征重要性值。",
+      "info": "有关跨类计算的信息",
+      "label": "交叉类权重:",
+      "overviewInfo": "多类模型为每个类生成一个独立的特征重要性向量。每个类的特征重要性向量说明了哪些特征使类的可能性更高或更低。可以选择如何将每个类的特征重要性向量权重汇总为单个值:",
+      "predictedClassInfo": "预测类: 显示给定点预测类的特征重要性值"
+    },
+    "DatasetExplorer": {
+      "aggregatePlots": "聚合绘图",
+      "chartType": "图表类型",
+      "colorValue": "颜色值",
+      "infoTitle": "有关数据分析图表视图的其他信息",
+      "helperText": "创建数据集队列，以按筛选器分析数据统计信息，如预测结果、数据集特征和错误组。了解数据集中的呈现过度/不足。",
+      "individualDatapoints": "单个数据点",
+      "missingParameters": "此选项卡要求提供评估数据集。",
+      "noColor": "无",
+      "datasetCohortDropdown": "Dataset cohort"
+    },
+    "DependencePlot": {
+      "featureImportanceOf": "特性重要性",
+      "placeholder": "选择一项功能以显示其相关性图"
+    },
+    "ExplanationScatter": {
+      "class": "类: ",
+      "colorValue": "颜色:",
+      "count": "计数",
+      "dataGroupLabel": "数据",
+      "dataLabel": "数据: {0}",
+      "importanceLabel": "重要性: {0}",
+      "index": "索引",
+      "output": "输出",
+      "predictedY": "预测的 Y",
+      "odIncorrect": "不正确",
+      "odCorrect": "正确",
+      "probabilityLabel": "概率: {0}",
+      "trueY": "真实 Y",
+      "xValue": "X 值:",
+      "yValue": "Y 值:"
+    },
+    "ExplanationSummary": {
+      "clickHere": "了解详细信息",
+      "limeDescription": "此解释器使用 LIME，它对模型进行线性近似处理。我们通过执行以下操作来获取解释: 扰乱实例，获取模型预测，并将这些预测用作标签来学习局部保真的稀疏线性模型。此线性模型的权重用作“特征重要性”。若要了解详细信息，请单击下面的链接。",
+      "limeTitle": "LIME (局部可解释的模型不可知解释)",
+      "mimicDescription": "此解释器基于以下理念: 训练全局代理模型来模仿黑盒模型。全局代理模型是一种本质上可解释的模型，它被训练成尽可能精确地逼近任何黑盒模型的预测。特征重要性值是基础代理模型(LightGBM、线性回归、随机梯度下降或决策树)的基于模型的特征重要性值。",
+      "mimicTitle": "模仿(全局代理解释)",
+      "pfiDescription": "此解释器对整个数据集一次一个特征地随机打乱数据，并计算相关性能指标的变化幅度(默认性能指标: F1 用于二元分类，含微平均的 F1 分数用于多类分类，平均绝对误差用于回归)。变化越大，相应特征就越重要。此解释器只能解释基础模型的整体行为，而不能解释单个预测。特征的特征重要性值代表了通过扰乱相应特定特征实现的模型性能增量。",
+      "pfiTitle": "排列特征重要性(PFI)",
+      "shapDescription": "此解释器使用 SHAP，这是一种用于解释模型的博弈论方法，其中特征集的重要性是通过边缘化从模型中“隐藏”这些特征来衡量的。请单击下面的链接以了解详细信息。",
+      "shapTitle": "Shapley 值",
+      "whatDoFeatureMean": "这些特征重要性值意味着什么?"
+    },
+    "FeatureImportanceWrapper": {
+      "barText": "滚动条",
+      "beehiveText": "Swarm",
+      "boxText": "框",
+      "chartType": "图表类型:",
+      "globalImportanceExplanation": "全局特征重要性通过对所有点的特征重要性的绝对值求平均值(L1 规范化)计算得出。 ",
+      "multiclassImportanceAddendum": "计算所有类的特征重要性时，所有点都包括在内，并且不使用任何差异权重。因此，对许多预测为非“A 类”的点具有较大负面重要性的特征将大大提高该特征的“A 类”重要性。",
+      "violinText": "小提琴图"
+    },
+    "FilterOperations": {
+      "equals": " 等于 {0}",
+      "excludes": " 不包含 {0} ",
+      "greaterThan": " 大于 {0}",
+      "greaterThanEquals": " 大于或等于 {0}",
+      "inTheRangeOf": "[ {0} ]",
+      "includes": " 包含 {0} ",
+      "lessThan": " 小于 {0}",
+      "lessThanEquals": " 小于或等于 {0}",
+      "overflowFilterArgs": "{0} 和 其他 {1} 个"
+    },
+    "Filters": {
+      "categoricalIncludeValues": "包含的值:",
+      "equalComparison": "等于",
+      "greaterThanComparison": "大于",
+      "greaterThanEqualToComparison": "大于或等于",
+      "inTheRangeOf": "在以下范围内",
+      "lessThanComparison": "小于",
+      "lessThanEqualToComparison": "小于或等于",
+      "max": "最大值: {0}",
+      "maximum": "最大值",
+      "min": "最小值: {0}",
+      "minimum": "最小值",
+      "numericValue": "值",
+      "numericalComparison": "操作",
+      "uniqueValues": "唯一值的数目: {0} 个"
+    },
+    "GlobalOnlyChart": {
+      "helperText": "了解影响整体模型预测的前 k 个重要特征。使用滑块以按降序显示特征重要性。"
+    },
+    "GlobalTab": {
+      "absoluteValues": "以绝对值形式查看",
+      "aggregateFeatureImportance": "聚合特征重要性",
+      "collapsedHelperText": "浏览影响整体模型预测的前 K 个重要特征。",
+      "datapoint": "数据点",
+      "datasetCohortSelector": "选择数据集队列",
+      "datasetCohorts": "数据集队列",
+      "datasetRequired": "相关性绘图需要计算数据集和局部特征重要性数组。",
+      "dependencePlotFeatureSelectPlaceholder": "选择特征",
+      "dependencePlotHelperText": "此相关性图显示特征值与其相应特征重要性值之间的关系。",
+      "dependencePlotTitle": "相关性绘图",
+      "helperText": "探索影响总体模型预测的前 k 个重要特征(即全局解释)。使用滑块降序显示特征重要性。并排显示所有队列的功能重要性，并且可以通过选择图例中的队列来切换关闭。单击关系图中的任何特征以查看下面的密度图，以了解所选特征的值如何影响预测。",
+      "infoTitle": "有关聚合特征重要性的其他信息",
+      "legendHelpText": "通过单击图例项在绘图中切换启用/禁用队列。",
+      "missingParameters": "此选项卡要求提供局部特征重要性参数。",
+      "sortByCohort": "按队列排序",
+      "sortBy": "按数据点排序",
+      "topAtoB": "前 {0} 个特征(按重要性排列)",
+      "viewDependencePlotFor": "查看以下特征的相关性绘图:",
+      "weightOptions": "类重要性权重",
+      "weightOptionsDropdown": "类重要性权重下拉列表"
+    },
+    "IcePlot": {
+      "close": "关闭",
+      "errorPrefix": "出现错误: {0}",
+      "featurePickerLabel": "特征:",
+      "integerError": "必须为整数",
+      "loadingMessage": "正在加载数据...",
+      "maximumInputLabel": "最大值:",
+      "minimumInputLabel": "最小值:",
+      "noModelError": "请提供可操作模型，以便浏览 ICE 绘图中的预测。",
+      "numericError": "必须为数值",
+      "predictedProbability": "预测概率",
+      "prediction": "预测",
+      "predictionLabel": "预测: {0}",
+      "probabilityLabel": "概率: {0}",
+      "pythonError": "Python 错误",
+      "stepInputLabel": "步骤:",
+      "submitPrompt": "提交范围以查看 ICE 绘图",
+      "topLevelErrorMessage": "参数中的错误"
+    },
+    "ModelPerformance": {
+      "cohortPickerLabel": "选择要浏览的数据集队列",
+      "helperText": "通过浏览预测值的分布和模型性能指标的值来评估模型的性能。可以通过查看数据集不同队列或子组性能的比较分析来进一步调查模型。沿 y 值和 x 值选择筛选器，以跨不同维度进行剪切。",
+      "missingParameters": "此选项卡要求提供来自模型的预测值数组。",
+      "missingTrueY": "除了预测结果之外，模型性能统计信息还要求提供 true 结果",
+      "modelStatistics": "模型统计信息"
+    },
+    "PerturbationExploration": {
+      "loadingMessage": "正在加载...",
+      "perturbationLabel": "扰动:"
+    },
+    "PredictionLabel": {
+      "predictedClassLabel": "预测类: {0}",
+      "predictedValueLabel": "预测值: {0}"
+    },
+    "Statistics": {
+      "accuracy": "准确度: {0}",
+      "bleuScore": "Bleu 评分: {0}",
+      "bertScore": "Bert 评分: {0}",
+      "exactMatchRatio": "完全匹配比率: {0}",
+      "rougeScore": "Rouge 评分: {0}",
+      "fnr": "误报率: {0}",
+      "fpr": "漏报率: {0}",
+      "hammingScore": "汉明评分: {0}",
+      "meanPrediction": "平均值预测 {0}",
+      "meteorScore": "流星评分: {0}",
+      "mse": "均方误差: {0}",
+      "precision": "精准率: {0}",
+      "rSquared": "R²: {0}",
+      "recall": "召回率: {0}",
+      "selectionRate": "选择率: {0}",
+      "mae": "平均绝对误差: {0}",
+      "f1Score": "F1 分数: {0}",
+      "samples": "样本大小: {0}",
+      "meanAveragePrecision": "平均精度均值: {0}",
+      "averagePrecision": "平均精度: {0}",
+      "averageRecall": "平均召回率: {0}"
+    },
+    "ValidationErrors": {
+      "addFilters": "添加筛选器",
+      "datasizeError": "所选队列太大，请添加筛选器以减小队列的大小。",
+      "datasizeWarning": "评估数据集太大，无法在某些图表中有效显示，请添加筛选器以减小队列的大小。 ",
+      "errorHeader": "有些输入参数不一致，将不会使用: ",
+      "evalData": "评估数据集",
+      "globalFeatureImportance": "全局特征重要性",
+      "inconsistentDimensions": "尺寸不一致。{0} 有尺寸 {1}，而预期为 {2}",
+      "localFeatureImportance": "局部特征重要性",
+      "notArray": "{0} 不是数组。预期维度 {1} 的数组",
+      "notNonEmpty": "{0} 输入不是非空数组",
+      "predictedProbability": "预测概率",
+      "predictedY": "预测的 Y",
+      "varyingLength": "尺寸不一致。{0} 有长度不同的元素"
+    },
+    "Violin": {
+      "groupBy": "分组依据",
+      "groupNone": "不分组",
+      "groupPredicted": "预测的 Y",
+      "groupTrue": "真实 Y"
+    },
+    "WhatIf": {
+      "closeAriaLabel": "关闭",
+      "defaultCustomRootName": "第 {0} 行的副本",
+      "filterFeaturePlaceholder": "搜索特征"
+    },
+    "WhatIfTab": {
+      "IceGetStartedText": "选择一个点或创建一个 What-If 点以查看 ICE 绘图",
+      "classLabel": "类: {0}",
+      "classPickerLabel": "类",
+      "cohortPickerLabel": "选择要浏览的数据集队列",
+      "dataPointInfo": "数据点信息",
+      "deltaLabel": "增量",
+      "disclaimer": "免责声明: 这些是基于许多近似值的解释，而不是预测的“原因”。在无法从数学上进行严格、扎实的因果推理的情况下，不建议用户在现实生活中根据此工具制定决策。",
+      "featureImportanceGetStartedText": "在上表中选择一个数据点以查看其本地功能重要性",
+      "featureImportanceLackingParameters": "请提供局部特征重要性，以查看每个特征对各个预测有何影响。",
+      "featureImportancePlot": "特征重要性绘图",
+      "featureValues": "特征值",
+      "helperText": "通过点击散点图中的数据点来选择单个数据点，以查看下方其局部特征重要性值和右侧面板中的特征值。",
+      "iceLackingParameters": "ICE 绘图需要运营模型以预测假设数据点。",
+      "icePlot": "个体条件期望(ICE)图",
+      "icePlotHelperText": "ICE 图演示了所选数据点的预测值如何沿介于最小值和最大值之间的一系列特征值而发生变化。",
+      "indexLabel": "数据索引",
+      "loading": "正在加载...",
+      "localFeatureImportanceForPoint": "所选数据点的局部特征重要性",
+      "maxLabel": "最大值",
+      "minLabel": "最小值",
+      "missingParameters": "此选项卡要求提供评估数据集。",
+      "newPredictedClass": "新的预测类: ",
+      "newPredictedValue": "新的预测值: ",
+      "newProbability": "新概率: ",
+      "nonNumericValue": "值应为数字",
+      "noneCreatedYet": "尚未创建任何点",
+      "noneSelectedYet": "尚未选择任何点",
+      "notAvailable": "Studio 目前不支持 What-If。请在 Jupyter Notebook 中运行此小组件以启用 What-If。",
+      "panelPlaceholder": "需要模型以对新的数据点进行预测。",
+      "predictedClass": "预测类: ",
+      "predictedValue": "预测值: ",
+      "probability": "概率: ",
+      "probabilityLabel": "概率",
+      "realPoint": "实际数据点",
+      "rowLabel": "行 {0}",
+      "saveAsNewPoint": "另存为新点",
+      "saveChanges": "保存更改",
+      "scatterLegendText": "通过单击图例项在绘图中切换开关数据点。",
+      "selectionLimit": "最多选择 3 个点",
+      "showLabel": "显示:",
+      "stepsLabel": "步骤",
+      "tooltipTitleFew": "预测类",
+      "tooltipTitleMany": "前 {0} 个预测类",
+      "trueClass": "真实类: ",
+      "trueValue": "真实值: ",
+      "trueValue.comment": "向实际标签添加前缀以进行回归",
+      "whatIfDatapoint": "What-If 数据点",
+      "whatIfDatapoints": "What-If 数据点",
+      "whatIfHelpText": "在绘图上选择一个点，或手动输入一个要打乱的已知数据点索引，并另存为新的 What-If 点。",
+      "whatIfNameLabel": "What-If 数据点名",
+      "whatIfTooltipTitle": "What-If 预测类"
+    },
+    "absoluteAverage": "绝对值的平均值",
+    "aggregateFeatureImportance": "聚合特征重要性",
+    "calloutTitle": "单击了解相关信息",
+    "clearSelection": "清除所选内容",
+    "dataExploration": "数据集探索",
+    "datasetExplorer": "数据集资源管理器",
+    "defaultClassNames": "{0} 类",
+    "defaultFeatureNames": "特征 {0}",
+    "explanationExploration": "解释探索",
+    "feature": "特征:",
+    "featureImportance": "特征重要性",
+    "featureImportanceOf": "{0} 的特征重要性",
+    "globalImportance": "全局重要性",
+    "ice": "ICE",
+    "individualAndWhatIf": "单个特征重要性和 what-if",
+    "individualImportance": "单个特征重要性",
+    "intercept": "截距",
+    "localFeatureImportance": "本地功能重要性",
+    "modelPerformance": "模型性能",
+    "perturbationExploration": "扰动探索",
+    "predictedClass": "预测类",
+    "selectPoint": "选择一点以查看其局部解释",
+    "summaryImportance": "摘要重要性"
+  },
+  "InterpretText": {
+    "View": {
+      "interpretibilityDashboard": "可解释性仪表板",
+      "importantWords": "显示最重要的字词",
+      "topFeatureList": "主要特征列表分析",
+      "allButton": "所有特征",
+      "negButton": "负特征",
+      "posButton": "正特征",
+      "legendText": "正标量特征重要性表示该词对你所选标签的分类的重要程度，而负标量特征重要性表示驱使你的模型远离你所选标签的词。",
+      "legendTextForQA": "左侧文本框和条形图显示模型的预测。右侧文本框显示与所选令牌关联的功能重要性。正面特征重要性表示字词对于将所选令牌标记为答案的开始/结束位置非常重要的程度。",
+      "label": "标签",
+      "colon": ":",
+      "startingPosition": "起始位置",
+      "endingPosition": "结束位置",
+      "predictedAnswer": "预测的答案:",
+      "trueAnswer": "真实答案:",
+      "inputs": "输入",
+      "outputs": "输出",
+      "sliderAriaLabel": "用于最重要的字词的滑块"
+    },
+    "Legend": {
+      "featureLegend": "文本特征图例",
+      "posFeatureImportance": "正特征重要性",
+      "negFeatureImportance": "负特征重要性",
+      "cls": "CLS: 句子的开头",
+      "sep": "SEP: 句子结尾",
+      "selectedWord": "所选字词:"
+    },
+    "BarChart": {
+      "featureImportance": "特征重要性"
+    }
+  },
+  "InterpretVision": {
+    "Cohort": {
+      "close": "关闭",
+      "errorCohortName": "请选择唯一的队列名称。",
+      "errorNumSelected": "请选择至少 (1) 项。",
+      "itemsSelectedSingular": "已选择项",
+      "itemsSelectedPlural": "选定项目",
+      "save": "保存对列",
+      "saveAndClose": "保存并关闭",
+      "saveAndSwitch": "保存并切换",
+      "textField": "新队列名称",
+      "title": "保存新队列"
+    },
+    "Dashboard": {
+      "allData": "所有数据",
+      "columnOne": "图像",
+      "columnTwo": "指标",
+      "columnThree": "真实 Y",
+      "columnFour": "预测的 Y",
+      "columnThreeOD": "正确",
+      "columnFourOD": "不正确",
+      "columnFive": "其他元数据",
+      "chooseObject": "选择检测到的对象",
+      "examples": "示例",
+      "filter": "筛选器",
+      "indexLabel": "图像 ",
+      "labelTypeDropdown": "选择标签类型",
+      "labelTypeAriaLabel": "Label type",
+      "labelVisibilityDropdown": "选择要显示的标签",
+      "labelVisibilityAriaLabel": "Label visibility",
+      "legendFailure": "故障",
+      "legendSuccess": "成功",
+      "loading": "索引图像的计算说明",
+      "multiselect": "多选",
+      "notdefined": "未定义对象方案",
+      "objectSelect": "对象选择",
+      "pageSize": "页面大小:",
+      "panelTitle": "所选实例",
+      "panelExplanation": "说明",
+      "panelInformation": "信息",
+      "predictedLabel": "预测标签",
+      "predictedY": "预测:",
+      "correctDetections": "检测正确:",
+      "incorrectDetections": "检测不正确:",
+      "prefix": "对象: ",
+      "rows": "行数: ",
+      "rowsAriaLabel": "Number of rows per page",
+      "search": "搜索",
+      "selectAll": "全选",
+      "settings": "设置",
+      "showAll": "全部显示",
+      "tabOptionFirst": "图像资源管理器视图",
+      "tabOptionSecond": "表视图",
+      "tabOptionThird": "类视图",
+      "thumbnailSize": "缩略图大小",
+      "titleBarError": "错误实例",
+      "titleBarSuccess": "成功实例",
+      "trueY": "基本事实:"
+    }
+  },
+  "ModelAssessment": {
+    "AddingTab": {
+      "AddButtonText": "添加",
+      "CalloutContent": "通过添加一些组件(错误树状视图、错误热度地图)，可以从在以下组件内看到的全局队列中筛选数据。",
+      "AddComponentAriaLabel": "Add dashboard component",
+      "AddButtonAriaLabel": "Add dashboard",
+      "CalloutTitle": "添加组件",
+      "TabAddedMessage": {
+        "DataAnalysis": "添加了数据分析组件",
+        "FeatureImportances": "添加了特征重要性组件",
+        "ErrorAnalysis": "添加了错误分析组件",
+        "Fairness": "添加了公平性组件",
+        "ModelOverview": "已添加模型概述组件",
+        "CausalAnalysis": "添加了因果分析组件",
+        "Counterfactuals": "添加了反事实组件",
+        "Vision": "已添加视觉数据资源管理器组件",
+        "Forecasting": "预测添加模拟组件"
+      }
+    },
+    "CausalAnalysis": {
+      "Table": {
+        "ciLower": "置信区间(下部)",
+        "ciUpper": "置信区间(上部)",
+        "name": "特征",
+        "pValue": "P 值",
+        "point": "效果估计",
+        "stderr": "标准错误",
+        "zstat": "Z 分数"
+      }
+    },
+    "Cohort": {
+      "apply": "应用",
+      "delete": "删除",
+      "deleteAriaLabel": "Delete cohort",
+      "cancel": "取消",
+      "cancelAriaLabel": "Cancel cohort",
+      "cohortInfo": "队列信息",
+      "cohortList": "队列列表",
+      "deleteCohort": "正在删除 {0}?",
+      "deleteConfirm": "是否确定要删除此队列?",
+      "selectCohort": "选择队列",
+      "selectCohortAriaLabel": "Cohort selection",
+      "shiftCohort": "切换队列",
+      "shiftCohortAriaLabel": "Switch cohort",
+      "shiftCohortDescription": "从队列列表中选择队列。将该队列应用到仪表板。"
+    },
+    "CohortInformation": {
+      "ShiftCohort": "切换队列",
+      "SwitchTimeSeries": "切换时序",
+      "NewCohort": "新建队列",
+      "DataPoints": "数据点数量",
+      "DefaultCohort": " (默认)",
+      "Filters": "筛选器数",
+      "GlobalCohort": "全局队列: "
+    },
+    "CohortSettings": {
+      "CohortSettingsDescription": "全局队列是通过手动添加筛选器或在错误分析组件中保存所选组创建的数据子集。查看、创建、编辑、复制和删除队列。",
+      "CohortSettingsTitle": "队列设置"
+    },
+    "ComponentNames": {
+      "ChartView": "图表视图",
+      "CausalAnalysis": "因果分析",
+      "Counterfactuals": "反事实",
+      "DataAnalysis": "数据分析",
+      "DataBalance": "数据平衡",
+      "DataExplorer": "数据资源管理器",
+      "ErrorAnalysis": "错误分析",
+      "Fairness": "公平度",
+      "FeatureImportances": "特征重要性",
+      "Forecasting": "预测",
+      "ModelOverview": "模型概述",
+      "TableView": "表视图",
+      "VisionTab": "视觉数据资源管理器"
+    },
+    "DashboardSettings": {
+      "Content": "此表显示了仪表板的布局。可以使用错误分析组件向下筛选要在以下组件中查看的数据。",
+      "DashboardComponents": "仪表板组件",
+      "DataPoints": "数据点数量",
+      "DeleteDialog": {
+        "Cancel": "取消",
+        "Content": "是否确实要删除 {0}?",
+        "Delete": "删除",
+        "Title": "删除 {0}?"
+      },
+      "Title": "仪表板配置"
+    },
+    "DataBalance": {
+      "AggregateBalanceMeasures": {
+        "Callout": {
+          "Description": "聚合平衡度量值使我们能够获得数据集在不相等方面的更深理解。它们是根据感兴趣的列集计算的，不依赖于标签列。这些度量值代表着所关注的列的所有特征值组合的记录分布情况。",
+          "Title": "什么是聚合平衡度量值?"
+        },
+        "Measures": {
+          "AtkinsonIndex": {
+            "Description": "阿特金森指数是一个衡量收入不平等的指标，它显示了一个特定的社会为了使其公民之间的收入份额更加平等而必须放弃的总收入的百分比。对于数据集来说，这代表了为了在感兴趣的列方面让数据集达到完全平衡，所需要放弃的记录的百分比。该指数介于 0 和 1 之间，数值越小表示不平等程度越低。",
+            "Name": "阿特金森指数"
+          },
+          "TheilLIndex": {
+            "Description": "泰尔 L 指数是一个衡量收入不平等的指标，它使用 α=0 的广义熵指数计算，因此它对分布中低端的差异更加敏感。这个指数能更好地捕捉到在数据集中不经常出现的记录组合。它也被称为平均对数偏差指标。",
+            "Name": "泰尔指数(L)"
+          },
+          "TheilTIndex": {
+            "Description": "泰尔 T 指数是一个衡量收入不平等的指标，它使用 α=1 的广义熵指数进行计算，因此它对分布中高端的差异更加敏感。这个指数能更好地捕捉到在数据集中非常频繁出现的记录组合。",
+            "Name": "泰尔指数(T)"
+          }
+        },
+        "MeasuresNotComputed": "没有计算聚合平衡度量值。要计算它们，请确保: (1)任务类型为“分类”；(2)分类特征列表有效且不为空；(3)计算见解时没有出现错误。",
+        "Name": "聚合平衡度量值",
+        "Table": {
+          "Description": "说明",
+          "FeatureName": "特征名称",
+          "FeatureValue": "特征值"
+        }
+      },
+      "DistributionBalanceMeasures": {
+        "Callout": {
+          "Description": "通过分布平衡度量值，我们可以将数据与参考均匀分布进行比较。这些度量值按感兴趣的列进行计算，不依赖于标签列。",
+          "Title": "什么是分布平衡度量值?"
+        },
+        "Chart": {
+          "Axes": {
+            "DistributionMeasure": "分布度量值",
+            "MeasureValue": "度量值"
+          },
+          "Title1": "比较",
+          "Title2": "具有均匀分布"
+        },
+        "Measures": {
+          "ChiSquarePValue": {
+            "Description": "卡方检验的 p 值给出了反对无效假设的证据，即观察到的频率和预期频率的差异是由随机机会造成的。",
+            "Name": "卡方 p 值"
+          },
+          "ChiSquareStatistic": {
+            "Description": "卡方检验可验证分类数据与每个类别的预期频率相比，具有给定频率的无效假设。",
+            "Name": "卡方(χ2)统计"
+          },
+          "CrossEntropy": {
+            "Description": "两个概率分布之间的交叉熵(也称为对数损失)是信息理论中的一个度量值，它的计算方式是对数据集概率分布进行负求和，然后乘以参考概率分布的对数。",
+            "Name": "跨熵"
+          },
+          "InfiniteNormDistance": {
+            "Description": "无穷范数距离(也称为切比雪夫距离或棋盘距离)是一种度量值，它指出两个向量之间的距离是它们沿任何坐标维度的差值的最大值。该度量值为非负值，值为 0 表示两个分布区相等。",
+            "Name": "无穷范数距离"
+          },
+          "JSDistance": {
+            "Description": "Jensen-Shannon (JS)距离衡量两个概率分布之间的相似性。它是 Kullback-Leibler (KL)散度的对称和平滑版本，也是 JS 散度的平方根。它的范围是 [0,1]，其中值为 0 意味着分布是完全平衡的。",
+            "Name": "Jensen-Shannon 距离"
+          },
+          "KLDivergence": {
+            "Description": "Kullback-Leibler (KL)散度是衡量一个概率分布与第二个概率分布的不同程度的指标。它表示当一个分布被用来近似另一个分布时损失的信息量。该度量值为非负数，数值为 0 意味着两个分布相等。",
+            "Name": "Kullback-Leibler 散度"
+          },
+          "TotalVariationDistance": {
+            "Description": "全变差距离等于两个分布之间的曼哈顿(L1)距离的一半。它是用两个分布之间的绝对值差异的总和来计算的。该度量值是非负的，数值为 0 意味着两个分布相等。",
+            "Name": "全变差距离"
+          },
+          "WassersteinDistance": {
+            "Description": "Wasserstein 距离也称为 Earth Mover 距离，因为它可以被看作是将一个分布转化为另一个分布所需的最小“工作量”。工作的衡量方式是，必须移动的分布量乘以必须移动的距离。该度量是非负的，数值为 0 意味着两个分布相等。",
+            "Name": "Wasserstein 距离"
+          }
+        },
+        "MeasuresNotComputed": "没有计算分布平衡度量值。要计算它们，请确保: (1)任务类型为“分类”；(2)分类特征列表有效且不为空；(3)计算见解时没有出现错误。",
+        "Name": "分布平衡度量值"
+      },
+      "FeatureBalanceMeasures": {
+        "Callout": {
+          "Description": "特征平衡度量值使我们能够查看特征值的每个组合是否以均衡的概率接收正结果(真预测)。",
+          "Title": "什么是特征平衡度量值?"
+        },
+        "Chart": {
+          "Axes": {
+            "ClassA": "类 A",
+            "ClassB": "类 B"
+          },
+          "Tooltip": {
+            "And": "和",
+            "ValueDescription1": "有一个",
+            "ValueDescription2": "/"
+          }
+        },
+        "Description1": "正在显示",
+        "Description2": "所有类的间隙",
+        "Description3": "用于标签",
+        "FeaturePicker": "特征",
+        "LabelPicker": "正标签",
+        "MeasurePicker": "度量值",
+        "Measures": {
+          "JaccardIndex": {
+            "Description": "间隙表示类 A 的杰卡德指数与 B 类的杰卡德指数之间的差异。杰卡德指数本身是一个并交比的度量值，因此其范围为 [0,1]，其中 0 意味着分布完全不相交，1 意味着它们完全相同。",
+            "Name": "杰卡德指数"
+          },
+          "KendallRankCorrelation": {
+            "Description": "(KRC)间隙表示类 A 的 KRC 与类 B 的 KRC 之间的差异。肯德尔等级相关系数本身是一个相关统计量，用于衡量两个测量量之间的顺序关联，当观测值有相似的等级时，该值就高，当观测值在两个变量之间有不同的等级时，该值就低。",
+            "Name": "肯德尔等级相关系数"
+          },
+          "LogLikelihoodRatio": {
+            "Description": "(LLR)间隙表示类 A 的 LLR 与类 B 的 LLR 之间的差异。对数似然比本身是一个相关性统计方法，用于衡量具有正标的特征的概率以及正标的概率。",
+            "Name": "对数似然比"
+          },
+          "PointwiseMutualInformation": {
+            "Description": "(PMI)间隙表示类 A 的 PMI 与类 B 的 PMI 之间的差异。点互信息本身是一种熵度量值，给定类 A 和类 B，在给定其联合分布和各个分布(假定独立)的情况下，它可以量化两者概率之间的差异。",
+            "Name": "点相信息"
+          },
+          "SorensenDiceCoefficient": {
+            "Description": "(SDC)间隙表示类 A 的 SDC 与类 B 的 SDC 之间的差异。Sørensen-Dice 系数本身是一个并交比的度量值，用于标记两个样本的相似性。它与 F1 分数相关，它等于两个集共有的元素数乘二然后除以每个集内元素数的总和。",
+            "Name": "Sørensen-Dice 系数"
+          },
+          "StatisticalParity": {
+            "Description": "(SP)间隙表示类 A 的 SP 与类 B 的 SP 之间的差异。统计平价本身衡量的是正例率，也就是一个类获得正结果的程度。间隙衡量的是两个类的正例率之间的差异。接近于 0 意味着两个类获得的正结果相同。正值意味着第一类的正标签比第二类更多。负值意味着相反的情况。",
+            "Name": "统计平价"
+          },
+          "TTest": {
+            "Description": "间隙表示类 A 的 t 检验与 B 类的 t 检验之间的差异。t 检验本身是用于比较两个组(成对)的平均值的相关性统计方法。在 t 分布表上查找间隙值，以判断两个组是否有显著的不同。",
+            "Name": "t 检验"
+          },
+          "TTestPValue": {
+            "Description": "间隙表示类 A 和类 B 之间的 t 检验间隙的统计学意义。t 检验间隙值和自由度用于计算 p 值。",
+            "Name": "t 检验 p 值"
+          }
+        },
+        "MeasuresNotComputed": "没有计算特征平衡度量值。要计算它们，请确保: (1)任务类型为“分类”；(2)分类特征列表有效且不为空；(3)计算见解时没有出现错误。",
+        "Name": "特征平衡度量值"
+      },
+      "LearnMore": "了解详细信息",
+      "MeasuresNotComputed": "此选项卡要求为此数据集计算数据平衡度量值。当指定了“分类”任务类型和非空分类特征列表时，将计算度量值。"
+    },
+    "FeatureImportances": {
+      "CorrectPredictions": "正确的预测",
+      "GlobalExplanation": "聚合特征重要性",
+      "IncorrectPredictions": "不正确的预测",
+      "InfoTitle": "有关特征重要性值的其他信息",
+      "IndividualFeatureTabular": "通过单击表中的一个数据点(最多 5 个数据点)来选择数据点，以查看其本地特征重要性值(本地解释)和单个条件预期(ICE)绘图。",
+      "IndividualFeatureText": "通过单击表中的数据点来选择数据点，以查看来自 SHAP 文本解释器的局部特征重要性值(局部说明)。",
+      "LocalExplanation": "单个特征重要性",
+      "SelectionCounter": "已选择 {0} 个数据点(共 {1} 个)",
+      "SelectionLimit": "此时最多可选择 5 个数据点。",
+      "RowCheckboxAriaLabel": "行复选框",
+      "SelectionColumnAriaLabel": "切换所选内容"
+    },
+    "IndividualFeatureImportanceView": {
+      "SmallInstanceSelection": "实例选择"
+    },
+    "MainMenu": {
+      "DashboardSettings": "仪表板配置",
+      "cohortInfo": "队列信息",
+      "cohortList": "队列列表",
+      "cohortSettings": "队列设置",
+      "createCohort": "创建队列",
+      "shiftCohort": "切换队列"
+    },
+    "Navigation": {
+      "modelStatistics": "模型统计信息"
+    },
+    "ModelOverview": {
+      "metrics": {
+        "accuracy": {
+          "name": "准确度分数",
+          "description": "正确分类的数据点的分数。"
+        },
+        "exactMatchRatio": {
+          "name": "完全匹配比率",
+          "description": "为每个标签正确分类的实例的比率。"
+        },
+        "meteorScore": {
+          "name": "流星评分",
+          "description": "METEOR 分数是根据精度和召回率的协调平均值计算得出的，在问题解答任务中，召回率加权超过精度。"
+        },
+        "bleuScore": {
+          "name": "Bleu 评分",
+          "description": "Bleu 评分度量在计算机生成的文本中字词(和/或 n-gram)的比率，这些文本出现在问题解答任务的引用文本中。"
+        },
+        "bertScore": {
+          "name": "Bert 评分",
+          "description": "BERTScore 专注于计算在问题解答任务中引用令牌和计算机生成的文本之间的语义相似性。"
+        },
+        "rougeScore": {
+          "name": "Rouge 评分",
+          "description": "Rouge 评分度量在计算机生成的问题解答任务中生成的文本中出现的引用文本中的单词(和/或 n-gram)的比率。"
+        },
+        "hammingScore": {
+          "name": "汉明评分",
+          "description": "在多标签任务中分类为 1 的标签中，正确分类的标签的平均比率。"
+        },
+        "f1Score": {
+          "name": "F1 分数",
+          "description": "F1-分数是精准率和召回率的调和平均值。"
+        },
+        "f1ScoreMacro": {
+          "name": "宏 F1 分数",
+          "description": "宏 F1 分数是每个类的精度和召回率的协调平均值，每个类加权均等。"
+        },
+        "f1ScoreMicro": {
+          "name": "微 F1 分数",
+          "description": "微 F1 分数是每个类的精度和召回率的协调平均值，每个类根据其包含的实例数进行加权。"
+        },
+        "meanAbsoluteError": {
+          "name": "平均绝对误差",
+          "description": "误差绝对值的平均值。与 MSE 相比，对离群值更具健壮性。"
+        },
+        "meanSquaredError": {
+          "name": "均方误差",
+          "description": "平方误差的平均值。"
+        },
+        "precision": {
+          "name": "精准率分数",
+          "description": "分类为 1 的数据中正确分类的数据点的分数。"
+        },
+        "precisionMacro": {
+          "name": "宏精度分数",
+          "description": "在每个类分类为 1，且每个类加权相等的数据点中正确分类的数据点的分数。"
+        },
+        "precisionMicro": {
+          "name": "微精度分数",
+          "description": "根据每个类包含的实例数加权，在分类为 1 的类中正确分类的数据点的分数。"
+        },
+        "recall": {
+          "name": "召回率分数",
+          "description": "真实标签为 1 的数据中正确分类的数据点的分数。其他名称: 真正率、敏感度。"
+        },
+        "recallMacro": {
+          "name": "宏召回分数",
+          "description": "在每个类的真正标签为 1，且每个类加权均等的数据点中正确分类的数据点的分数。"
+        },
+        "recallMicro": {
+          "name": "微召回率分数",
+          "description": "在每个类的真正标签为 1 的数据点中正确分类的数据点的分数，每个类根据其包含的实例数进行加权。"
+        },
+        "falsePositiveRate": {
+          "name": "误报率",
+          "description": "真实标签为 0 的数据中不正确分类的数据点的分数。"
+        },
+        "falseNegativeRate": {
+          "name": "漏报率",
+          "description": "真实标签为 1 的数据点中不正确分类的数据点分数。"
+        },
+        "selectionRate": {
+          "name": "选择率",
+          "description": "标签为 1 的预测百分比。"
+        },
+        "meanPrediction": {
+          "name": "平均值预测",
+          "description": "所有预测的平均值。"
+        },
+        "meanAveragePrecision": {
+          "name": "平均精度分数",
+          "description": "对象检测模型的平均精度是所有类中 AP 的平均精度(平均精度)。这将评估对象检测模型的可靠性，并封装精度和召回率之间的权衡。"
+        },
+        "averagePrecision": {
+          "name": "平均精度分数",
+          "description": "为所选类计算对象检测模型的平均精度。"
+        },
+        "averageRecall": {
+          "name": "平均召回率分数",
+          "description": "为所选类计算对象检测模型的平均召回率。"
+        },
+        "fairnessMetricDifference": "差异",
+        "fairnessMetricRatio": "比率"
+      },
+      "metricsDropdown": "指标",
+      "metricsTypeDropdown": "聚合方法",
+      "metricTypes": {
+        "macro": "宏",
+        "micro": "微"
+      },
+      "classSelectionDropdown": "选择类",
+      "iouThresholdDropdown": {
+        "name": "IOU 阈值",
+        "description": "交并比量化了图像中检测到的物体的预测边界框与真实边界框之间的重叠程度。例如，将 IoU 阈值设置为 70% 意味着与真实边界框有超过 70% 重叠的预测结果将认为是 True，从而影响了对预测准确性和其他性能指标计算方式的定义。",
+        "iconId": "iouThresholdIconId",
+        "title": "了解 IoU 阈值"
+      },
+      "notAvailable": "N/A",
+      "countColumnHeader": "样本大小",
+      "dataCohortsHeatmapHeader": "队列",
+      "dataCohortsChartSelectionHeader": "数据集队列",
+      "featureBasedCohortsChartSelectionHeader": "功能队列",
+      "disaggregatedAnalysisHeatmapHeader": "功能队列",
+      "fairnessMetricsHeatmapHeader": "公平性指标",
+      "featuresDropdown": "功能",
+      "metricChartDropdownSelectionHeader": "指标",
+      "probabilityForClassSelectionHeader": "类的概率",
+      "targetSelectionHeader": "目标",
+      "metricSelectionDropdownPlaceholder": "选择指标以比较队列。",
+      "classSelectionDropdownPlaceholder": "为基于类的分析选择类名。",
+      "featureSelectionDropdownPlaceholder": "选择要用于基于功能的分析的功能。",
+      "probabilityDistributionPivotItem": "概率分布",
+      "regressionDistributionPivotItem": "目标分布",
+      "metricsVisualizationsPivotItem": "指标可视化效果",
+      "confusionMatrixPivotItem": "混淆矩阵",
+      "disaggregatedAnalysisFeatureSelectionPlaceholder": "选择要生成基于功能的分析的功能。",
+      "tableCountTooltip": "队列 {0} 包含 {1} 个实例。",
+      "tableMetricTooltip": "队列 {1} 上模型的 {0} 为 {2}",
+      "tableDifferenceTooltip": "{0} 差异为 {1}。计算方法是从队列 {5} 的最大值 {4} 中减去队列 {3} 的最小值 {2}。",
+      "tableRatioTooltip": "{0} 比率为 {1}。计算方法是通过将队列 {3} 的最小值 {2} 除以队列 {5} 的最大值 {4}。",
+      "boxPlotPlaceholder": "选择至少一个队列以查看框图。",
+      "chartCohortSelectionPlaceholder": "总体选择至少一个队列以查看图表。",
+      "metricSelectionButton": "选择指标",
+      "cohortSelectionButton": "选择队列",
+      "probabilityLabelSelectionButton": "选择标签",
+      "regressionTargetSelectionButton": "选择目标",
+      "selectAllCohortsOption": "全选",
+      "other": "其他",
+      "BoxPlot": {
+        "outlierProbability": "概率",
+        "outlierLabel": "离群值",
+        "boxPlotSeriesLabel": "箱形图",
+        "lowerWhisker": "下须",
+        "upperWhisker": "上须",
+        "median": "中值",
+        "lowerQuartile": "下四分位数",
+        "upperQuartile": "上四分位数"
+      },
+      "chartConfigApply": "应用",
+      "chartConfigCancel": "取消",
+      "chartConfigDatasetCohortSelectionPlaceholder": "选择数据集队列",
+      "chartConfigFeatureBasedCohortSelectionPlaceholder": "选择基于功能的队列",
+      "confusionMatrix": {
+        "confusionMatrixCohortSelectionLabel": "选择数据集队列",
+        "confusionMatrixClassSelectionLabel": "选择类",
+        "confusionMatrixClassMinSelectionError": "至少选择 {0} 类以可视化混淆矩阵。",
+        "confusionMatrixClassMaxSelectionError": "最多选择 {0} 类以可视化混淆矩阵。",
+        "confusionMatrixClassSelectionDefaultPlaceholder": "选择类",
+        "confusionMatrixHeatmapTooltip": "{0} 数据点应为 {1}，预测为 {2}",
+        "confusionMatrixYAxisLabel": "真实类",
+        "confusionMatrixXAxisLabel": "预测类",
+        "class": "类"
+      },
+      "nA": "N/A",
+      "disaggregatedAnalysisBaseCohortDisclaimer": "以下基于功能的分析中的队列基于全局队列，{0}。",
+      "disaggregatedAnalysisBaseCohortWarning": "与 {0} 队列不同，{1} 包含筛选器。因此，它只捕获整个数据集的子集，而见解可能不会推广到完整的数据集。",
+      "probabilitySplineChartToggleLabel": "使用自由绘制曲线图",
+      "countAxisLabel": "计数",
+      "helpMeChooseFeaturesButton": "帮助我选择功能",
+      "helpMeChooseMetricsButton": "帮助我选择指标",
+      "featureConfiguration": {
+        "flyoutHeader": "选择你的功能",
+        "flyoutSubHeader": "你想要通过哪些特征评估模型的公平性?",
+        "flyoutDescription": "根据模型行为差异评估公平性。我们将根据每个所选功能的值来拆分数据，并评估这些拆分之间的模型性能指标之间的差异。",
+        "selectAllRowsAriaLabel": "Select all rows",
+        "flyoutAriaLabel": "Aggregate balance measures",
+        "featureColumnHeader": "功能",
+        "featureSelectionAriaLabel": "Feature selection table",
+        "metricSelectionAriaLabel": "Metric selection table",
+        "groupsColumnHeader": "组",
+        "categoricalGroupsCountRemark": "此功能具有 {0} 个唯一值。",
+        "continuousGroupsCountRemark": "此功能是连续的，并拆分为 {0} 个箱。",
+        "continuousFeatureBinningLabel": "更改箱数",
+        "tooManyFeaturesSelectedWarning": "请最多选择两个功能。"
+      },
+      "metricConfiguration": {
+        "flyoutHeader": "选择指标",
+        "flyoutSubHeader": "你希望如何度量模型的性能?",
+        "flyoutDescription": "根据模型类型，这些是建议的性能指标。公平性分析或非聚合分析是通过评估模型在功能子组中的性能差异来执行的。",
+        "noMetricsSelectedWarning": "请选择至少一个指标。",
+        "metricNameColumnHeader": "指标名",
+        "metricDescriptionColumnHeader": "指标说明"
+      },
+      "cohortSelection": {
+        "flyoutHeader": "选择队列",
+        "flyoutDescription": "可以选择查看数据集队列或功能队列。如果功能队列不可用，则需要先在功能队列视图中选择一个或多个功能。随后会生成功能队列，你可以在此处选择它们。"
+      },
+      "regressionTargetOptions": {
+        "predictedY": "预测的 Y",
+        "trueY": "真实 Y",
+        "error": "错误"
+      },
+      "topLevelDescription": "通过浏览预测值的分布和模型性能指标值来评估模型的性能。使用“数据集队列”选项卡，通过查看其在不同预构建或新建数据集队列之间的性能比较分析来研究你的模型。使用“功能队列”，通过查看其在敏感/非敏感功能子队列之间的性能比较分析来研究你的模型。(例如，不同性别、收入水平的性能)。",
+      "infoTitle": "有关模型概述的其他信息",
+      "visualDisplayToggleLabel": "显示热度地图",
+      "featureBasedViewDescription": "最多选择两个功能，以查看基于功能的队列(如果已选择一个功能)或相交队列(如果已选择两个功能)的模型性能细分。"
+    },
+    "TableViewTab": {
+      "Heading": "以表格式查看所有功能和行的数据集。"
+    }
+  },
+  "Forecasting": {
+    "target": "目标",
+    "whatIfForecastingHeader": "模拟分析",
+    "forecastHeader": "预测分析",
+    "whatIfForecastingDescription": "模拟允许你扰动整个时序的功能，并观察模型的预测变化。",
+    "whatIfForecastingChooseTimeSeries": "若要开始，请从以下选项中选择时序。",
+    "forecastDescription": "预测分析将模型的预测与时序的实际值进行比较。若要启用模拟分析，请为数据集提供功能。",
+    "timeSeries": "时序",
+    "selectTimeSeries": "选择时序。",
+    "singleTimeSeries": "数据集仅包含默认已选择的单个时序“{0}”。",
+    "trueY": "真实 Y",
+    "baselinePrediction": "基线预测",
+    "forecastComparisonHeader": "比较模拟预测",
+    "forecastComparisonChartTitle": "预测",
+    "forecastComparisonChartTimeAxisLabel": "时间",
+    "Transformations": {
+      "multiply": "乘",
+      "divide": "除",
+      "add": "加",
+      "subtract": "减",
+      "change": "更改为"
+    },
+    "TransformationCreation": {
+      "title": "创建模拟方案",
+      "nameLabel": "模拟方案名称",
+      "featureInstructions": "选择一个要扰动的特征。",
+      "operationInstructions": "选择要应用于该功能的操作。",
+      "operationDropdownHeader": "操作",
+      "featureDropdownHeader": "特征",
+      "valueSpinButtonHeader": "值",
+      "scenarioNamingInstructionsPlaceholder": "输入唯一名称",
+      "scenarioNamingInstructions": "输入模拟方案的名称。",
+      "scenarioNamingCollisionMessage": "此名称已存在。请输入唯一名称。",
+      "scenarioNamingLengthMessage": "名称必须介于 1 到 50 个字符之间。实际长度为 {0}。",
+      "scenarioNamingInvalidCharactersMessage": "名称只能包含字母数字字符、空格、短划线或下划线，并且需要以字母数字字符开头。",
+      "valueErrorMessage": "对于操作 {0}，请选择除 {1} 以外的值。",
+      "invalidCombinationErrorMessage": "这与现有的模拟方案相同。请更改功能、操作或值。",
+      "addTransformationButton": "添加转换",
+      "divisionAndMultiplicationBy": "执行者"
+    },
+    "TransformationTable": {
+      "nameColumnHeader": "名称",
+      "methodColumnHeader": "方法",
+      "divisionAndMultiplicationBy": "执行者 ",
+      "header": "模拟预测 ({0})"
+    },
+    "TimeSeries": {
+      "apply": "应用",
+      "cancel": "取消",
+      "cohortList": "时序列表",
+      "selectCohort": "选择时序",
+      "selectCohortAriaLabel": "Time series selection",
+      "shiftCohort": "切换时序",
+      "shiftCohortAriaLabel": "Switch time series",
+      "shiftCohortDescription": "从时序列表中选择时序。将时序应用到仪表板。"
+    },
+    "TimeSeriesSettings": {
+      "CohortSettingsDescription": "时序是根据时间序列标识列预先定义的。",
+      "CohortSettingsTitle": "时序设置"
+    }
+  }
+}

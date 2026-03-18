@@ -1,0 +1,222 @@
+[
+    {
+        "section": "Agent Memory",
+        "lessons": [
+            {
+                "title": "Agent Memory",
+                "path": "13-agent-memory/README.md",
+                "notebooks": [
+                    "13-agent-memory-cognee.ipynb",
+                    "13-agent-memory.ipynb"
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Agentic Design Patterns",
+        "lessons": [
+            {
+                "title": "Agentic Design Patterns",
+                "path": "03-agentic-design-patterns/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Agentic Protocols",
+        "lessons": [
+            {
+                "title": "Agentic Protocols",
+                "path": "11-agentic-protocols/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Github Mcp",
+                "path": "11-agentic-protocols/code_samples/github-mcp/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Mcp Agents",
+                "path": "11-agentic-protocols/code_samples/mcp-agents/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Agentic Rag",
+        "lessons": [
+            {
+                "title": "Agentic Rag",
+                "path": "05-agentic-rag/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Ai Agents Production",
+        "lessons": [
+            {
+                "title": "Ai Agents Production",
+                "path": "10-ai-agents-production/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Browser Use",
+        "lessons": [
+            {
+                "title": "Browser Use",
+                "path": "15-browser-use/README.md",
+                "notebooks": [
+                    "15-browser-user.ipynb"
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Building Trustworthy Agents",
+        "lessons": [
+            {
+                "title": "Building Trustworthy Agents",
+                "path": "06-building-trustworthy-agents/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Code Samples",
+        "lessons": [
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "01-intro-to-ai-agents/code_samples/01-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "02-explore-agentic-frameworks/code_samples/02-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "03-agentic-design-patterns/code_samples/03-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "04-tool-use/code_samples/04-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "05-agentic-rag/code_samples/05-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "07-planning-design/code_samples/07-dotnet-agent-framework.md",
+                "notebooks": []
+            },
+            {
+                "title": "Dotnet Agent Framework",
+                "path": "08-multi-agent/code_samples/08-dotnet-agent-framework.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Context Engineering",
+        "lessons": [
+            {
+                "title": "Context Engineering",
+                "path": "12-context-engineering/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Course Setup",
+        "lessons": [
+            {
+                "title": "Course Setup",
+                "path": "00-course-setup/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Explore Agentic Frameworks",
+        "lessons": [
+            {
+                "title": "Explore Agentic Frameworks",
+                "path": "02-explore-agentic-frameworks/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Intro To Ai Agents",
+        "lessons": [
+            {
+                "title": "Intro To Ai Agents",
+                "path": "01-intro-to-ai-agents/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Metacognition",
+        "lessons": [
+            {
+                "title": "Metacognition",
+                "path": "09-metacognition/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Microsoft Agent Framework",
+        "lessons": [
+            {
+                "title": "Microsoft Agent Framework",
+                "path": "14-microsoft-agent-framework/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Multi Agent",
+        "lessons": [
+            {
+                "title": "Multi Agent",
+                "path": "08-multi-agent/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Workflows Agent Framework",
+                "path": "08-multi-agent/code_samples/workflows-agent-framework/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Planning Design",
+        "lessons": [
+            {
+                "title": "Planning Design",
+                "path": "07-planning-design/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Tool Use",
+        "lessons": [
+            {
+                "title": "Tool Use",
+                "path": "04-tool-use/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

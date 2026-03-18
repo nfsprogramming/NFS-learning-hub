@@ -1,0 +1,372 @@
+[
+    {
+        "section": "Classification",
+        "lessons": [
+            {
+                "title": "Introduction",
+                "path": "4-Classification/1-Introduction/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "4-Classification/1-Introduction/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Classifiers 1",
+                "path": "4-Classification/2-Classifiers-1/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "4-Classification/2-Classifiers-1/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Classifiers 2",
+                "path": "4-Classification/3-Classifiers-2/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "4-Classification/3-Classifiers-2/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Applied",
+                "path": "4-Classification/4-Applied/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Classification",
+                "path": "4-Classification/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Clustering",
+        "lessons": [
+            {
+                "title": "Visualize",
+                "path": "5-Clustering/1-Visualize/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "5-Clustering/1-Visualize/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "K Means",
+                "path": "5-Clustering/2-K-Means/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "5-Clustering/2-K-Means/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Clustering",
+                "path": "5-Clustering/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Introduction",
+        "lessons": [
+            {
+                "title": "Intro To Ml",
+                "path": "1-Introduction/1-intro-to-ML/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "History Of Ml",
+                "path": "1-Introduction/2-history-of-ML/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Fairness",
+                "path": "1-Introduction/3-fairness/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Techniques Of Ml",
+                "path": "1-Introduction/4-techniques-of-ML/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Introduction",
+                "path": "1-Introduction/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Nlp",
+        "lessons": [
+            {
+                "title": "Introduction To Nlp",
+                "path": "6-NLP/1-Introduction-to-NLP/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Tasks",
+                "path": "6-NLP/2-Tasks/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Translation Sentiment",
+                "path": "6-NLP/3-Translation-Sentiment/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Julia",
+                "path": "6-NLP/3-Translation-Sentiment/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "6-NLP/3-Translation-Sentiment/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Hotel Reviews 1",
+                "path": "6-NLP/4-Hotel-Reviews-1/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "6-NLP/4-Hotel-Reviews-1/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "6-NLP/4-Hotel-Reviews-1/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Hotel Reviews 2",
+                "path": "6-NLP/5-Hotel-Reviews-2/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "6-NLP/5-Hotel-Reviews-2/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "6-NLP/5-Hotel-Reviews-2/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Nlp",
+                "path": "6-NLP/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Real World",
+        "lessons": [
+            {
+                "title": "Applications",
+                "path": "9-Real-World/1-Applications/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Debugging Ml Models",
+                "path": "9-Real-World/2-Debugging-ML-Models/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Real World",
+                "path": "9-Real-World/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Regression",
+        "lessons": [
+            {
+                "title": "Tools",
+                "path": "2-Regression/1-Tools/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "2-Regression/1-Tools/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Data",
+                "path": "2-Regression/2-Data/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "2-Regression/2-Data/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Linear",
+                "path": "2-Regression/3-Linear/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "2-Regression/3-Linear/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Logistic",
+                "path": "2-Regression/4-Logistic/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "2-Regression/4-Logistic/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Regression",
+                "path": "2-Regression/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Reinforcement",
+        "lessons": [
+            {
+                "title": "Qlearning",
+                "path": "8-Reinforcement/1-QLearning/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "8-Reinforcement/1-QLearning/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "8-Reinforcement/1-QLearning/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Gym",
+                "path": "8-Reinforcement/2-Gym/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Julia",
+                "path": "8-Reinforcement/2-Gym/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "8-Reinforcement/2-Gym/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Reinforcement",
+                "path": "8-Reinforcement/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Timeseries",
+        "lessons": [
+            {
+                "title": "Introduction",
+                "path": "7-TimeSeries/1-Introduction/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Julia",
+                "path": "7-TimeSeries/1-Introduction/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "7-TimeSeries/1-Introduction/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Arima",
+                "path": "7-TimeSeries/2-ARIMA/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Julia",
+                "path": "7-TimeSeries/2-ARIMA/solution/Julia/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "R",
+                "path": "7-TimeSeries/2-ARIMA/solution/R/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Svr",
+                "path": "7-TimeSeries/3-SVR/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Timeseries",
+                "path": "7-TimeSeries/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Web App",
+        "lessons": [
+            {
+                "title": "Web App",
+                "path": "3-Web-App/1-Web-App/README.md",
+                "notebooks": [
+                    "notebook.ipynb"
+                ]
+            },
+            {
+                "title": "Web App",
+                "path": "3-Web-App/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

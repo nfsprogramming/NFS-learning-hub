@@ -1,0 +1,233 @@
+[
+    {
+        "section": "Introduction",
+        "lessons": [
+            {
+                "title": "Introduction to AI",
+                "path": "lessons/1-Intro",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Symbolic AI",
+        "lessons": [
+            {
+                "title": "Knowledge Representation and Expert Systems",
+                "path": "lessons/2-Symbolic",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Neural Networks",
+        "lessons": [
+            {
+                "title": "Introduction to Neural Networks: Perceptron",
+                "path": "lessons/3-NeuralNetworks/03-Perceptron",
+                "notebooks": [
+                    "Perceptron.ipynb"
+                ]
+            },
+            {
+                "title": "Introduction to Neural Networks. Multi-Layered Perceptron",
+                "path": "lessons/3-NeuralNetworks/04-OwnFramework",
+                "notebooks": [
+                    "OwnFramework.ipynb"
+                ]
+            },
+            {
+                "title": "Neural Network Frameworks",
+                "path": "lessons/3-NeuralNetworks/05-Frameworks",
+                "notebooks": [
+                    "IntroKeras.ipynb",
+                    "IntroKerasTF.ipynb",
+                    "IntroPyTorch.ipynb"
+                ]
+            },
+            {
+                "title": "Introduction to Neural Networks",
+                "path": "lessons/3-NeuralNetworks",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Computer Vision",
+        "lessons": [
+            {
+                "title": "Introduction to Computer Vision",
+                "path": "lessons/4-ComputerVision/06-IntroCV",
+                "notebooks": [
+                    "OpenCV.ipynb"
+                ]
+            },
+            {
+                "title": "Convolutional Neural Networks",
+                "path": "lessons/4-ComputerVision/07-ConvNets",
+                "notebooks": [
+                    "ConvNetsPyTorch.ipynb",
+                    "ConvNetsTF.ipynb"
+                ]
+            },
+            {
+                "title": "Pre-trained Networks and Transfer Learning",
+                "path": "lessons/4-ComputerVision/08-TransferLearning",
+                "notebooks": [
+                    "AdversarialCat_TF.ipynb",
+                    "Dropout.ipynb",
+                    "TransferLearningPyTorch.ipynb",
+                    "TransferLearningTF.ipynb"
+                ]
+            },
+            {
+                "title": "Autoencoders",
+                "path": "lessons/4-ComputerVision/09-Autoencoders",
+                "notebooks": [
+                    "AutoEncodersPyTorch.ipynb",
+                    "AutoencodersTF.ipynb"
+                ]
+            },
+            {
+                "title": "Generative Adversarial Networks",
+                "path": "lessons/4-ComputerVision/10-GANs",
+                "notebooks": [
+                    "GANPyTorch.ipynb",
+                    "GANTF.ipynb",
+                    "StyleTransfer.ipynb",
+                    "StyleTransfer_Keras.ipynb"
+                ]
+            },
+            {
+                "title": "Object Detection",
+                "path": "lessons/4-ComputerVision/11-ObjectDetection",
+                "notebooks": [
+                    "ObjectDetection.ipynb"
+                ]
+            },
+            {
+                "title": "Segmentation",
+                "path": "lessons/4-ComputerVision/12-Segmentation",
+                "notebooks": [
+                    "SemanticSegmentationPytorch.ipynb",
+                    "SemanticSegmentationTF.ipynb"
+                ]
+            },
+            {
+                "title": "Computer Vision",
+                "path": "lessons/4-ComputerVision",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Natural Language Processing",
+        "lessons": [
+            {
+                "title": "Representing Text as Tensors",
+                "path": "lessons/5-NLP/13-TextRep",
+                "notebooks": [
+                    "TextRepresentationPyTorch.ipynb",
+                    "TextRepresentationTF.ipynb"
+                ]
+            },
+            {
+                "title": "Embeddings",
+                "path": "lessons/5-NLP/14-Embeddings",
+                "notebooks": [
+                    "EmbeddingsPyTorch.ipynb",
+                    "EmbeddingsTF.ipynb"
+                ]
+            },
+            {
+                "title": "Language Modeling",
+                "path": "lessons/5-NLP/15-LanguageModeling",
+                "notebooks": [
+                    "CBoW-PyTorch.ipynb",
+                    "CBoW-TF.ipynb"
+                ]
+            },
+            {
+                "title": "Recurrent Neural Networks",
+                "path": "lessons/5-NLP/16-RNN",
+                "notebooks": [
+                    "RNNPyTorch.ipynb",
+                    "RNNTF.ipynb"
+                ]
+            },
+            {
+                "title": "Generative networks",
+                "path": "lessons/5-NLP/17-GenerativeNetworks",
+                "notebooks": [
+                    "GenerativePyTorch.ipynb",
+                    "GenerativeTF.ipynb"
+                ]
+            },
+            {
+                "title": "Attention Mechanisms and Transformers",
+                "path": "lessons/5-NLP/18-Transformers",
+                "notebooks": [
+                    "TransformersPyTorch.ipynb",
+                    "TransformersTF.ipynb"
+                ]
+            },
+            {
+                "title": "Named Entity Recognition",
+                "path": "lessons/5-NLP/19-NER",
+                "notebooks": [
+                    "NER-TF.ipynb"
+                ]
+            },
+            {
+                "title": "Pre-Trained Large Language Models",
+                "path": "lessons/5-NLP/20-LangModels",
+                "notebooks": [
+                    "GPT-PyTorch.ipynb"
+                ]
+            },
+            {
+                "title": "Natural Language Processing",
+                "path": "lessons/5-NLP",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Other AI Techniques",
+        "lessons": [
+            {
+                "title": "Genetic Algorithms",
+                "path": "lessons/6-Other/21-GeneticAlgorithms",
+                "notebooks": [
+                    "Diophantine.ipynb",
+                    "Genetic.ipynb"
+                ]
+            },
+            {
+                "title": "Deep Reinforcement Learning",
+                "path": "lessons/6-Other/22-DeepRL",
+                "notebooks": [
+                    "CartPole-RL-PyTorch.ipynb",
+                    "CartPole-RL-TF.ipynb",
+                    "notebook.ipynb",
+                    "tmp.ipynb"
+                ]
+            },
+            {
+                "title": "Multi-Agent Systems",
+                "path": "lessons/6-Other/23-MultiagentSystems",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "AI Ethics",
+        "lessons": [
+            {
+                "title": "Ethical and Responsible AI",
+                "path": "lessons/7-Ethics",
+                "notebooks": []
+            }
+        ]
+    }
+]

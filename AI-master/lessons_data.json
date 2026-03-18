@@ -1,0 +1,12 @@
+[
+    {
+        "section": "Overview",
+        "lessons": [
+            {
+                "title": "Course Introduction",
+                "path": "README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

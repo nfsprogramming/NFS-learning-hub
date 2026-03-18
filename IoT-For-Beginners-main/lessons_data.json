@@ -1,0 +1,192 @@
+[
+    {
+        "section": "Consumer",
+        "lessons": [
+            {
+                "title": "Consumer",
+                "path": "6-consumer/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Speech Recognition",
+                "path": "6-consumer/lessons/1-speech-recognition/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Language Understanding",
+                "path": "6-consumer/lessons/2-language-understanding/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Spoken Feedback",
+                "path": "6-consumer/lessons/3-spoken-feedback/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Multiple Language Support",
+                "path": "6-consumer/lessons/4-multiple-language-support/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Farm",
+        "lessons": [
+            {
+                "title": "Farm",
+                "path": "2-farm/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Predict Plant Growth",
+                "path": "2-farm/lessons/1-predict-plant-growth/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Detect Soil Moisture",
+                "path": "2-farm/lessons/2-detect-soil-moisture/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Automated Plant Watering",
+                "path": "2-farm/lessons/3-automated-plant-watering/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Migrate Your Plant To The Cloud",
+                "path": "2-farm/lessons/4-migrate-your-plant-to-the-cloud/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Migrate Application To The Cloud",
+                "path": "2-farm/lessons/5-migrate-application-to-the-cloud/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Keep Your Plant Secure",
+                "path": "2-farm/lessons/6-keep-your-plant-secure/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Getting Started",
+        "lessons": [
+            {
+                "title": "Getting Started",
+                "path": "1-getting-started/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Introduction To Iot",
+                "path": "1-getting-started/lessons/1-introduction-to-iot/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Deeper Dive",
+                "path": "1-getting-started/lessons/2-deeper-dive/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Sensors And Actuators",
+                "path": "1-getting-started/lessons/3-sensors-and-actuators/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Connect Internet",
+                "path": "1-getting-started/lessons/4-connect-internet/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Lesson Template",
+        "lessons": [
+            {
+                "title": "Lesson Template",
+                "path": "lesson-template/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Manufacturing",
+        "lessons": [
+            {
+                "title": "Manufacturing",
+                "path": "4-manufacturing/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Train Fruit Detector",
+                "path": "4-manufacturing/lessons/1-train-fruit-detector/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Check Fruit From Device",
+                "path": "4-manufacturing/lessons/2-check-fruit-from-device/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Run Fruit Detector Edge",
+                "path": "4-manufacturing/lessons/3-run-fruit-detector-edge/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Trigger Fruit Detector",
+                "path": "4-manufacturing/lessons/4-trigger-fruit-detector/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Retail",
+        "lessons": [
+            {
+                "title": "Retail",
+                "path": "5-retail/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Train Stock Detector",
+                "path": "5-retail/lessons/1-train-stock-detector/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Check Stock Device",
+                "path": "5-retail/lessons/2-check-stock-device/README.md",
+                "notebooks": []
+            }
+        ]
+    },
+    {
+        "section": "Transport",
+        "lessons": [
+            {
+                "title": "Transport",
+                "path": "3-transport/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Location Tracking",
+                "path": "3-transport/lessons/1-location-tracking/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Store Location Data",
+                "path": "3-transport/lessons/2-store-location-data/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Visualize Location Data",
+                "path": "3-transport/lessons/3-visualize-location-data/README.md",
+                "notebooks": []
+            },
+            {
+                "title": "Geofences",
+                "path": "3-transport/lessons/4-geofences/README.md",
+                "notebooks": []
+            }
+        ]
+    }
+]

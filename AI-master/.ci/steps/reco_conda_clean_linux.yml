@@ -1,0 +1,12 @@
+parameters:
+  conda_env: # this param must be set
+  clean_conda: true
+
+steps:
+- script: |
+    conda env remove -n ${{parameters.conda_env}} -y   
+  workingDirectory: tests
+  displayName: 'Conda remove'
+  continueOnError: true
+  condition: always() # this step will always run, even if the pipeline is canceled
+  enabled: ${{parameters.clean_conda}}
