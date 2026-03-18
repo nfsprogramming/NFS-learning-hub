@@ -12,13 +12,13 @@ def fix_index_files(directory):
                 with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                # Bump CSS version to v=2.9
-                new_content = re.sub(r'styles\.css\?v=[0-9.]+', 'styles.css?v=2.9', content)
+                # Bump CSS version to v=3.0 for all modules
+                new_content = re.sub(r'styles\.css\?v=[0-9.]+', 'styles.css?v=3.0', content)
                 
                 if new_content != content:
                     with open(path, 'w', encoding='utf-8') as f:
                         f.write(new_content)
-                    print(f"Updated {path}")
+                    print(f"Updated {path} to v=3.0")
 
 if __name__ == "__main__":
     fix_index_files(".")

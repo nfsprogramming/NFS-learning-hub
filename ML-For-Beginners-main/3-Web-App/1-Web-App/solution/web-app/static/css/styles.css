@@ -9,6 +9,33 @@ body {
 	font-size: 30px;
 }
 
+
+/* Custom Scrollbar Design */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #05060a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid #05060a;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 242, 255, 0.4);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) #05060a;
+}
 input {
 	min-width: 150px;
 }
