@@ -223,3 +223,4 @@ function openNotebook(lessonPath, notebookName, lessonId) {
     const colabUrl = `https://colab.research.google.com/github/${githubRepo}/blob/${branch}/${fullPath}`;
     window.open(colabUrl, '_blank');
 }
+// End of script.
