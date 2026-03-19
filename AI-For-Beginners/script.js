@@ -1,4 +1,4 @@
-console.log("%c Microsoft AI for Beginners | Official Microsoft Curriculum ", "background: #00f2ff; color: #0a0b10; font-weight: bold; padding: 4px; border-radius: 4px;");
+console.log("%c Microsoft Ai For Beginners | Official Microsoft Curriculum ", "background: #00f2ff; color: #0a0b10; font-weight: bold; padding: 4px; border-radius: 4px;");
 
 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
 

@@ -1,9 +1,9 @@
-console.log("%c Microsoft AI for Beginners | Official Microsoft Curriculum ", "background: #00f2ff; color: #0a0b10; font-weight: bold; padding: 4px; border-radius: 4px;");
+console.log("%c Microsoft Mslearn Ai Studio | Official Microsoft Curriculum ", "background: #00f2ff; color: #0a0b10; font-weight: bold; padding: 4px; border-radius: 4px;");
 
 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
 
 let courseData = [];
-let progress = JSON.parse(localStorage.getItem('course_progress_AI_For_Beginners')) || {};
+let progress = JSON.parse(localStorage.getItem('course_progress_mslearn_ai_studio')) || {};
 let theoryNavigationStack = [];
 function syncCourseBranding() {
     const headerTitle = document.getElementById('course-header-title');
@@ -191,7 +191,7 @@ function closeTheory() {
 
 function toggleComplete(lessonId) {
     progress[lessonId] = !progress[lessonId];
-    localStorage.setItem('course_progress_AI_For_Beginners', JSON.stringify(progress));
+    localStorage.setItem('course_progress_mslearn_ai_studio', JSON.stringify(progress));
     renderDashboard();
     updateOverallProgress();
 }

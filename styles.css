@@ -573,3 +573,18 @@ body {
 }
 .toast.show { transform: translateX(0); }
 .course-card.hidden { display: none !important; }
+/* Animations & reveal */
+.scroll-init {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.course-card.scroll-init {
+    transition-delay: calc(0.1s * var(--order, 1));
+}

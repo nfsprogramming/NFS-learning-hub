@@ -33,12 +33,6 @@ onAuthStateChanged(auth, async (user) => {
 function updateUIForUser(user) {
     const navActions = document.querySelector('.nav-actions');
     navActions.innerHTML = `
-        <div class="search-wrapper">
-            <div class="search-bar" id="search-bar">
-                <input type="text" placeholder="Search courses..." id="search-input" oninput="filterCourses(this.value)">
-            </div>
-            <button class="btn-glass" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
         <button class="btn-gold" onclick="openPremiumModal()">Premium Pro</button>
         <div class="user-profile" id="user-profile-btn" onclick="toggleLogoutMenu(event)">
             <img src="${user.photoURL}" alt="Profile">
@@ -65,12 +59,6 @@ function updateUIForUser(user) {
 function updateUIForGuest() {
     const navActions = document.querySelector('.nav-actions');
     navActions.innerHTML = `
-        <div class="search-wrapper">
-            <div class="search-bar" id="search-bar">
-                <input type="text" placeholder="Search courses..." id="search-input" oninput="filterCourses(this.value)">
-            </div>
-            <button class="btn-glass" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
         <button class="btn-gold" onclick="openPremiumModal()">Premium Pro</button>
         <button class="btn-white" onclick="handleLogin()" title="Login to save progress">
             <i class="fa-brands fa-google"></i> Sign in

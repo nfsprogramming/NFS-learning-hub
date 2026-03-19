@@ -25,13 +25,18 @@
             <div class="logo-text">Learning Hub</div>
         </div>
         <div class="nav-links">
-            <a href="#" class="active">Courses</a>
+            <a href="#courses-start" class="active">Courses</a>
             <a href="javascript:void(0)" onclick="showComingSoon('Roadmaps')">Roadmaps</a>
             <a href="javascript:void(0)" onclick="showComingSoon('Resources')">Resources</a>
             <a href="javascript:void(0)" onclick="showComingSoon('Community')">Community</a>
         </div>
         <div class="nav-actions">
-            <button class="btn-glass"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="search-wrapper">
+                <div class="search-bar" id="hub-search-bar">
+                    <input type="text" id="course-search" placeholder="Search courses..." autocomplete="off">
+                </div>
+                <button class="btn-glass" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
             <button class="btn-gold" onclick="openPremiumModal()">Premium Pro</button>
         </div>
     </nav>
@@ -56,7 +61,7 @@
             </div>
         </header>
 
-        <section class="course-section">
+        <section class="course-section" id="courses-start">
             <div class="section-header">
                 <h2 class="section-title">Beginner Level</h2>
                 <p class="section-desc">Start your journey with fundamental concepts and hands-on projects.</p>
@@ -260,7 +265,8 @@
     <script>
         async function updateHubLessonCounts() {
             const cards = Array.from(document.querySelectorAll('.course-grid .course-card[href$="/index.html"]'));
-            await Promise.all(cards.map(async (card) => {
+            await Promise.all(cards.map(async (card, idx) => {
+                card.style.setProperty('--order', idx % 4);
                 const href = card.getAttribute('href');
                 if (!href) return;
                 const courseDir = href.replace('/index.html', '');
@@ -279,6 +285,60 @@
         }
 
         updateHubLessonCounts();
+
+        // Search Toggling
+        function toggleSearch() {
+            const bar = document.getElementById('hub-search-bar');
+            bar.classList.toggle('active');
+            if (bar.classList.contains('active')) {
+                document.getElementById('course-search').focus();
+            }
+        }
+
+        // Search Filtering Logic
+        document.getElementById('course-search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.course-card');
+            
+            cards.forEach(card => {
+                const name = card.querySelector('.course-name').textContent.toLowerCase();
+                const info = card.querySelector('.course-info').textContent.toLowerCase();
+                if (name.includes(term) || info.includes(term)) {
+                    card.style.display = 'flex';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                }
+            });
+        });
+
+        // Smooth Scroll for Nav Links
+        document.querySelector('a[href^="#"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Reveal Animation on Scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.course-section, .hero, .course-card').forEach(el => {
+            el.classList.add('scroll-init');
+            observer.observe(el);
+        });
     </script>
     <div id="toast-container"></div>
     <script type="module" src="auth.js"></script>
