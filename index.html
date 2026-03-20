@@ -24,11 +24,11 @@
             <img src="logo.png" alt="NFS Programming" style="height: 48px; border-radius: 8px; filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.3));">
             <div class="logo-text">Learning Hub</div>
         </div>
-        <div class="nav-links">
-            <a href="#courses-start" class="active">Courses</a>
-            <a href="javascript:void(0)" onclick="showComingSoon('Roadmaps')">Roadmaps</a>
-            <a href="javascript:void(0)" onclick="showComingSoon('Resources')">Resources</a>
-            <a href="javascript:void(0)" onclick="showComingSoon('Community')">Community</a>
+        <div class="nav-links" id="nav-menu">
+            <a href="#courses-start" class="active" onclick="toggleMenu()">Courses</a>
+            <a href="javascript:void(0)" onclick="showComingSoon('Roadmaps'); toggleMenu()">Roadmaps</a>
+            <a href="javascript:void(0)" onclick="showComingSoon('Resources'); toggleMenu()">Resources</a>
+            <a href="javascript:void(0)" onclick="showComingSoon('Community'); toggleMenu()">Community</a>
         </div>
         <div class="nav-actions">
             <div class="search-wrapper">
@@ -37,7 +37,8 @@
                 </div>
                 <button class="btn-glass" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <button class="btn-gold" onclick="openPremiumModal()">Premium Pro</button>
+            <button class="btn-gold premium-btn" onclick="openPremiumModal()">Premium Pro</button>
+            <button class="btn-glass mobile-toggle" onclick="toggleMenu()" style="display: none;"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
 
@@ -285,6 +286,12 @@
         }
 
         updateHubLessonCounts();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
 
         // Search Toggling
         function toggleSearch() {

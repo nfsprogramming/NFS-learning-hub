@@ -588,3 +588,160 @@ body {
 .course-card.scroll-init {
     transition-delay: calc(0.1s * var(--order, 1));
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-stats {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 6, 10, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        border-bottom: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .nav-links.active {
+        max-height: 400px;
+        padding: 10px 5% 20px 5%;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 1.1rem;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+    
+    .nav-links a.active {
+        color: var(--primary);
+    }
+
+    .mobile-toggle {
+        display: block !important;
+        margin-left: 5px;
+    }
+
+    .btn-gold {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 5rem 5% 3rem 5%;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .stat-item {
+        align-items: center;
+        flex: 1 1 30%;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .course-section {
+        padding: 3rem 5% 3rem 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .course-card {
+        padding: 20px;
+    }
+
+    .main-footer {
+        padding: 4rem 5% 2rem 5%;
+        margin-top: 2rem;
+    }
+    
+    #premium-modal > div {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    #premium-modal h2 {
+        font-size: 1.6rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-bar.active {
+        width: 130px;
+    }
+}
